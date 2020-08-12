@@ -76,7 +76,7 @@
 <div class="copyright text-center">
 	<div class="container">
 		<div class="content">
-			<p>Copyright © 2013 UN-Habitat Nepal</p>
+			<p>Copyright © {{date('Y')}} UN-Habitat Nepal</p>
 		</div>
 	</div>
 </div>

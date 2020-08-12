@@ -97,14 +97,14 @@
 	<div class="home-main-post pa-tb">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 left-container">
+				<div class="col-md-12 left-container">
 					<div class="left-col featured-post box-shadow">
-						<div class="title box-shadow text-center">
+						<div class="title text-center">
 							<h6 class="m-0">Featured News</h6>
 						</div>
 						<div class="row p-3 mt-3">
-							<div class="col-md-6 mb-3">
-								<div class="main-post-card box-shadow">
+							<div class="col-md-4 mb-3">
+								<div class="main-post-card ">
 									<div class="post-card-img">
 										<a href="#">
 											<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
@@ -119,8 +119,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6 mb-3">
-								<div class="main-post-card box-shadow">
+							<div class="col-md-4 mb-3">
+								<div class="main-post-card ">
 									<div class="post-card-img">
 										<a href="#">
 											<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
@@ -135,19 +135,35 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-md-4 mb-3">
+								<div class="main-post-card ">
+									<div class="post-card-img">
+										<a href="#">
+											<img src="{{url('public/images/5.jpg')}}" class="img-fluid" alt="">
+										</a>
+									</div>
+									<div class="sub-title text-center mt-2">
+										<a href="#"><h5 class="mb-0">Preparing resilient community to fight against COVID-19</h5></a>
+										<span class="post-date">May 12,2020</span>
+									</div>
+									<div class="content">
+										<p>In a wake against COVID-19 havoc, communities across Nepal are suffering from shortage of hand sanitizer. All the shelf of super market and shops are.</p>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="view-more box-shadow text-center">
-							<a href="#" class="btn btn-primary btn-sm">Read More</a>
+						<div class="view-more text-center">
+							<a href="#" class="btn btn2">View More</a>
 						</div>
 					</div>
 
 					<div class="left-col recent-publish box-shadow">
-						<div class="title box-shadow text-center">
+						<div class="title text-center">
 							<h6 class="m-0">Recent Publication</h6>
 						</div>
 						<div class="row p-3 mt-3">
-							<div class="col-md-6 mb-3">
-								<div class="main-post-card box-shadow">
+							<div class="col-md-4 mb-3">
+								<div class="main-post-card">
 									<div class="post-card-img">
 										<a href="#">
 											<img src="{{url('public/images/7.png')}}" class="img-fluid" alt="">
@@ -158,8 +174,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6 mb-3">
-								<div class="main-post-card box-shadow">
+							<div class="col-md-4 mb-3">
+								<div class="main-post-card">
 									<div class="post-card-img">
 										<a href="#">
 											<img src="{{url('public/images/8.jpg')}}" class="img-fluid" alt="">
@@ -170,9 +186,21 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-md-4 mb-3">
+								<div class="main-post-card">
+									<div class="post-card-img">
+										<a href="#">
+											<img src="{{url('public/images/17.png')}}" class="img-fluid" alt="">
+										</a>
+									</div>
+									<div class="sub-title text-center">
+										<a href="#"><h5 class="mb-0">Bunga – Abode of the Mystics</h5></a>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="view-more box-shadow text-center">
-							<a href="#" class="btn btn-primary btn-sm">Read More</a>
+						<div class="view-more text-center">
+							<a href="#" class="btn btn2">View More</a>
 						</div>
 					</div>
 
@@ -227,13 +255,39 @@
 						</div>
 					</div>
 
+					<div class="gif-post p-3">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="gif-post-img">
+									<a href="https://sustainabledevelopment.un.org/">
+										<img src="{{url('public/images/9.gif')}}" class="img-fluid" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="gif-post-img">
+									<a href="#">
+										<img src="{{url('public/images/10.gif')}}" class="img-fluid" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="gif-post-img">
+									<a href="#">
+										<img src="{{url('public/images/11.gif')}}" class="img-fluid" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="left-col recent-publish recent-video box-shadow">
-						<div class="title box-shadow text-center">
+						<div class="title text-center">
 							<h6 class="m-0">Recent Videos</h6>
 						</div>
 						<div class="row p-3 mt-3">
-							<div class="col-md-6 mb-3">
-								<div class="main-post-card box-shadow">
+							<div class="col-md-4 mb-3">
+								<div class="main-post-card">
 									<div class="post-card-img">
 										<a href="#">
 											<iframe width="560" height="315" src="https://www.youtube.com/embed/DgKon3LY5mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -244,8 +298,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6 mb-3">
-								<div class="main-post-card box-shadow">
+							<div class="col-md-4 mb-3">
+								<div class="main-post-card">
 									<div class="post-card-img">
 										<a href="#">
 											<iframe width="560" height="315" src="https://www.youtube.com/embed/NaUSfPDrxqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -256,19 +310,31 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-md-4 mb-3">
+								<div class="main-post-card">
+									<div class="post-card-img">
+										<a href="#">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/03HwRyK3JTg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</a>
+									</div>
+									<div class="sub-title text-center">
+										<a href="#"><h5 class="mb-0">Kumari: Living Goddess of Bungamati</h5></a>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="view-more box-shadow text-center">
-							<a href="#" class="btn btn-primary btn-sm">Read More</a>
+						<div class="view-more text-center">
+							<a href="#" class="btn btn2">View More</a>
 						</div>
 					</div>
 
 					<div class="left-col recent-publish latest-story box-shadow">
-						<div class="title box-shadow text-center">
+						<div class="title text-center">
 							<h6 class="m-0">Latest Stories</h6>
 						</div>
 						<div class="row p-3">
-							<div class="col-md-6">
-								<div class="latest-story-card box-shadow">
+							<div class="col-md-4">
+								<div class="latest-story-card">
 									<div class="row">
 										<div class="col-5 col-sm-5 col-md-5">
 											<div class="popular-post-img">
@@ -285,8 +351,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="latest-story-card box-shadow">
+							<div class="col-md-4">
+								<div class="latest-story-card">
 									<div class="row">
 										<div class="col-5 col-sm-5 col-md-5">
 											<div class="popular-post-img">
@@ -303,8 +369,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="latest-story-card box-shadow">
+							<div class="col-md-4">
+								<div class="latest-story-card">
 									<div class="row">
 										<div class="col-5 col-sm-5 col-md-5">
 											<div class="popular-post-img">
@@ -321,8 +387,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="latest-story-card box-shadow">
+							<div class="col-md-4">
+								<div class="latest-story-card">
 									<div class="row">
 										<div class="col-5 col-sm-5 col-md-5">
 											<div class="popular-post-img">
@@ -339,9 +405,45 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-md-4">
+								<div class="latest-story-card">
+									<div class="row">
+										<div class="col-5 col-sm-5 col-md-5">
+											<div class="popular-post-img">
+												<a href="#">
+													<img src="{{url('public/images/5.jpg')}}" class="img-fluid" alt="">
+												</a>
+											</div>
+										</div>
+										<div class="col-7 col-sm-7 col-md-7">
+											<div class="sub-title">
+												<a href="#"><h6>Preparing resilient community to fight against COVID-19</h6></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="latest-story-card">
+									<div class="row">
+										<div class="col-5 col-sm-5 col-md-5">
+											<div class="popular-post-img">
+												<a href="#">
+													<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
+												</a>
+											</div>
+										</div>
+										<div class="col-7 col-sm-7 col-md-7">
+											<div class="sub-title">
+												<a href="#"><h6>Practicing hand hygiene</h6></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="view-more box-shadow text-center">
-							<a href="#" class="btn btn-primary btn-sm">Read More</a>
+						<div class="view-more text-center">
+							<a href="#" class="btn btn2">View More</a>
 						</div>
 					</div>
 
@@ -374,7 +476,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<!-- <div class="col-md-4">
 					<div class="right-col" id="sticky-anchor">
 						<div class="sidebar box-shadow">
 							<div class="popular-post">
@@ -446,7 +548,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
