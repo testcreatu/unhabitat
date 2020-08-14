@@ -7,7 +7,8 @@
     </div>
     <div class="col-md-7 search">
       <form>
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <p><i class="fas fa-search"></i></p>
       </form>
     </div>
   </div>

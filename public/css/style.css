@@ -138,6 +138,12 @@ ul li {
 	color: #fff !important;
 }
 
+.form-control,
+.btn {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 
 
 
@@ -175,9 +181,20 @@ ul li {
 	padding-top: 35px;
 }
 
+.search form {
+  position: relative;
+}
+
+.search form p {
+  position: absolute;
+  right: 12px;
+  top: -30px;
+}
+
 .search input {
 	width: 50%;
 	margin-left: auto !important;
+  padding: 0 36px 0 10px;
 }
 .header-nav {
     box-shadow: 0 1px 5px 1px rgba(0,0,0,.15);
@@ -206,6 +223,7 @@ ul li {
 .navbar .nav-item:last-child {
 	margin-right: 0;
 }
+
 /*header ends*/
 
 
@@ -261,13 +279,12 @@ footer {
 	text-transform: uppercase;
 }
 
-.footer-link .latest-story-card {
-	background: transparent;
-}
 
 .footer-link .latest-story-card {
 	padding: 10px 15px;
+  background: transparent;
 	height: 100%;
+  border:none;
 }
 /*footer ends*/
 
@@ -486,7 +503,7 @@ button:focus {
 }
 
 .home-main-post {
-	background: #f0f0f0;
+	background: #fff;
 	margin-top: -8px;
 }
 
@@ -591,8 +608,9 @@ button:focus {
 .latest-story-card {
 	background: #fff;
 	margin-bottom: 15px;
-    /*height: 80px;*/
-    overflow: hidden;
+  /*height: 80px;*/
+  overflow: hidden;
+  border: 1px solid var(--primary-color);
 }
 
 .latest-story-card .sub-title {
@@ -607,13 +625,13 @@ button:focus {
 
 .unhabitat-focus,
 .our-work {
-    background: #1a3667;
-    color: #fff;
-    text-align: center;
-    padding: 50px;
-    margin-bottom: 40px;
-    z-index: 3;
-    position: relative;
+  background: #1a3667;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 40px;
+  z-index: 3;
+  position: relative;
 }
 
 .focus-img {
