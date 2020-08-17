@@ -10,7 +10,7 @@
 			<img src="{{url('public/images/1.jpg')}}" class="img-fluid overlay-bg" alt="">
 		</div>
 		<div class="banner-feature">
-			<h1><a href="#">Unhabitat Covid-19 Response By Nepal</a></h1>
+			<a href="#"><h1>Unhabitat Covid-19 Response By Nepal</h1></a>
 		</div>
 	</div>
 
@@ -106,28 +106,28 @@
 							<div class="col-md-4 mb-3">
 								<div class="main-post-card ">
 									<div class="post-card-img">
-										<a href="#">
+										<a href="{{url('featured_news_detail')}}">
 											<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
 										</a>
 									</div>
 									<div class="sub-title text-center mt-2">
-										<a href="#"><h5 class="mb-0">Learning to hand wash</h5></a>
+										<a href="{{url('featured_news_detail')}}"><h5 class="mb-0">Learning to hand wash</h5></a>
 										<span class="post-date">May 12,2020</span>
 									</div>
 									<div class="content">
-										<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG</p>
+										<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG lorem</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 mb-3">
 								<div class="main-post-card ">
 									<div class="post-card-img">
-										<a href="#">
+										<a href="{{url('featured_news_detail')}}">
 											<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
 										</a>
 									</div>
 									<div class="sub-title text-center mt-2">
-										<a href="#"><h5 class="mb-0">Disseminating Message through IEC</h5></a>
+										<a href="{{url('featured_news_detail')}}"><h5 class="mb-0">Disseminating Message through IEC</h5></a>
 										<span class="post-date">May 12,2020</span>
 									</div>
 									<div class="content">
@@ -138,12 +138,12 @@
 							<div class="col-md-4 mb-3">
 								<div class="main-post-card ">
 									<div class="post-card-img">
-										<a href="#">
+										<a href="{{url('featured_news_detail')}}">
 											<img src="{{url('public/images/5.jpg')}}" class="img-fluid" alt="">
 										</a>
 									</div>
 									<div class="sub-title text-center mt-2">
-										<a href="#"><h5 class="mb-0">Preparing resilient community to fight against COVID-19</h5></a>
+										<a href="{{url('featured_news_detail')}}"><h5 class="mb-0">Preparing resilient community to fight against COVID-19</h5></a>
 										<span class="post-date">May 12,2020</span>
 									</div>
 									<div class="content">
@@ -153,7 +153,7 @@
 							</div>
 						</div>
 						<div class="view-more text-center">
-							<a href="#" class="btn btn2">View More</a>
+							<a href="{{url('featured_news')}}" class="btn btn2">View More</a>
 						</div>
 					</div>
 
@@ -165,42 +165,42 @@
 							<div class="col-md-4 mb-3">
 								<div class="main-post-card">
 									<div class="post-card-img">
-										<a href="#">
+										<a href="{{url('recent_publish_detail')}}">
 											<img src="{{url('public/images/7.png')}}" class="img-fluid" alt="">
 										</a>
 									</div>
 									<div class="sub-title text-center">
-										<a href="#"><h5 class="mb-0">Traditional Building Types of Bungamati</h5></a>
+										<a href="{{url('recent_publish_detail')}}"><h5 class="mb-0">Traditional Building Types of Bungamati</h5></a>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 mb-3">
 								<div class="main-post-card">
 									<div class="post-card-img">
-										<a href="#">
+										<a href="{{url('recent_publish_detail')}}">
 											<img src="{{url('public/images/8.jpg')}}" class="img-fluid" alt="">
 										</a>
 									</div>
 									<div class="sub-title text-center">
-										<a href="#"><h5 class="mb-0">IEC Materials for COVID-19</h5></a>
+										<a href="{{url('recent_publish_detail')}}"><h5 class="mb-0">IEC Materials for COVID-19</h5></a>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 mb-3">
 								<div class="main-post-card">
 									<div class="post-card-img">
-										<a href="#">
+										<a href="{{url('recent_publish_detail')}}">
 											<img src="{{url('public/images/17.png')}}" class="img-fluid" alt="">
 										</a>
 									</div>
 									<div class="sub-title text-center">
-										<a href="#"><h5 class="mb-0">Bunga – Abode of the Mystics</h5></a>
+										<a href="{{url('recent_publish_detail')}}"><h5 class="mb-0">Bunga – Abode of the Mystics</h5></a>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="view-more text-center">
-							<a href="#" class="btn btn2">View More</a>
+							<a href="{{url('recent_publish')}}" class="btn btn2">View More</a>
 						</div>
 					</div>
 
@@ -324,7 +324,7 @@
 							</div>
 						</div>
 						<div class="view-more text-center">
-							<a href="#" class="btn btn2">View More</a>
+							<a href="{{url('our_video')}}" class="btn btn2">View More</a>
 						</div>
 					</div>
 
@@ -443,7 +443,7 @@
 							</div>
 						</div>
 						<div class="view-more text-center">
-							<a href="#" class="btn btn2">View More</a>
+							<a href="{{url('featured_news')}}" class="btn btn2">View More</a>
 						</div>
 					</div>
 

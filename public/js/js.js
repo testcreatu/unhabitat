@@ -39,8 +39,8 @@ $('.home-card-carousel').owlCarousel({
 // sticky sidebar
 function sticky_relocate() {
     var window_top = $(window).scrollTop() ;
-    var footer_top = $(".none-sticky").offset().top -10;
-    var div_top = $('#sticky-anchor').offset().top ;
+    var footer_top = $(".none-sticky").offset().top -30;
+    var div_top = $('#sticky-anchor').offset().top;
     var div_height = $(".sidebar").height();
     var leftHeight = $('.left-container').height(); 
 

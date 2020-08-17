@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-5">
      <div class="logo">
-      <img src="{{url('public/images/logo.png')}}" class="img-fluid" alt="">
+        <a href="{{url('/')}}"><img src="{{url('public/images/logo.png')}}" class="img-fluid" alt=""></a>
     </div>
     </div>
     <div class="col-md-7 search">
@@ -26,19 +26,19 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}">
+            <li class="nav-item {{ (request()->is('home*')) ? 'active' : '' }}">
               <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About us</a>
+            <li class="nav-item {{ (request()->is('about_us*')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{url('about_us')}}">About us</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Media center
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">News</a>
-                <a class="dropdown-item" href="#">Photo</a>
+                <a class="dropdown-item {{ (request()->is('featured_news*')) ? 'active' : '' }}" href="{{url('featured_news')}}">News</a>
+                <a class="dropdown-item {{ (request()->is('images*')) ? 'active' : '' }}" href="{{url('images')}}">Photo</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -46,7 +46,7 @@
                 project
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Ongoing project</a>
+                <a href="#" class="dropdown-item">Ongoing project</a>
                 <a class="dropdown-item" href="#">Completed project</a>
               </div>
             </li>
@@ -61,13 +61,13 @@
                 publication
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Nepal publicatuon</a>
+                <a class="dropdown-item" href="{{url('recent_publish')}}">Nepal publicatuon</a>
                 <a class="dropdown-item" href="#">International publication</a>
                 <a class="dropdown-item" href="#">Flagship publication</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">video</a>
+            <li class="nav-item  {{ (request()->is('our_video*')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{url('our_video')}}">video</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">notice</a>
