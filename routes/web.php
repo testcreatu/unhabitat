@@ -54,6 +54,14 @@ Route::get('recent_publish_detail', function () {
     return view('news-detail.recent-publish-detail');
 });
 
+Route::get('notice', function () {
+    return view('notice.notice');
+});
+
+Route::get('focus_area', function () {
+    return view('focus-area.focus-area');
+});
+
 
 
 

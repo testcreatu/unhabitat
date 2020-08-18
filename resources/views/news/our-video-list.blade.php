@@ -14,12 +14,12 @@
 			<div class="col-md-4 mb-3">
 				<div class="main-post-card">
 					<div class="post-card-img">
-						<a href="#">
+						<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/DgKon3LY5mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</a>
 					</div>
 					<div class="sub-title text-center">
-						<a href="#"><h5 class="mb-0">Carving Heritage of Bungamati</h5></a>
+						<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank"><h5 class="mb-0">Carving Heritage of Bungamati</h5></a>
 					</div>
 				</div>
 			</div>
@@ -31,7 +31,7 @@
 						</a>
 					</div>
 					<div class="sub-title text-center">
-						<a href="#"><h5 class="mb-0">Nepal Lifetime Experiences Rice Planting Festival</h5></a>
+						<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank"><h5 class="mb-0">Nepal Lifetime Experiences Rice Planting Festival</h5></a>
 					</div>
 				</div>
 			</div>

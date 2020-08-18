@@ -9,6 +9,7 @@
 body {
    position: relative;
    font-family: 'Poppins', sans-serif;
+   scroll-behavior: smooth;
 }
 
 p {
@@ -252,6 +253,7 @@ ul li {
 /*footer start*/
 footer {
 	background: #373941;
+  padding: 100px 0;
 }
 
 .quick-link {
@@ -550,7 +552,7 @@ button:focus {
  border-right: 1px solid #e5e5e5;
   position: relative;
  transition: all 0.5s ease;
-  margin-top: 80px;
+  /*margin-top: 80px;*/
 }
 
 .home-main-post {
@@ -590,20 +592,21 @@ button:focus {
 	font-weight: 500;
 }
 
-.sub-title .post-date {
+.sub-title .post-date,
+.notice .post-date {
 	color: #62646a !important;
 	text-shadow: none;
 }
 
 .main-post-card {
 	background: #fff;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.5s ease;
-    border:1px solid var(--primary-color);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+  border:1px solid var(--primary-color);
 }
 
 .main-post-card .content {
@@ -775,9 +778,11 @@ button:focus {
 
 /*about start*/
 .about-page {
-  margin-top: 100px;
+  margin: 100px 0;
 }
-.about-page .left-col {
+
+.about-page .left-col,
+.notice .left-col {
   border-top: none;
   padding: 0 10px;
 }
@@ -876,8 +881,9 @@ button:focus {
 .news-post-list,
 .news-detail,
 .gallery-list,
-.publish {
-  margin-top: 100px;
+.publish,
+.notice {
+  margin: 100px 0;
 }
 
 .news-detail .left-col {
@@ -1017,7 +1023,7 @@ button:focus {
 
 .link-list {
   background: #f8f9fa;
-  padding: 20px 30px !important;
+  padding: 30px !important;
 }
 
 .link-list .sub-title h6,
@@ -1050,3 +1056,80 @@ button:focus {
   position: absolute;
   left: 0;
 }
+/*recent publush detail ends*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*notice start*/
+.notice-detail {
+  padding: 30px;
+}
+.read-more-content {
+  display: none;
+}
+
+.read-more-btn {
+  cursor: pointer;
+  margin-top: 15px;
+  color: #62646a !important;
+}
+
+.read-more-btn:hover {
+  color: var(--primary-color) !important;
+  text-decoration: underline !important;
+}
+
+.notice-detail {
+  margin-bottom: 25px;
+  border-top: 2px solid var(--primary-color);
+}
+
+.notice-detail:last-child {
+  margin-bottom: 0;
+}
+
+.notice-detail .content p {
+  margin-top: 15px;
+}
+
+.notice-detail .title h5 {
+  color: var(--primary-color) !important;
+}
+
+.notice-detail-content .share-plugin {
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  padding: 10px 0 0 0;
+}
+
+.notice-detail-content .share-plugin ul li {
+  margin-bottom: 0
+}
+
+.notice .sidebar.stick ,
+.notice .sidebar.abs {
+  width: 350px;
+  box-shadow: none;
+}
+
+.read-more-content ul {
+  padding-left: 15px !important;
+}
+
+.read-more-content ul li {
+  list-style: circle !important;
+}
+/*notice end*/
+
+
+
+

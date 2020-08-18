@@ -50,8 +50,8 @@
                 <a class="dropdown-item" href="#">Completed project</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">focus areas</a>
+            <li class="nav-item {{ (request()->is('focus_area*')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{url('focus_area')}}">focus areas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">events</a>
@@ -69,8 +69,8 @@
             <li class="nav-item  {{ (request()->is('our_video*')) ? 'active' : '' }}">
               <a class="nav-link" href="{{url('our_video')}}">video</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">notice</a>
+            <li class="nav-item {{ (request()->is('notice*')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{url('notice')}}">notice</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">covid-19 response</a>

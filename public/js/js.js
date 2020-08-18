@@ -62,3 +62,29 @@ $(function () {
     $(window).scroll(sticky_relocate);
     sticky_relocate();
 });
+
+
+
+
+// read more js
+$(document).ready(function () {
+    $(".read-more-btn").click(function () {
+        $(this).prev().slideToggle();
+        if ($(this).text() == "Read More") {
+            $(this).text("Read Less");
+        } else {
+            $(this).text("Read More");
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
