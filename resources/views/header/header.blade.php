@@ -36,35 +36,54 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Media center
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item {{ (request()->is('featured_news*')) ? 'active' : '' }}" href="{{url('featured_news')}}">News</a>
-                <a class="dropdown-item {{ (request()->is('images*')) ? 'active' : '' }}" href="{{url('images')}}">Photo</a>
-              </div>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item {{ (request()->is('featured_news*')) ? 'active' : '' }}" href="{{url('featured_news')}}">News</a></li>
+                <li><a class="dropdown-item {{ (request()->is('images*')) ? 'active' : '' }}" href="{{url('images')}}">Photo</a></li>
+              </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 project
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href="#" class="dropdown-item">Ongoing project</a>
-                <a class="dropdown-item" href="#">Completed project</a>
-              </div>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a href="#" class="dropdown-item">Ongoing project</a>
+                  <ul>
+                    <li><a href="{{url('project_detail')}}">Global Sanitation Fund Prgramme Nepal</a></li>
+                    <li><a href="{{url('project_detail')}}">Land and Global Land Tool Network(GLTN)</a></li>
+                    <li><a href="{{url('project_detail')}}">Parya Sampada</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Completed project</a>
+                  <ul>
+                    <li><a href="{{url('project_detail')}}">Water for Asian Cities Programme Nepal</a></li>
+                    <li><a href="{{url('project_detail')}}">Green Homes: Promoting Sustainable Housing in Nepal</a></li>
+                    <li><a href="{{url('project_detail')}}">Emergency Shelter Project</a></li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li class="nav-item {{ (request()->is('focus_area*')) ? 'active' : '' }}">
               <a class="nav-link" href="{{url('focus_area')}}">focus areas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">events</a>
+              <a class="nav-link" href="{{url('event')}}">events</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 publication
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="{{url('recent_publish')}}">Nepal publication</a>
+                </li>
+              </ul>
+<!--               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{url('recent_publish')}}">Nepal publicatuon</a>
                 <a class="dropdown-item" href="#">International publication</a>
                 <a class="dropdown-item" href="#">Flagship publication</a>
-              </div>
+              </div> -->
             </li>
             <li class="nav-item  {{ (request()->is('our_video*')) ? 'active' : '' }}">
               <a class="nav-link" href="{{url('our_video')}}">video</a>
@@ -72,8 +91,8 @@
             <li class="nav-item {{ (request()->is('notice*')) ? 'active' : '' }}">
               <a class="nav-link" href="{{url('notice')}}">notice</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">covid-19 response</a>
+            <li class="nav-item  {{ (request()->is('covid-19_response*')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{url('covid-19_response')}}">covid-19 response</a>
             </li>
           </ul>
         </div>

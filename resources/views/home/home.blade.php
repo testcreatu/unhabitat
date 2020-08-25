@@ -10,12 +10,87 @@
 			<img src="{{url('public/images/1.jpg')}}" class="img-fluid overlay-bg" alt="">
 		</div>
 		<div class="banner-feature">
-			<a href="#"><h1>Unhabitat Covid-19 Response By Nepal</h1></a>
+			<a href="{{url('covid-19_response')}}"><h1>Unhabitat Covid-19 Response By Nepal</h1></a>
 		</div>
 	</div>
 
 	<div class="container-fluid p-0">
 		<div class="owl-carousel owl-theme home-card-carousel">
+			<div class="item">
+				<a href="#" class="carousel-card">
+					<div class="carousel-news">
+						<div class="carousel-news-img overlay-bg">
+							<img src="{{url('public/images/2.jpg')}}" class="img-fluid overlay-bg" alt="">
+						</div>
+						<div class="caroursel-news-title text-center">
+							<div class="title">
+								<h4>Practicing hand hygiene</h4>
+							</div>
+							<span class="post-date">May 12,2020</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#" class="carousel-card">
+					<div class="carousel-news">
+						<div class="carousel-news-img overlay-bg">
+							<img src="{{url('public/images/3.jpg')}}" class="img-fluid overlay-bg" alt="">
+						</div>
+						<div class="caroursel-news-title text-center">
+							<div class="title">
+								<h4>Learning to hand wash</h4>
+							</div>
+							<span class="post-date">May 12,2020</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#" class="carousel-card">
+					<div class="carousel-news">
+						<div class="carousel-news-img overlay-bg">
+							<img src="{{url('public/images/4.png')}}" class="img-fluid overlay-bg" alt="">
+						</div>
+						<div class="caroursel-news-title text-center">
+							<div class="title">
+								<h4>Disseminating Message through IEC</h4>
+							</div>
+							<span class="post-date">May 12,2020</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#" class="carousel-card">
+					<div class="carousel-news">
+						<div class="carousel-news-img overlay-bg">
+							<img src="{{url('public/images/5.jpg')}}" class="img-fluid overlay-bg" alt="">
+						</div>
+						<div class="caroursel-news-title text-center">
+							<div class="title">
+								<h4>Preparing resilient community to fight against COVID-19</h4>
+							</div>
+							<span class="post-date">May 12,2020</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#" class="carousel-card">
+					<div class="carousel-news">
+						<div class="carousel-news-img overlay-bg">
+							<img src="{{url('public/images/6.jpeg')}}" class="img-fluid overlay-bg" alt="">
+						</div>
+						<div class="caroursel-news-title text-center">
+							<div class="title">
+								<h4>Grant Project in Nepal mobilises Bungamati Community to produce Protective Face Masks</h4>
+							</div>
+							<span class="post-date">May 12,2020</span>
+						</div>
+					</div>
+				</a>
+			</div>
 			<div class="item">
 				<a href="#" class="carousel-card">
 					<div class="carousel-news">

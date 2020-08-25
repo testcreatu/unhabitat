@@ -15,7 +15,8 @@
 				<div class="main-post-card">
 					<div class="post-card-img">
 						<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/DgKon3LY5mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<img src="https://img.youtube.com/vi/lfCy78dbcYA/sddefault.jpg">
+							<!-- <iframe width="560" height="315" target="_blank" src="https://www.youtube.com/embed/DgKon3LY5mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 						</a>
 					</div>
 					<div class="sub-title text-center">
@@ -26,8 +27,8 @@
 			<div class="col-md-4 mb-3">
 				<div class="main-post-card">
 					<div class="post-card-img">
-						<a href="#">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/NaUSfPDrxqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<a href="#" target="_blank">
+							<iframe width="560" height="315" target="_blank" src="https://www.youtube.com/embed/NaUSfPDrxqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</a>
 					</div>
 					<div class="sub-title text-center">

@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3 left-container">
-				<div class="left-col box-shadow" id="sticky-anchor">
+				<div class="left-col box-shadow">
 					<ul class="sidebar">
 						<li class="{{ (request()->is('about_us*')) ? 'active' : '' }}">
 							<a href="#">About us</a>

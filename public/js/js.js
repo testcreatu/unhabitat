@@ -17,9 +17,11 @@ window.onscroll = function(e) {
 
 
 $('.home-card-carousel').owlCarousel({
-    loop:true,
+    loop:false,
     margin:10,
     nav:true,
+    items:1,
+    rewind: true,
     responsive:{
         0:{
             items:1
@@ -80,6 +82,25 @@ $(document).ready(function () {
 
 
 
+
+$('.publication-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:true,
+    items:1,
+    rewind: true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2
+        }
+    }
+})
 
 
 
