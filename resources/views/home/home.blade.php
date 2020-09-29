@@ -14,7 +14,10 @@
 		</div>
 	</div>
 
-	<div class="container-fluid p-0">
+	<div class="container p-0 ma-t">
+		<div class="container-title">
+			<h3>Trending Now</h3>
+		</div>
 		<div class="owl-carousel owl-theme home-card-carousel">
 			<div class="item">
 				<a href="#" class="carousel-card">
@@ -171,115 +174,206 @@
 
 	<div class="home-main-post pa-tb">
 		<div class="container">
-			<div class="row">
+			<div class="row no-gutters">
 				<div class="col-md-12 left-container">
-					<div class="left-col featured-post box-shadow">
-						<div class="title text-center">
-							<h6 class="m-0">Featured News</h6>
+					<!-- featured post -->
+					<div class="featured-post">
+						<div class="container-title">
+							<h3>Featured News</h3>
 						</div>
+						<!-- <div class="title text-center">
+							<h6 class="m-0">Featured News</h6>
+						</div> -->
 						<div class="row p-3 mt-3">
 							<div class="col-md-4 mb-3">
-								<div class="main-post-card ">
-									<div class="post-card-img">
-										<a href="{{url('featured_news_detail')}}">
+								<a href="{{url('featured_news_detail')}}">
+									<div class="main-post-card ">
+										<div class="post-card-img">
 											<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
-										</a>
+										</div>
+										<div class="post-card-content">
+											<div class="sub-title text-center mt-2">
+												<h5 class="mb-0">Learning to hand wash</h5>
+												<span class="post-date">May 12,2020</span>
+											</div>
+											<div class="content">
+												<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG lorem</p>
+											</div>
+										</div>
 									</div>
-									<div class="sub-title text-center mt-2">
-										<a href="{{url('featured_news_detail')}}"><h5 class="mb-0">Learning to hand wash</h5></a>
-										<span class="post-date">May 12,2020</span>
-									</div>
-									<div class="content">
-										<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG lorem</p>
-									</div>
-								</div>
+								</a>
 							</div>
 							<div class="col-md-4 mb-3">
-								<div class="main-post-card ">
-									<div class="post-card-img">
-										<a href="{{url('featured_news_detail')}}">
-											<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
-										</a>
+								<a href="{{url('featured_news_detail')}}">
+									<div class="main-post-card ">
+										<div class="post-card-img">
+											
+												<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
+										</div>
+										<div class="post-card-content">
+											<div class="sub-title text-center mt-2">
+												<h5 class="mb-0">Disseminating Message through IEC</h5>
+												<span class="post-date">May 12,2020</span>
+											</div>
+											<div class="content">
+												<p>UN Habitat Nepal disseminates the message on essence of Hand Washing and major indicators of total sanitation targeting to people from GSF program.</p>
+											</div>
+										</div>
 									</div>
-									<div class="sub-title text-center mt-2">
-										<a href="{{url('featured_news_detail')}}"><h5 class="mb-0">Disseminating Message through IEC</h5></a>
-										<span class="post-date">May 12,2020</span>
-									</div>
-									<div class="content">
-										<p>UN Habitat Nepal disseminates the message on essence of Hand Washing and major indicators of total sanitation targeting to people from GSF program.</p>
-									</div>
-								</div>
+								</a>
 							</div>
 							<div class="col-md-4 mb-3">
-								<div class="main-post-card ">
-									<div class="post-card-img">
-										<a href="{{url('featured_news_detail')}}">
+								<a href="{{url('featured_news_detail')}}">
+									<div class="main-post-card ">
+										<div class="post-card-img">
 											<img src="{{url('public/images/5.jpg')}}" class="img-fluid" alt="">
-										</a>
+										</div>
+										<div class="post-card-content">
+											<div class="sub-title text-center mt-2">
+												<h5 class="mb-0">Preparing resilient community to fight against COVID-19</h5>
+												<span class="post-date">May 12,2020</span>
+											</div>
+											<div class="content">
+												<p>In a wake against COVID-19 havoc, communities across Nepal are suffering from shortage of hand sanitizer. All the shelf of super market and shops are.</p>
+											</div>
+										</div>
 									</div>
-									<div class="sub-title text-center mt-2">
-										<a href="{{url('featured_news_detail')}}"><h5 class="mb-0">Preparing resilient community to fight against COVID-19</h5></a>
-										<span class="post-date">May 12,2020</span>
-									</div>
-									<div class="content">
-										<p>In a wake against COVID-19 havoc, communities across Nepal are suffering from shortage of hand sanitizer. All the shelf of super market and shops are.</p>
-									</div>
-								</div>
+								</a>
 							</div>
 						</div>
 						<div class="view-more text-center">
 							<a href="{{url('featured_news')}}" class="btn btn2">View More</a>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-					<div class="left-col recent-publish box-shadow">
-						<div class="title text-center">
-							<h6 class="m-0">Recent Publication</h6>
-						</div>
-						<div class="row p-3 mt-3">
-							<div class="col-md-4 mb-3">
-								<div class="main-post-card">
-									<div class="post-card-img">
-										<a href="{{url('recent_publish_detail')}}">
+	<div class="home-main-post ma-t">
+		<div class="container">
+			<!-- recent publish -->
+			<div class="recent-publish ma-t">
+				<div class="container-title">
+					<h3>Recent Publication</h3>
+				</div>
+				<div class="row p-3 mt-3">
+					<div class="col-md-3 mb-3">
+						<div class="row">
+							<div class="col-md-12 p-0 mb-1">
+								<a href="{{url('recent_publish_detail')}}">
+									<div class="main-post-card">
+										<div class="post-card-img half-post-card-img">
 											<img src="{{url('public/images/7.png')}}" class="img-fluid" alt="">
-										</a>
+										</div>
+										<div class="post-card-content">
+											<div class="sub-title text-center">
+												<h5 class="mb-0">Title goes here</h5>
+											</div>
+										</div>
 									</div>
-									<div class="sub-title text-center">
-										<a href="{{url('recent_publish_detail')}}"><h5 class="mb-0">Traditional Building Types of Bungamati</h5></a>
-									</div>
-								</div>
+								</a>
 							</div>
-							<div class="col-md-4 mb-3">
-								<div class="main-post-card">
-									<div class="post-card-img">
-										<a href="{{url('recent_publish_detail')}}">
+							<div class="col-md-12 p-0">
+								<a href="{{url('recent_publish_detail')}}">
+									<div class="main-post-card">
+										<div class="post-card-img half-post-card-img">
 											<img src="{{url('public/images/8.jpg')}}" class="img-fluid" alt="">
-										</a>
+										</div>
+										<div class="post-card-content">
+											<div class="sub-title text-center">
+												<h5 class="mb-0">Title goes here</h5>
+											</div>
+										</div>
 									</div>
-									<div class="sub-title text-center">
-										<a href="{{url('recent_publish_detail')}}"><h5 class="mb-0">IEC Materials for COVID-19</h5></a>
-									</div>
-								</div>
+								</a>
 							</div>
-							<div class="col-md-4 mb-3">
-								<div class="main-post-card">
-									<div class="post-card-img">
-										<a href="{{url('recent_publish_detail')}}">
-											<img src="{{url('public/images/17.png')}}" class="img-fluid" alt="">
-										</a>
-									</div>
-									<div class="sub-title text-center">
-										<a href="{{url('recent_publish_detail')}}"><h5 class="mb-0">Bunga – Abode of the Mystics</h5></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="view-more text-center">
-							<a href="{{url('recent_publish')}}" class="btn btn2">View More</a>
 						</div>
 					</div>
+					<div class="col-md-6 p-0 pl-1 pr-1">
+						<a href="{{url('recent_publish_detail')}}">
+							<div class="main-post-card">
+								<div class="post-card-img full-post-card-img">
+									<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
+								</div>
+								<div class="post-card-content">
+									<div class="sub-title text-center">
+										<h5 class="mb-0">Traditional Building Types of Bungamati</h5>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 mb-3">
+						<div class="row">
+							<div class="col-md-12 p-0 mb-1">
+								<a href="{{url('recent_publish_detail')}}">
+									<div class="main-post-card">
+										<div class="post-card-img half-post-card-img">
+											<img src="{{url('public/images/16.png')}}" class="img-fluid" alt="">
+										</div>
+										<div class="post-card-content">
+											<div class="sub-title text-center">
+												<h5 class="mb-0">Title goes here</h5>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-12 p-0">
+								<a href="{{url('recent_publish_detail')}}">
+									<div class="main-post-card">
+										<div class="post-card-img half-post-card-img">
+											<img src="{{url('public/images/17.png')}}" class="img-fluid" alt="">
+										</div>
+										<div class="post-card-content">
+											<div class="sub-title text-center">
+												<h5 class="mb-0">Title goes here</h5>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>	
+					<!-- <div class="col-md-4 mb-3">
+						<div class="main-post-card">
+							<div class="post-card-img">
+								<a href="{{url('recent_publish_detail')}}">
+									<img src="{{url('public/images/8.jpg')}}" class="img-fluid" alt="">
+								</a>
+							</div>
+							<div class="sub-title text-center">
+								<a href="{{url('recent_publish_detail')}}"><h5 class="mb-0">IEC Materials for COVID-19</h5></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 mb-3">
+						<div class="main-post-card">
+							<div class="post-card-img">
+								<a href="{{url('recent_publish_detail')}}">
+									<img src="{{url('public/images/17.png')}}" class="img-fluid" alt="">
+								</a>
+							</div>
+							<div class="sub-title text-center">
+								<a href="{{url('recent_publish_detail')}}"><h5 class="mb-0">Bunga – Abode of the Mystics</h5></a>
+							</div>
+						</div>
+					</div> -->
+				</div>
+				<div class="view-more text-center">
+					<a href="{{url('recent_publish')}}" class="btn btn2">View More</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-					<div class="unhabitat-focus">
+	<div class="home-main-post pa-tb">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-md-12 left-container">
+					<!-- foucs quote -->
+					<div class="unhabitat-focus ma-t">
 						<div class="title">
 							<h4>A new focus for UN-Habitat</h4>
 						</div>
@@ -330,7 +424,50 @@
 						</div>
 					</div>
 
-					<div class="gif-post p-3">
+					<!-- sustainable development -->
+					<div class="gif-post">
+						<div class="container-title">
+							<h3>Sustainable Development Goals</h3>
+						</div>
+						<div class="row mt-4">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="gif-post-img">
+											<div class="column">
+												<img src="{{url('public/images/9.gif')}}" class="img-fluid" alt="" onclick="myFunction(this);">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="gif-post-img">
+											<div class="column">
+												<img src="{{url('public/images/10.gif')}}" class="img-fluid" alt="" onclick="myFunction(this);">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="gif-post-img">
+											<div class="column">
+												<img src="{{url('public/images/11.gif')}}" class="img-fluid" alt="" onclick="myFunction(this);">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<!-- Close the image -->
+								<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+								<!-- Expanded image -->
+								<img id="expandedImg" class="tab-img" style="width: 100%;height: 350px;">
+
+								<!-- Image text -->
+								<div id="imgtext">Cick the image to view</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="gif-post p-3">
 						<div class="row">
 							<div class="col-md-4">
 								<div class="gif-post-img">
@@ -354,61 +491,116 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
-					<div class="left-col recent-publish recent-video box-shadow">
-						<div class="title text-center">
-							<h6 class="m-0">Recent Videos</h6>
+					<div class="container p-0 ma-t">
+						<div class="container-title">
+							<h3>Recent Video</h3>
 						</div>
-						<div class="row p-3 mt-3">
-							<div class="col-md-4 mb-3">
-								<div class="main-post-card">
-									<div class="post-card-img">
-										<a href="#">
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/DgKon3LY5mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<div class="owl-carousel owl-theme home-card-carousel">
+							<div class="item">
+								<div class="video-card">
+									<div class="video-card-img">
+										<a href="https://www.youtube.com/embed/dFsK-G5NSNU" target="_blank">
+											<img src="https://img.youtube.com/vi/dFsK-G5NSNU/sddefault.jpg">
 										</a>
 									</div>
-									<div class="sub-title text-center">
-										<a href="#"><h5 class="mb-0">Carving Heritage of Bungamati</h5></a>
+									<div class="video-card-title">
+										<h6>COVID PROOFING: Reinventing Tranquility in Community</h6>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4 mb-3">
-								<div class="main-post-card">
-									<div class="post-card-img">
-										<a href="#">
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/NaUSfPDrxqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<div class="item">
+								<div class="video-card">
+									<div class="video-card-img">
+										<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank">
+											<img src="https://img.youtube.com/vi/DgKon3LY5mk/sddefault.jpg">
 										</a>
 									</div>
-									<div class="sub-title text-center">
-										<a href="#"><h5 class="mb-0">Nepal Lifetime Experiences Rice Planting Festival</h5></a>
+									<div class="video-card-title">
+										<h6>Carving Heritage of Bungamati</h6>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4 mb-3">
-								<div class="main-post-card">
-									<div class="post-card-img">
-										<a href="#">
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/03HwRyK3JTg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-										</a>
-									</div>
-									<div class="sub-title text-center">
-										<a href="#"><h5 class="mb-0">Kumari: Living Goddess of Bungamati</h5></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="view-more text-center">
-							<a href="{{url('our_video')}}" class="btn btn2">View More</a>
 						</div>
 					</div>
 
-					<div class="left-col recent-publish latest-story box-shadow">
-						<div class="title text-center">
-							<h6 class="m-0">Latest Stories</h6>
-						</div>
+
+					<!-- latest story -->
+					<div class="recent-publish latest-story ma-t">
+						
 						<div class="row p-3">
+							<div class="col-md-8">
+								<div class="container-title">
+									<h3>Latest Stories</h3>
+								</div>
+								<div class="lastest-story-card mb-4 mt-4">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="popular-post-img story-card-img">
+												<a href="#">
+													<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
+												</a>
+											</div>
+										</div>
+										<div class="col-md-8">
+											<div class="story-card-content">
+												<div class="sub-title">
+													<a href="#"><h6 class="mb-0">Practicing hand hygiene</h6></a>
+												</div>
+												<div class="meta-data">
+													<span>12 May 2020</span> <span>By: Admin</span>
+												</div>
+												<div class="content">
+													<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG, Arghakhanchi.</p>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="lastest-story-card">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="popular-post-img story-card-img">
+												<a href="#">
+													<img src="{{url('public/images/6.jpeg')}}" class="img-fluid" alt="">
+												</a>
+											</div>
+										</div>
+										<div class="col-md-8">
+											<div class="story-card-content">
+												<div class="sub-title">
+													<a href="#"><h6 class="mb-0">Learning to hand wash</h6></a>
+												</div>
+												<div class="meta-data">
+													<span>12 May 2020</span> <span>By: Admin</span>
+												</div>
+												<div class="content">
+													<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG, Arghakhanchi.
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+							</div>
 							<div class="col-md-4">
+								<div class="container-title">
+									<h3>Notice</h3>
+								</div>
+								<div class="sidebar">
+									<div class="link-list mt-4">
+										<div class="sub-title">
+											<h6>Notice</h6>
+										</div>
+										<ul class="">
+											<li><a href="http://localhost/creatu/unhabitat/notice">Call for Proposal (CFP)</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="col-md-4">
 								<div class="latest-story-card">
 									<div class="row">
 										<div class="col-5 col-sm-5 col-md-5">
@@ -515,14 +707,11 @@
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="view-more text-center">
-							<a href="{{url('featured_news')}}" class="btn btn2">View More</a>
+							</div> -->
 						</div>
 					</div>
 
-					<div class="our-work box-shadow">
+					<div class="our-work box-shadow ma-t">
 						<div class="title">
 							<h4>Our Work</h4>
 						</div>
@@ -551,79 +740,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="col-md-4">
-					<div class="right-col" id="sticky-anchor">
-						<div class="sidebar box-shadow">
-							<div class="popular-post">
-								<div class="title box-shadow text-center">
-									<h6 class="m-0">Popular News</h6>
-								</div>
-								<div class="row p-3">
-									<div class="col-5 col-sm-5 col-md-5">
-										<div class="popular-post-img">
-											<a href="#">
-												<img src="{{url('public/images/5.jpg')}}" class="img-fluid" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="col-7 col-sm-7 col-md-7">
-										<div class="sub-title">
-											<a href="#"><h6>Preparing resilient community to fight against COVID-19</h6></a>
-										</div>
-									</div>
-								</div>
-								<hr>
-								<div class="row p-3">
-									<div class="col-5 col-sm-5 col-md-5">
-										<div class="popular-post-img">
-											<a href="#">
-												<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="col-7 col-sm-7 col-md-7">
-										<div class="sub-title">
-											<a href="#"><h6>Practicing hand hygiene</h6></a>
-										</div>
-									</div>
-								</div>
-								<hr>
-								<div class="row p-3">
-									<div class="col-5 col-sm-5 col-md-5">
-										<div class="popular-post-img">
-											<a href="#">
-												<img src="{{url('public/images/6.jpeg')}}" class="img-fluid" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="col-7 col-sm-7 col-md-7">
-										<div class="sub-title">
-											<a href="#"><h6>Grant Project in Nepal mobilises Bungamati Community to produce Protective Face Masks</h6></a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<hr>
-							<div class="gif-post p-3">
-								<div class="gif-post-img">
-									<a href="https://sustainabledevelopment.un.org/">
-										<img src="{{url('public/images/9.gif')}}" class="img-fluid" alt="">
-									</a>
-								</div>
-								<div class="gif-post-img">
-									<a href="#">
-										<img src="{{url('public/images/10.gif')}}" class="img-fluid" alt="">
-									</a>
-								</div>
-								<div class="gif-post-img">
-									<a href="#">
-										<img src="{{url('public/images/11.gif')}}" class="img-fluid" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
 			</div>
 		</div>
 	</div>

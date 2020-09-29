@@ -1,25 +1,74 @@
-var topNav = document.getElementById("topNav"),
-  stop = topNav.offsetTop,
-  docBody = document.documentElement || document.body.parentNode || document.body,
-  hasOffset = window.pageYOffset !== undefined,
-  scrollTop;
+// var topNav = document.getElementById("topNav"),
+//   stop = topNav.offsetTop,
+//   docBody = document.documentElement || document.body.parentNode || document.body,
+//   hasOffset = window.pageYOffset !== undefined,
+//   scrollTop;
 
-window.onscroll = function(e) {
-  scrollTop = hasOffset ? window.pageYOffset : docBody.scrollTop;
-  if (scrollTop >= stop) {
-    topNav.className = 'sticky-nav';
-  } else {
-    topNav.className = '';
-  }
+// window.onscroll = function(e) {
+//   scrollTop = hasOffset ? window.pageYOffset : docBody.scrollTop;
+//   if (scrollTop >= stop) {
+//     topNav.className = 'sticky-nav';
+//   } else {
+//     topNav.className = '';
+//   }
+// }
+
+
+// $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
+// if ($('.smart-scroll').length > 0) {
+//     var last_scroll_top = 0;
+//     $(window).on('scroll', function() {
+//         scroll_top = $(this).scrollTop();
+//         if(scroll_top < last_scroll_top) {
+//             $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+//         }
+//         else {
+//             $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+//         }
+//         last_scroll_top = scroll_top;
+//     });
+// }
+
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollpos = window.pageYOffset;
+  if(prevScrollpos > currentScrollpos) {
+    document.getElementById("navbar").style.top = "0px";
+} else {
+    document.getElementById("navbar").style.top = "-180px";
 }
+prevScrollpos = currentScrollpos;
+}
+
+
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('.scroll-top').fadeIn();
+    } else {
+      $('.scroll-top').fadeOut();
+    }
+  });
+
+  $('.scroll-top').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 100);
+      return false;
+  });
+
+});
 
 
 
 
 $('.home-card-carousel').owlCarousel({
     loop:false,
-    margin:10,
+    margin:15,
     nav:true,
+    dots:false,
     items:1,
     rewind: true,
     responsive:{
@@ -30,7 +79,7 @@ $('.home-card-carousel').owlCarousel({
             items:3
         },
         1000:{
-            items:5
+            items:4
         }
     }
 })
@@ -107,5 +156,16 @@ $('.publication-carousel').owlCarousel({
 
 
 
-
+function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}
 

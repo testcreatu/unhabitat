@@ -62,10 +62,12 @@
 					<div class="title text-center">
 						<h5 class="mb-0">Video Of the day</h5>
 					</div>
-					<div class="post-card-img">
-						<a href="#">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/DgKon3LY5mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-						</a>
+					<div class="video-card">
+						<div class="video-card-img">
+							<a href="https://www.youtube.com/embed/dFsK-G5NSNU" target="_blank">
+								<img src="https://img.youtube.com/vi/dFsK-G5NSNU/sddefault.jpg">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -16,7 +16,6 @@
 					<div class="post-card-img">
 						<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank">
 							<img src="https://img.youtube.com/vi/lfCy78dbcYA/sddefault.jpg">
-							<!-- <iframe width="560" height="315" target="_blank" src="https://www.youtube.com/embed/DgKon3LY5mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 						</a>
 					</div>
 					<div class="sub-title text-center">
