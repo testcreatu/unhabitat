@@ -5,18 +5,27 @@
 @section('content')
 
 <div class="news-detail">
-	<div class="container">
-		<div class="row">
+	<div class="banner">
+		<div class="banner-image overlay-bg">
+			<img src="{{url('public/images/1.jpg')}}" class="img-fluid overlay-bg" alt="">
+		</div>
+		<div class="banner-feature">
+			<a href="{{url('covid-19_response')}}"><h1>Unhabitat Covid-19 Response By Nepal</h1></a>
+		</div>
+	</div>
+	<div class="container ma-t">
+		<div class="row mb-4">
 			<div class="col-md-9">
-				<div class="news-detail-post box-shadow">
+				<div class="news-detail-post">
+					<div class="title text-center mb-4">
+						<h4 class="mb-0">Learning to hand wash</h4>
+						<span class="post-date">May 12,2020</span>
+					</div>
 					<div class="news-detail-post-img">
 						<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
 					</div>
 					<div class="content mt-2">
-						<div class="title">
-							<h4 class="mb-0">Learning to hand wash</h4>
-							<span class="post-date">May 12,2020</span>
-						</div>
+						
 						<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG, Arghakhanchi.</p>
 					</div>
 					<div class="share-plugin mt-3">
@@ -31,10 +40,17 @@
 							</li>
 						</ul>
 					</div>
+					<hr>
+					<div class="facebook-comment">
+						<div id="fb-root"></div>
+							<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=706653159797806&autoLogAppEvents=1" nonce="ge0FdjvM"></script>
+
+							<div class="fb-comments" data-href="{{url()->current()}}" data-numposts="5" data-width="100%"></div>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-3">
-				<!-- <div class="popular-post">
+				<div class="popular-post">
 					<div class="title text-center">
 						<h6 class="mb-3">Popular News</h6>
 					</div>
@@ -80,7 +96,7 @@
 							</div>
 						</div>
 					</div>
-				</div> -->
+				</div>
 				<div class="gif-post">
 					<div class="gif-post-img">
 						<a href="https://sustainabledevelopment.un.org/">

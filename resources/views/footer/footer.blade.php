@@ -1,4 +1,103 @@
-<footer class="none-sticky">
+<footer class="pa-tb">
+	<div class="container">
+		<div class="footer-logo">
+			<a class="navbar-brand" href="{{url('/')}}">
+				<div class="logo">
+					<img src="{{url('public/images/logo-1.png')}}" class="img-fluid" alt="">
+				</div>
+			</a>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+				<section class="footer-quick-link">
+					<h2>About us</h2>
+					<ul>
+						<li>
+							<a href="#">Overview</a>
+						</li>
+						<li>
+							<a href="#">Where we are</a>
+						</li>
+						<li>
+							<a href="#">Mandate</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+				<section class="footer-quick-link">
+					<h2>Project</h2>
+					<ul>
+						<li>
+							<a href="#">National</a>
+						</li>
+						<li>
+							<a href="#">International</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+				<section class="footer-quick-link">
+					<h2>Media Center</h2>
+					<ul>
+						<li>
+							<a href="#">New Stories</a>
+						</li>
+						<li>
+							<a href="#">Gallery</a>
+						</li>
+						<li>
+							<a href="#">Videos</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+				<section class="footer-quick-link">
+					<h2>Connect</h2>
+					<ul class="footer-social-link">
+						<li>
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+					</ul>
+				</section>
+				<section class="footer-subscribe text-center">
+					<h5>Stay updated on sustainable urbanization</h5>
+					<form>
+						<div class="form-group mb-2">
+							<input type="email" class="form-control"  placeholder="Email Address">
+						</div>
+						<button type="submit" class="btn btn2">Submit</button>
+					</form>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div class="copyright text-center">
+		<div class="container">
+			<div class="content">
+				<p>Copyright © {{date('Y')}} UN-Habitat Nepal</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+<!-- <footer class="none-sticky">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
@@ -73,12 +172,12 @@
 			</div>
 		</div>
 	</div>
-</footer>
+</footer> -->
 
-<div class="copyright text-center">
+<!-- <div class="copyright text-center">
 	<div class="container">
 		<div class="content">
 			<p>Copyright © {{date('Y')}} UN-Habitat Nepal</p>
 		</div>
 	</div>
-</div>
+</div> -->

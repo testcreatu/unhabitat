@@ -71,6 +71,7 @@ $('.home-card-carousel').owlCarousel({
     dots:false,
     items:1,
     rewind: true,
+    autoplay:true,
     responsive:{
         0:{
             items:1
@@ -168,4 +169,17 @@ function myFunction(imgs) {
   // Show the container element (hidden with CSS)
   expandImg.parentElement.style.display = "block";
 }
+
+
+
+
+
+
+// thumb hover effect
+var view = function(e){
+    $(".preview").html( $("<img>").attr("src", $(e.target).attr("rel")) );
+};
+
+$("img.zoom").mouseover(view);
+view({target: $("img.zoom")[0]});
 
