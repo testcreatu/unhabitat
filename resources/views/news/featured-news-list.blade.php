@@ -5,9 +5,29 @@
 @section('content')
 
 <div class="news-post-list">
-	<div class="container">
-		<div class="title text-center mb-4">
-			<h2 class="m-0">Featured News</h2>
+	<div class="banner">
+		<div class="banner-image overlay-bg">
+			<img src="{{url('public/images/36.jpg')}}" class="img-fluid overlay-bg" alt="">
+		</div>
+		<div class="banner-feature">
+			<div class="banner-title">
+				<h2>About Us</h2>
+			</div>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb text-center">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Featured News List</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<div class="container ma-t ma-b">
+		<div class="container-title">
+			<h3>
+				<span>
+					Featured News
+				</span>
+			</h3>
 		</div>
 
 		<div class="row">
@@ -20,7 +40,6 @@
 						<div class="post-card-content">
 							<div class="sub-title text-center mt-2">
 								<h5 class="mb-0">Preparing resilient community to fight against COVID-19</h5>
-								<span class="post-date">May 12,2020</span>
 							</div>
 							<div class="content">
 								<p>In a wake against COVID-19 havoc, communities across Nepal are suffering from shortage of hand sanitizer. All the shelf of super market and shops are.</p>
@@ -38,7 +57,6 @@
 						<div class="post-card-content">
 							<div class="sub-title text-center mt-2">
 								<h5 class="mb-0">Learning to hand wash</h5>
-								<span class="post-date">May 12,2020</span>
 							</div>
 							<div class="content">
 								<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG lorem</p>
@@ -57,7 +75,6 @@
 						<div class="post-card-content">
 							<div class="sub-title text-center mt-2">
 								<a href="{{url('featured_news_detail')}}"><h5 class="mb-0">Disseminating Message through IEC</h5></a>
-								<span class="post-date">May 12,2020</span>
 							</div>
 							<div class="content">
 								<p>UN Habitat Nepal disseminates the message on essence of Hand Washing and major indicators of total sanitation targeting to people from GSF program.</p>

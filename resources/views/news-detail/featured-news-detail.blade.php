@@ -10,12 +10,20 @@
 			<img src="{{url('public/images/1.jpg')}}" class="img-fluid overlay-bg" alt="">
 		</div>
 		<div class="banner-feature">
-			<a href="{{url('covid-19_response')}}"><h1>Unhabitat Covid-19 Response By Nepal</h1></a>
+			<div class="banner-title">
+				<h2>About Us</h2>
+			</div>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb text-center">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Featurd News</li>
+				</ol>
+			</nav>
 		</div>
 	</div>
 	<div class="container ma-t">
 		<div class="row mb-4">
-			<div class="col-md-9">
+			<div class="col-md-8">
 				<div class="news-detail-post">
 					<div class="title text-center mb-4">
 						<h4 class="mb-0">Learning to hand wash</h4>
@@ -48,11 +56,32 @@
 							<div class="fb-comments" data-href="{{url()->current()}}" data-numposts="5" data-width="100%"></div>
 					</div>
 				</div>
+				<!-- <div class="related-news">
+					<div class="container-title">
+						<h3>
+							<span>Related News</span>
+						</h3>
+					</div>
+					<div class="owl-carousel owl-theme home-card-carousel">
+						<div class="item">
+							<a href="{{url('featured_news_detail')}}">	
+								<div class="related-news-card">
+									<div class="related-news-img">
+										<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
+									</div>
+									<div class="content text-center mt-3">
+										<h6>Practicing hand hygiene</h6>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div> -->
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-4">
 				<div class="popular-post">
 					<div class="title text-center">
-						<h6 class="mb-3">Popular News</h6>
+						<h6 class="mb-3">Most viewed</h6>
 					</div>
 					<div class="row popular-post-list">
 						<div class="col-5 col-sm-5 col-md-5">
@@ -97,7 +126,60 @@
 						</div>
 					</div>
 				</div>
-				<div class="gif-post">
+
+				<div class="popular-post mt-4">
+					<div class="title text-center">
+						<h6 class="mb-3">Notice</h6>
+					</div>
+					<div class="sidebar">
+						<div class="link-list mt-4">
+							<ul class="">
+								<li><a href="{{url('notice')}}">Call for Proposal (CFP)</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="popular-post mt-4">
+					<div class="title text-center">
+						<h6 class="mb-3">Related News</h6>
+					</div>
+					<a href="{{url('featured_news_detail')}}">
+						<div class="row popular-post-list">
+							<div class="col-5 col-sm-5 col-md-5">
+								<div class="popular-post-img">
+									<a href="#">
+										<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="col-7 col-sm-7 col-md-7">
+								<div class="sub-title">
+									<a href="#"><h6>Practicing hand hygiene</h6></a>
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="{{url('featured_news_detail')}}">
+						<div class="row popular-post-list">
+							<div class="col-5 col-sm-5 col-md-5">
+								<div class="popular-post-img">
+									<a href="#">
+										<img src="{{url('public/images/6.jpeg')}}" class="img-fluid" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="col-7 col-sm-7 col-md-7">
+								<div class="sub-title">
+									<a href="#"><h6>Grant Project in Nepal mobilises Bungamati Community to produce Protective Face Masks </h6></a>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				
+				<!-- <div class="gif-post">
 					<div class="gif-post-img">
 						<a href="https://sustainabledevelopment.un.org/">
 							<img src="{{url('public/images/9.gif')}}" class="img-fluid" alt="">
@@ -113,7 +195,7 @@
 							<img src="{{url('public/images/11.gif')}}" class="img-fluid" alt="">
 						</a>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

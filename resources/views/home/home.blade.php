@@ -8,10 +8,10 @@
 	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item carousel-img active">
-				<img class="d-block w-100" src="{{url('public/images/1.jpg')}}" alt="First slide">
+				<img class="d-block w-100" src="{{url('public/images/37.jpg')}}" alt="First slide">
 			</div>
 			<div class="carousel-item carousel-img">
-				<img class="d-block w-100" src="{{url('public/images/36.jpg')}}" alt="Second slide">
+				<img class="d-block w-100" src="{{url('public/images/38.jpg')}}" alt="Second slide">
 			</div>
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -33,7 +33,7 @@
 	</div> -->
 
 	<!-- trending now -->
-	<div class="container ma-t">
+	<div class="container ma-t ma-b">
 		<div class="container-title">
 			<h3>
 				<span>Trending Now</span>
@@ -41,7 +41,7 @@
 		</div>
 		<div class="owl-carousel owl-theme home-card-carousel">
 			<div class="item">
-				<a href="#" class="carousel-card">
+				<a href="{{url('featured_news_detail')}}" class="carousel-card">
 					<div class="carousel-news">
 						<div class="carousel-news-img overlay-bg">
 							<img src="{{url('public/images/2.jpg')}}" class="img-fluid overlay-bg" alt="">
@@ -50,13 +50,12 @@
 							<div class="title">
 								<h4>Practicing hand hygiene</h4>
 							</div>
-							<span class="post-date">May 12,2020</span>
 						</div>
 					</div>
 				</a>
 			</div>
 			<div class="item">
-				<a href="#" class="carousel-card">
+				<a href="{{url('featured_news_detail')}}" class="carousel-card">
 					<div class="carousel-news">
 						<div class="carousel-news-img overlay-bg">
 							<img src="{{url('public/images/3.jpg')}}" class="img-fluid overlay-bg" alt="">
@@ -65,13 +64,12 @@
 							<div class="title">
 								<h4>Learning to hand wash</h4>
 							</div>
-							<span class="post-date">May 12,2020</span>
 						</div>
 					</div>
 				</a>
 			</div>
 			<div class="item">
-				<a href="#" class="carousel-card">
+				<a href="{{url('featured_news_detail')}}" class="carousel-card">
 					<div class="carousel-news">
 						<div class="carousel-news-img overlay-bg">
 							<img src="{{url('public/images/4.png')}}" class="img-fluid overlay-bg" alt="">
@@ -80,13 +78,12 @@
 							<div class="title">
 								<h4>Disseminating Message through IEC</h4>
 							</div>
-							<span class="post-date">May 12,2020</span>
 						</div>
 					</div>
 				</a>
 			</div>
 			<div class="item">
-				<a href="#" class="carousel-card">
+				<a href="{{url('featured_news_detail')}}" class="carousel-card">
 					<div class="carousel-news">
 						<div class="carousel-news-img overlay-bg">
 							<img src="{{url('public/images/5.jpg')}}" class="img-fluid overlay-bg" alt="">
@@ -95,28 +92,12 @@
 							<div class="title">
 								<h4>Preparing resilient community to fight</h4>
 							</div>
-							<span class="post-date">May 12,2020</span>
 						</div>
 					</div>
 				</a>
 			</div>
 			<div class="item">
-				<a href="#" class="carousel-card">
-					<div class="carousel-news">
-						<div class="carousel-news-img overlay-bg">
-							<img src="{{url('public/images/6.jpeg')}}" class="img-fluid overlay-bg" alt="">
-						</div>
-						<div class="caroursel-news-title text-center">
-							<div class="title">
-								<h4>Grant Project in Nepal mobilises</h4>
-							</div>
-							<span class="post-date">May 12,2020</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="item">
-				<a href="#" class="carousel-card">
+				<a href="{{url('featured_news_detail')}}" class="carousel-card">
 					<div class="carousel-news">
 						<div class="carousel-news-img overlay-bg">
 							<img src="{{url('public/images/2.jpg')}}" class="img-fluid overlay-bg" alt="">
@@ -125,37 +106,6 @@
 							<div class="title">
 								<h4>Practicing hand hygiene</h4>
 							</div>
-							<span class="post-date">May 12,2020</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="item">
-				<a href="#" class="carousel-card">
-					<div class="carousel-news">
-						<div class="carousel-news-img overlay-bg">
-							<img src="{{url('public/images/3.jpg')}}" class="img-fluid overlay-bg" alt="">
-						</div>
-						<div class="caroursel-news-title text-center">
-							<div class="title">
-								<h4>Learning to hand wash</h4>
-							</div>
-							<span class="post-date">May 12,2020</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="item">
-				<a href="#" class="carousel-card">
-					<div class="carousel-news">
-						<div class="carousel-news-img overlay-bg">
-							<img src="{{url('public/images/4.png')}}" class="img-fluid overlay-bg" alt="">
-						</div>
-						<div class="caroursel-news-title text-center">
-							<div class="title">
-								<h4>Disseminating Message through IEC</h4>
-							</div>
-							<span class="post-date">May 12,2020</span>
 						</div>
 					</div>
 				</a>
@@ -163,93 +113,100 @@
 		</div>
 	</div>
 
-<!-- 	<img class="thumb1" src="http://placehold.it/50x50">
-	<img class="fullsize1" src="http://placehold.it/100x100"> -->
-
-	<!-- <img src="{{url('public/images/2.jpg')}}" class="compress"/>
-	 <img src="{{url('public/images/2.jpg')}}" class="image"/> -->
-
 	<!-- featured post -->
-	<div class="container ma-t">
-		<div class="row no-gutters">
-			<div class="col-md-12 left-container">
-				<div class="featured-post">
-					<div class="container-title">
-						<h3>
-							<span>Featured News</span>
-						</h3>
-					</div>
-					<!-- <div class="title text-center">
-						<h6 class="m-0">Featured News</h6>
-					</div> -->
-					<div class="row p-3 mt-3">
-						<div class="col-md-4 mb-3">
-							<a href="{{url('featured_news_detail')}}">
-								<div class="main-post-card ">
-									<div class="post-card-img">
-										<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
-									</div>
-									<div class="post-card-content">
-										<div class="sub-title text-center mt-2">
-											<h5 class="mb-0">Learning to hand wash</h5>
-											<span class="post-date">May 12,2020</span>
-										</div>
-										<div class="content">
-											<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG lorem</p>
-										</div>
-									</div>
+	<div class="featured-post pa-tb">
+		<div class="container">
+			<div class="container-title">
+				<h3>
+					<span>Featured News</span>
+				</h3>
+			</div>
+			<div class="row mt-3">
+				<div class="col-md-8 mb-3">
+					<a href="{{url('featured_news_detail')}}">
+						<div class="main-post-card ">
+							<div class="post-card-img full-post-card-img">
+								<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
+							</div>
+							<div class="post-card-content">
+								<div class="sub-title text-center mt-2">
+									<h5 class="mb-0">Learning to hand wash</h5>
 								</div>
-							</a>
+								<div class="content">
+									<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG lorem</p>
+								</div>
+							</div>
 						</div>
-						<div class="col-md-4 mb-3">
-							<a href="{{url('featured_news_detail')}}">
+					</a>
+				</div>
+				<div class="col-md-4 mb-3">
+					<div class="row">
+						<div class="col-md-12 mb-3">
+							<a href="{{url('recent_publish_detail')}}">
 								<div class="main-post-card ">
-									<div class="post-card-img">
-										
-											<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
+									<div class="post-card-img post-card-half-img">
+										<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
 									</div>
-									<div class="post-card-content">
+									<div class="post-card-content half-post-card-content">
 										<div class="sub-title text-center mt-2">
 											<h5 class="mb-0">Disseminating Message through IEC</h5>
-											<span class="post-date">May 12,2020</span>
 										</div>
 										<div class="content">
-											<p>UN Habitat Nepal disseminates the message on essence of Hand Washing and major indicators of total sanitation targeting to people from GSF program.</p>
+											<p>UN Habitat Nepal disseminates the message on essence of Hand Washing.</p>
 										</div>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 mb-3">
-							<a href="{{url('featured_news_detail')}}">
+						<div class="col-md-12 mb-3">
+							<a href="{{url('recent_publish_detail')}}">
 								<div class="main-post-card ">
-									<div class="post-card-img">
+									<div class="post-card-img post-card-half-img">
+
 										<img src="{{url('public/images/5.jpg')}}" class="img-fluid" alt="">
 									</div>
-									<div class="post-card-content">
+									<div class="post-card-content half-post-card-content">
 										<div class="sub-title text-center mt-2">
-											<h5 class="mb-0">Preparing resilient community to fight against COVID-19</h5>
-											<span class="post-date">May 12,2020</span>
+											<h5 class="mb-0">Preparing community to fight against COVID-19</h5>
 										</div>
 										<div class="content">
-											<p>In a wake against COVID-19 havoc, communities across Nepal are suffering from shortage of hand sanitizer. All the shelf of super market and shops are.</p>
+											<p>In a wake against COVID-19 havoc, communities across Nepal.</p>
 										</div>
 									</div>
 								</div>
 							</a>
 						</div>
-					</div>
-					<div class="view-more text-center">
-						<a href="{{url('featured_news')}}" class="btn btn2">View More &nbsp;&nbsp; +</a>
+						<div class="col-md-12 mb-3">
+							<a href="{{url('recent_publish_detail')}}">
+								<div class="main-post-card ">
+									<div class="post-card-img post-card-half-img">
+
+										<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
+									</div>
+									<div class="post-card-content half-post-card-content">
+										<div class="sub-title text-center mt-2">
+											<h5 class="mb-0">Practicing hand hygiene</h5>
+										</div>
+										<div class="content">
+											<p>In a wake against COVID-19 havoc, communities across Nepal.</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div class="view-more text-center mt-4">
+				<a href="{{url('featured_news')}}" class="btn btn2">View More &nbsp;&nbsp; +</a>
+			</div>
 		</div>
 	</div>
+		
 
 	<!-- recent publish -->
 	<div class="container ma-t">
-		<div class="recent-publish ma-t">
+		<div class="recent-publish">
 			<div class="container-title">
 				<h3>
 					<span>
@@ -259,7 +216,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6">
-					<a href="{{url('recent_publish_detail')}}">
+					<a href="{{url('featured_news_detail')}}">
 						<div class="main-post-card">
 							<div class="post-card-img full-post-card-img">
 								<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
@@ -275,7 +232,7 @@
 				<div class="col-md-6">
 					<div class="row">
 						<div class="col-md-6 mb-4">
-							<a href="{{url('recent_publish_detail')}}">
+							<a href="{{url('featured_news_detail')}}">
 								<div class="main-post-card">
 									<div class="post-card-img half-post-card-img">
 										<img src="{{url('public/images/8.jpg')}}" class="img-fluid" alt="">
@@ -332,20 +289,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="col-md-4">
-					<a href="{{url('recent_publish_detail')}}">
-						<div class="main-post-card">
-							<div class="post-card-img full-post-card-img">
-								<img src="{{url('public/images/7.png')}}" class="img-fluid" alt="">
-							</div>
-							<div class="post-card-content">
-								<div class="sub-title text-center">
-									<h5 class="mb-0">Title goes here</h5>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div> -->
 			</div>
 			<div class="view-more text-center mt-4">
 				<a href="{{url('recent_publish')}}" class="btn btn2">View More &nbsp;&nbsp; +</a>
@@ -408,7 +351,129 @@
 	</div>
 
 	<!-- sustainable development -->
-	<div class="container ma-t">
+	<div class="container">
+		<div class="sustainable-goal ma-tb">
+			<div class="container-title">
+				<h3>
+					<span>
+						Sustainable Development Goals
+					</span>
+				</h3>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png1.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png2.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png3.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png4.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png5.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png6.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png7.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png8.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png9.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png10.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png11.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png12.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png13.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png14.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png15.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png16.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/png17.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+						<div class="col-md-2 p-1">
+							<div class="goal-img">
+								<img src="{{url('public/images/logo.png')}}" class="img-fluid" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="sustainableCarousel" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item goal-carousel-img active">
+								<img class="d-block w-100" src="{{url('public/images/png1.png')}}" alt="">
+							</div>
+							<div class="carousel-item goal-carousel-img">
+								<img class="d-block w-100" src="{{url('public/images/png2.png')}}" alt="">
+							</div>
+							<div class="carousel-item goal-carousel-img">
+								<img class="d-block w-100" src="{{url('public/images/png3.png')}}" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="container ma-t">
 		<div class="row no-gutters">
 			<div class="col-md-12 left-container">
 				<div class="gif-post">
@@ -439,53 +504,58 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- recent video -->
-	<div class="container ma-t">
-		<div class="container-title">
-			<h3>
-				<span>
-					Recent Video
-				</span>
-			</h3>
-		</div>
-		<div class="owl-carousel owl-theme home-card-carousel">
-			<div class="item">
-				<div class="video-card">
-					<div class="video-card-img">
-						<a href="https://www.youtube.com/embed/dFsK-G5NSNU" target="_blank">
-							<img src="https://img.youtube.com/vi/dFsK-G5NSNU/sddefault.jpg">
-						</a>
+	<div class="recent-video pa-tb">
+		<div class="container">
+			<div class="container-title">
+				<h3>
+					<span>
+						Recent Video
+					</span>
+				</h3>
+			</div>
+			<div class="owl-carousel owl-theme home-card-carousel">
+				<div class="item">
+					<div class="video-card">
+						<div class="video-card-img">
+							<a href="https://www.youtube.com/embed/dFsK-G5NSNU" target="_blank">
+								<img src="https://img.youtube.com/vi/dFsK-G5NSNU/sddefault.jpg">
+							</a>
+						</div>
+						<div class="video-card-title">
+							<h6>COVID PROOFING: Reinventing Tranquility in Community</h6>
+						</div>
 					</div>
-					<div class="video-card-title">
-						<h6>COVID PROOFING: Reinventing Tranquility in Community</h6>
+				</div>
+				<div class="item">
+					<div class="video-card">
+						<div class="video-card-img">
+							<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank">
+								<img src="https://img.youtube.com/vi/DgKon3LY5mk/sddefault.jpg">
+							</a>
+						</div>
+						<div class="video-card-title">
+							<h6>Carving Heritage of Bungamati</h6>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="video-card">
+						<div class="video-card-img">
+							<a href="https://www.youtube.com/embed/NaUSfPDrxqs" target="_blank">
+								<img src="https://img.youtube.com/vi/NaUSfPDrxqs/sddefault.jpg">
+							</a>
+						</div>
+						<div class="video-card-title">
+							<h6>Nepal Lifetime Experiences Rice Planting Festival</h6>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="item">
-				<div class="video-card">
-					<div class="video-card-img">
-						<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank">
-							<img src="https://img.youtube.com/vi/DgKon3LY5mk/sddefault.jpg">
-						</a>
-					</div>
-					<div class="video-card-title">
-						<h6>Carving Heritage of Bungamati</h6>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="video-card">
-					<div class="video-card-img">
-						<a href="https://www.youtube.com/embed/NaUSfPDrxqs" target="_blank">
-							<img src="https://img.youtube.com/vi/NaUSfPDrxqs/sddefault.jpg">
-						</a>
-					</div>
-					<div class="video-card-title">
-						<h6>Nepal Lifetime Experiences Rice Planting Festival</h6>
-					</div>
-				</div>
+			<div class="view-more text-center mt-4">
+				<a href="{{url('our_video')}}" class="btn btn2">View More &nbsp;&nbsp; +</a>
 			</div>
 		</div>
 	</div>
@@ -494,65 +564,66 @@
 	<!-- latest story -->
 	<div class="container ma-t">	
 		<div class="recent-publish latest-story">
+			<div class="container-title">
+				<h3>
+					<span>Latest Stories</span>
+				</h3>
+			</div>
 			<div class="row p-3">
-				<div class="col-md-8">
-					<div class="container-title">
-						<h3>
-							<span>Latest Stories</span>
-						</h3>
-					</div>
-					<div class="lastest-story-card mb-4 mt-4">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="popular-post-img story-card-img">
-									<a href="#">
-										<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="col-md-8">
-								<div class="story-card-content">
-									<div class="sub-title">
-										<a href="#"><h6 class="mb-0">Practicing hand hygiene</h6></a>
-									</div>
-									<div class="meta-data">
-										<span>12 May 2020</span> <span>By: Admin</span>
-									</div>
-									<div class="content">
-										<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG, Arghakhanchi.</p>
+				<div class="col-md-6">
+					<a href="{{url('featured_news_detail')}}">
+						<div class="latest-story-card">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="popular-post-img story-card-img">
+											<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
 									</div>
 								</div>
-							</div>
-						</div>	
-					</div>
-
-					<div class="lastest-story-card">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="popular-post-img story-card-img">
-									<a href="#">
-										<img src="{{url('public/images/6.jpeg')}}" class="img-fluid" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="col-md-8">
-								<div class="story-card-content">
-									<div class="sub-title">
-										<a href="#"><h6 class="mb-0">Learning to hand wash</h6></a>
-									</div>
-									<div class="meta-data">
-										<span>12 May 2020</span> <span>By: Admin</span>
-									</div>
-									<div class="content">
-										<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG, Arghakhanchi.
-										</p>
+								<div class="col-md-8">
+									<div class="story-card-content">
+										<div class="sub-title">
+											<h6 class="mb-0">Practicing hand hygiene</h6>
+										</div>
+										<div class="meta-data">
+											<span>12 May 2020</span> <span>By: Admin</span>
+										</div>
+										<div class="content">
+											<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG, Arghakhanchi.</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>	
-					</div>
+							</div>	
+						</div>
+					</a>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-6">
+					<a href="{{url('featured_news_detail')}}">
+						<div class="latest-story-card">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="popular-post-img story-card-img">
+										<img src="{{url('public/images/6.jpeg')}}" class="img-fluid" alt="">
+									</div>
+								</div>
+								<div class="col-md-8">
+									<div class="story-card-content">
+										<div class="sub-title">
+											<h6 class="mb-0">Learning to hand wash</h6>
+										</div>
+										<div class="meta-data">
+											<span>12 May 2020</span> <span>By: Admin</span>
+										</div>
+										<div class="content">
+											<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG, Arghakhanchi.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</a>
+				</div>
+				<!-- <div class="col-md-4">
 					<div class="container-title">
 						<h3>
 							<span>Notice</span>
@@ -568,7 +639,7 @@
 							</ul>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

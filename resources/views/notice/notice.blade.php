@@ -6,8 +6,24 @@
 
 
 <div class="notice">
+	<div class="banner">
+	<div class="banner-image overlay-bg">
+		<img src="{{url('public/images/36.jpg')}}" class="img-fluid overlay-bg" alt="">
+	</div>
+	<div class="banner-feature">
+		<div class="banner-title">
+			<h2>Notice</h2>
+		</div>
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb text-center">
+				<li class="breadcrumb-item"><a href="#">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Notice Title</li>
+			</ol>
+		</nav>
+	</div>
+</div>
 	<div class="container">
-		<div class="row">
+		<div class="row ma-tb">
 			<div class="col-md-8 left-conatiner">
 				<div class="left-col">
 					<div class="notice-detail box-shadow">
@@ -56,12 +72,12 @@
 				</div>
 			</div>
 			<div class="col-md-4 right-container">
-				<div class="right-col">
+				<div class="popular-post box-shadow">
+					<div class="title text-center">
+						<h6 class="mb-3">Notice</h6>
+					</div>
 					<div class="sidebar">
-						<div class="link-list box-shadow">
-							<div class="sub-title">
-								<h6>Notice</h6>
-							</div>
+						<div class="link-list mt-4">
 							<ul class="">
 								<li><a href="{{url('notice')}}">Call for Proposal (CFP)</a></li>
 							</ul>

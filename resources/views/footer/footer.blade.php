@@ -1,4 +1,4 @@
-<footer class="pa-tb">
+<footer class="pa-t">
 	<div class="container">
 		<div class="footer-logo">
 			<a class="navbar-brand" href="{{url('/')}}">

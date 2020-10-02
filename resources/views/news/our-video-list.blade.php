@@ -5,45 +5,61 @@
 @section('content')
 
 <div class="news-post-list">
-	<div class="container">
+	<div class="banner">
+		<div class="banner-image overlay-bg">
+			<img src="{{url('public/images/36.jpg')}}" class="img-fluid overlay-bg" alt="">
+		</div>
+		<div class="banner-feature">
+			<div class="banner-title">
+				<h2>Media Center</h2>
+			</div>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb text-center">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Our Video</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<div class="container ma-t ma-b">
 		<div class="title text-center mb-4">
 			<h2 class="m-0">Our Video</h2>
 		</div>
 
-		<div class="row recent-publish">
+		<div class="row recent-publish video-list">
 			<div class="col-md-4 mb-3">
-				<div class="main-post-card">
-					<div class="post-card-img">
+				<div class="video-card">
+					<div class="video-card-img">
+						<a href="https://www.youtube.com/embed/NaUSfPDrxqs" target="_blank">
+							<img src="https://img.youtube.com/vi/NaUSfPDrxqs/sddefault.jpg">
+						</a>
+					</div>
+					<div class="video-card-title">
+						<h6>Nepal Lifetime Experiences Rice Planting Festival</h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-3">
+				<div class="video-card">
+					<div class="video-card-img">
 						<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank">
-							<img src="https://img.youtube.com/vi/lfCy78dbcYA/sddefault.jpg">
+							<img src="https://img.youtube.com/vi/DgKon3LY5mk/sddefault.jpg">
 						</a>
 					</div>
-					<div class="sub-title text-center">
-						<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank"><h5 class="mb-0">Carving Heritage of Bungamati</h5></a>
+					<div class="video-card-title">
+						<h6>Carving Heritage of Bungamati</h6>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 mb-3">
-				<div class="main-post-card">
-					<div class="post-card-img">
-						<a href="#" target="_blank">
-							<iframe width="560" height="315" target="_blank" src="https://www.youtube.com/embed/NaUSfPDrxqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="video-card">
+					<div class="video-card-img">
+						<a href="https://www.youtube.com/embed/dFsK-G5NSNU" target="_blank">
+							<img src="https://img.youtube.com/vi/dFsK-G5NSNU/sddefault.jpg">
 						</a>
 					</div>
-					<div class="sub-title text-center">
-						<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank"><h5 class="mb-0">Nepal Lifetime Experiences Rice Planting Festival</h5></a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 mb-3">
-				<div class="main-post-card">
-					<div class="post-card-img">
-						<a href="#">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/03HwRyK3JTg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</a>
-					</div>
-					<div class="sub-title text-center">
-						<a href="#"><h5 class="mb-0">Kumari: Living Goddess of Bungamati</h5></a>
+					<div class="video-card-title">
+						<h6>COVID PROOFING: Reinventing Tranquility in Community</h6>
 					</div>
 				</div>
 			</div>

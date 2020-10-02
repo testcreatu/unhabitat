@@ -5,7 +5,23 @@
 @section('content')
 
 <div class="gallery-list">
-	<div class="container">
+	<div class="banner">
+		<div class="banner-image overlay-bg">
+			<img src="{{url('public/images/36.jpg')}}" class="img-fluid overlay-bg" alt="">
+		</div>
+		<div class="banner-feature">
+			<div class="banner-title">
+				<h2>Media Center</h2>
+			</div>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb text-center">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Our Gallery</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<div class="container ma-t ma-b">
 		<div class="row ">
 			<div class="col-md-3 gallery">
 				<div class="image-list">

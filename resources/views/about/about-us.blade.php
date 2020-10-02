@@ -5,9 +5,25 @@
 @section('content')
 
 <div class="about-page ">
-	<div class="container">
+	<div class="banner">
+		<div class="banner-image overlay-bg">
+			<img src="{{url('public/images/36.jpg')}}" class="img-fluid overlay-bg" alt="">
+		</div>
+		<div class="banner-feature">
+			<div class="banner-title">
+				<h2>About Us</h2>
+			</div>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb text-center">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Overview</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<div class="container ma-t ma-b">
 		<div class="row">
-			<div class="col-md-3 left-container">
+			<!-- <div class="col-md-3 left-container">
 				<div class="left-col box-shadow">
 					<ul class="sidebar">
 						<li class="{{ (request()->is('about_us*')) ? 'active' : '' }}">
@@ -33,17 +49,17 @@
 						</li>
 					</ul>
 				</div>
-			</div>
-			<div class="col-md-9 right-container">
+			</div> -->
+			<div class="col-md-12 right-container">
 				<div class="right-col">
 					<div class=" detail-content">
 						<div class="title">
 							<h5>About Us</h5>
 						</div>
 
-						<div class="detail-content-img">
+						<!-- <div class="detail-content-img">
 							<img src="{{('public/images/1.jpg')}}" class="img-fluid" alt="">
-						</div>
+						</div> -->
 
 						<div class="content">
 							<p><strong>UN-Habitat is the United Nations program working towards a better urban future. Its mission is to promote socially and environmentally sustainable human settlements development and the achievement of adequate shelter for all.</strong></p>

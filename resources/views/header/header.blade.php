@@ -20,7 +20,7 @@
           <div class="sub-menu">
             <ul>
               <li>
-                <a href="#" class="nav-link">Overview</a>
+                <a href="{{url('about_us')}}" class="nav-link">Overview</a>
               </li>
               <li>
                 <a href="#" class="nav-link">Where we are</a>
@@ -32,7 +32,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('')}}">Project</a>
+          <a class="nav-link" href="#">Project</a>
           <div class="sub-menu">
             <ul>
               <li>
@@ -52,7 +52,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('')}}">Media Center</a>
+          <a class="nav-link" href="#">Media Center</a>
           <div class="sub-menu">
             <ul>
               <li>

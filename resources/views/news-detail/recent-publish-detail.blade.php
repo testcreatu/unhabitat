@@ -5,10 +5,26 @@
 @section('content')
 	
 <div class="publish">	
-	<div class="container">
+	<div class="banner">
+		<div class="banner-image overlay-bg">
+			<img src="{{url('public/images/1.jpg')}}" class="img-fluid overlay-bg" alt="">
+		</div>
+		<div class="banner-feature">
+			<div class="banner-title">
+				<h2>About Us</h2>
+			</div>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb text-center">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Featurd News</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<div class="container ma-t ma-b">
 		<div class="row">
 			<div class="col-md-8">
-				<div class="publish-detail box-shadow">
+				<div class="publish-detail ">
 					<div class="publish-detail-img">
 						<img src="{{url('public/images/7.png')}}" class="img-fluid" alt="">
 					</div>
@@ -55,6 +71,15 @@
 							</li>
 						</ul>
 					</div>
+				</div>
+
+				<hr>
+
+				<div class="facebook-comment">
+					<div id="fb-root"></div>
+					<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=706653159797806&autoLogAppEvents=1" nonce="ge0FdjvM"></script>
+
+					<div class="fb-comments" data-href="{{url()->current()}}" data-numposts="5" data-width="100%"></div>
 				</div>
 			</div>
 			<div class="col-md-4">
