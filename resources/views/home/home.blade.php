@@ -5,20 +5,23 @@
 @section('content')
 
 <div class="home-page">
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item carousel-img active">
+	<div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner bannercarousel-item overlay-bg">
+			<div class="carousel-item  carousel-img active">
 				<img class="d-block w-100" src="{{url('public/images/37.jpg')}}" alt="First slide">
 			</div>
 			<div class="carousel-item carousel-img">
 				<img class="d-block w-100" src="{{url('public/images/38.jpg')}}" alt="Second slide">
 			</div>
+			<div class="banner-feature">
+				<a href="{{url('covid-19_response')}}"><h1>Unhabitat Covid-19 Response By Nepal</h1></a>
+			</div>
 		</div>
-		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+		<a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
 		</a>
-		<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+		<a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>

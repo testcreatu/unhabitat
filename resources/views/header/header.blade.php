@@ -16,7 +16,7 @@
           <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item {{ (request()->is('about_us*')) ? 'active' : '' }}">
-          <a class="nav-link" href="{{url('about_us')}}">About us</a>
+          <a class="nav-link" href="{{url('about_us')}}">About us &nbsp; <i class="fas fa-caret-down"></i></a>
           <div class="sub-menu">
             <ul>
               <li>
@@ -32,7 +32,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Project</a>
+          <a class="nav-link" href="#">Project  &nbsp; <i class="fas fa-caret-down"></i></a>
           <div class="sub-menu">
             <ul>
               <li>

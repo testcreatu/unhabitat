@@ -5,8 +5,24 @@
 @section('content')
 
 <div class="notice covid">
+	<div class="banner">
+		<div class="banner-image overlay-bg">
+			<img src="{{url('public/images/1.jpg')}}" class="img-fluid overlay-bg" alt="">
+		</div>
+		<div class="banner-feature">
+			<div class="banner-title">
+				<h2>Covid 19 Response</h2>
+			</div>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb text-center">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<!-- <li class="breadcrumb-item active" aria-current="page">Overview</li> -->
+				</ol>
+			</nav>
+		</div>
+	</div>
 	<div class="container">
-		<div class="notice-detail covid-detail box-shadow">
+		<div class="notice-detail covid-detail box-shadow ma-tb">
 			<div class="title">
 				<h5 class="mb-0">Covid-19 Response</h5>
 			</div>
