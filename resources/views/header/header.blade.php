@@ -39,14 +39,25 @@
                 <a href="#" class="nav-link">Ongoing Project</a>
                 <div class="sub-menu-1">
                   <ul>
-                    <li><a href="{{url('project_detail')}}">Global Sanitation Fund Prgramme Nepal</a></li>
-                    <li><a href="{{url('project_detail')}}">Land and Global Land Tool Network(GLTN)</a></li>
-                    <li><a href="{{url('project_detail')}}">Parya Sampada</a></li>
+                    @foreach($finalHeader['ongoing'] as $ongoing)
+                    <li><a href="{{url('project_detail/'.$ongoing['slug'])}}">{{$ongoing['title']}}</a></li>
+                    @endforeach
+               {{--      <li><a href="{{url('project_detail')}}">Land and Global Land Tool Network(GLTN)</a></li>
+                    <li><a href="{{url('project_detail')}}">Parya Sampada</a></li> --}}
                   </ul>
                 </div>
               </li>
               <li>
                 <a href="#" class="nav-link">Completed Project</a>
+                <div class="sub-menu-1">
+                  <ul>
+                    @foreach($finalHeader['completed'] as $completed)
+                    <li><a href="{{url('project_detail/'.$completed['slug'])}}">{{$completed['title']}}</a></li>
+                    @endforeach
+               {{--      <li><a href="{{url('project_detail')}}">Land and Global Land Tool Network(GLTN)</a></li>
+                    <li><a href="{{url('project_detail')}}">Parya Sampada</a></li> --}}
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>

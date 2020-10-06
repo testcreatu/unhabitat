@@ -11,7 +11,7 @@
 		</div>
 		<div class="banner-feature">
 			<div class="banner-title">
-				<h2>About Us</h2>
+				<h2>Publications</h2>
 			</div>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb text-center">
@@ -26,38 +26,32 @@
 			<div class="col-md-8">
 				<div class="publish-detail ">
 					<div class="publish-detail-img">
-						<img src="{{url('public/images/7.png')}}" class="img-fluid" alt="">
+						<img src="{{url('uploads/thumbnail/'.$finalPublication['detail']['image'])}}" class="img-fluid" alt="">
 					</div>
 					<div class="title mt-3">
-						<h4>Traditional Building Types of Bungamati</h4>
+						<h4>{{$finalPublication['detail']['title']}}</h4>
 					</div>
 					<div class="row meta-content mt-3">	
 						<div class="col-4 col-sm-4 col-md-4 publisher">
 							<strong>Publisher:</strong>
-							<span>UN-HABITAT</span>
+							<span>{{$finalPublication['detail']['publisher_name']}}</span>
 						</div>
 						<div class="col-3 col-sm-3 col-md-3 publisher">
 							<strong>Year:</strong>
-							<span>2020</span>
+							<span>{{$finalPublication['detail']['year']}}</span>
 						</div>
 						<div class="col-3 col-sm-3 col-md-3 publisher">
 							<strong>Pages</strong>
-							<span>1</span>
+							<span>{{$finalPublication['detail']['pages']}}</span>
 						</div>
 						<div class="col-2 col-sm-2 col-md-2 publisher">
 							<strong>Download</strong>
-							<span class="text-center"><a href="{{url('public/images/1.jpg')}}" target="_blank" download><i class="fas fa-download text"></i></a></span>
+							<span class="text-center"><a href="{{url('uploads/publications/files/'.$finalPublication['detail']['file'])}}" target="_blank" download><i class="fas fa-download text"></i></a></span>
 						</div>
 					</div>	
 					<div class="content mt-3">
 						<p>
-							<strong>About</strong>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							{!!$finalPublication['detail']['description']!!}
 					</div>
 					<div class="share-plugin mt-3">
 						<ul>
@@ -88,11 +82,50 @@
 						<h6>Publication</h6>
 					</div>
 					<ul class="">
-						<li><a href="{{url('recent_publish_detail')}}">IEC Materials for COVID-19</a></li>
-						<li><a href="{{url('recent_publish_detail')}}">Bunga – Abode of the Mystics </a></li>
-						<li><a href="{{url('recent_publish_detail')}}">Parya Sampada</a></li>
+						@foreach($finalPublication['projects'] as $projects)
+						<li><a href="{{url('project_detail/'.$projects['slug'])}}">{{$projects['title']}}</a></li>
+						@endforeach
+						{{-- <li><a href="{{url('recent_publish_detail')}}">Bunga – Abode of the Mystics </a></li>
+						<li><a href="{{url('recent_publish_detail')}}">Parya Sampada</a></li> --}}
 					</ul>
 				</div>
+					<div class="popular-post mt-4">
+					<div class="title text-center">
+						<h6 class="mb-3">Notice</h6>
+					</div>
+					<div class="sidebar">
+						@foreach($finalPublication['notice'] as $notice)
+						<div class="link-list mt-4">
+							<ul class="">
+								<li><a href="{{url('notice/'.$notice['slug'])}}">{{$notice['title']}}</a></li>
+							</ul>
+						</div>
+						@endforeach
+					</div>
+				</div>
+
+				<div class="popular-post mt-4">
+					<div class="title text-center">
+						<h6 class="mb-3">Other News</h6>
+					</div>
+					@foreach($finalPublication['latest_news'] as $news)
+					<a href="{{url('featured_news_detail/'.$news['slug'])}}">
+						<div class="row popular-post-list">
+							<div class="col-5 col-sm-5 col-md-5">
+								<div class="popular-post-img">
+									<a href="{{url('featured_news_detail/'.$news['slug'])}}">
+										<img src="{{url('uploads/thumbnail/'.$news['image'])}}" class="img-fluid" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="col-7 col-sm-7 col-md-7">
+								<div class="sub-title">
+									<a href="{{url('featured_news_detail/'.$news['slug'])}}"><h6>{{$news['title']}}</h6></a>
+								</div>
+							</div>
+						</div>
+					</a>
+					@endforeach
 			</div>
 		</div>
 	</div>

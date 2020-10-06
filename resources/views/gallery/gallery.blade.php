@@ -23,14 +23,16 @@
 	</div>
 	<div class="container ma-t ma-b">
 		<div class="row ">
+			@foreach($photoGallery as $photo)
 			<div class="col-md-3 gallery">
 				<div class="image-list">
-					<a href="{{url('public/images/2.jpg')}}" data-lightbox="mygallery" data-title="Practicing hand hygience">
-						<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
+					<a href="{{url('uploads/photo-gallery/'.$photo['image'])}}" data-lightbox="mygallery" data-title="Practicing hand hygience">
+						<img src="{{url('uploads/thumbnail/'.$photo['image'])}}" class="img-fluid" alt="">
 					</a>
 				</div>
 			</div>
-			<div class="col-md-3 gallery">
+			@endforeach
+{{-- 			<div class="col-md-3 gallery">
 				<div class="image-list">
 					<a href="{{url('public/images/3.jpg')}}" data-lightbox="mygallery" data-title="">
 						<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
@@ -57,7 +59,7 @@
 						<img src="{{url('public/images/6.jpeg')}}" class="img-fluid" alt="">
 					</a>
 				</div>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 </div>

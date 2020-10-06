@@ -3,7 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use App\Projects;
+use View;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -23,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $finalHeader = [];
+        $finalHeader['ongoing'] = Projects::where('status','active')->where('project_status','ongoing')->get();
+        $finalHeader['completed'] = Projects::where('status','active')->where('project_status','completed')->get();
+        View::share('finalHeader',$finalHeader);
+
     }
 }

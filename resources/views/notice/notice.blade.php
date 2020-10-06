@@ -28,33 +28,13 @@
 				<div class="left-col">
 					<div class="notice-detail box-shadow">
 						<div class="title">
-							<h5 class="mb-0">Call for Proposal (CFP)</h5>
-							<span class="post-date">20 January, 2020</span>
+							<h5 class="mb-0">{{$notice['title']}}</h5>
+							<?php $date = Carbon\Carbon::parse($notice['created_at'])->format('d F, Y') ?>
+							<span class="post-date">{{$date}}</span>
 						</div>
 						<div class="notice-detail-content">
-							<div class="status-meeting content mt-3">
-								<p>
-									UN-Habitat Nepal Office is now seeking proposals from interested national non-governmental organizations registered in Nepal in implementing part of GLTN project “Promotion of Fit-For-Purpose Land Administration Country Level Strategy in selected Provinces and municipalities in Nepal”. The CFP is open for interested NGOs individually or in Joint Venture/ Consortium with a formal intent to enter into an Agreement of Cooperation with UN-Habitat.
-								</p>
-							</div>
-							<div class="read-more-content">
-								<div class="content">
-									<p>
-										For TOR and details of the CFP, please download from http://www.unhabitat.org.np/files/FFPLA.zip (Please type full web address and is case sensitive)
-										<br>
-										One set hardcopy proposal and softcopy in pen-drive should be submitted at below mentioned address by 3 February 2020, 5 P.M. Nepal Time. 
-									</p>
-									<p>
-										UN House<br>
-										C/O UN-Habitat<br>
-										P.O. Box 107, Pulchowk, Kathmandu, NEPAL<br>
-									</p>
-									<p>
-										A pre-bid meeting will be held at UN-Habitat Office at 10 A.M. on 24 January 2020. For any queries please email to unhabitat.nepal@unhabitat.org.np
-									</p>
-								</div>
-							</div>
-							<a class="read-more-btn" title="Read More">Read More</a>
+							{!!$notice['description']!!}
+							
 							<div class="share-plugin">
 								<ul>
 									<li class="facebook">
@@ -77,11 +57,13 @@
 						<h6 class="mb-3">Notice</h6>
 					</div>
 					<div class="sidebar">
+						@foreach($other_notice as $notices)
 						<div class="link-list mt-4">
 							<ul class="">
-								<li><a href="{{url('notice')}}">Call for Proposal (CFP)</a></li>
+								<li><a href="{{url('notice/'.$notices['slug'])}}">{{$notices['title']}}</a></li>
 							</ul>
 						</div>
+						@endforeach
 					</div>
 				</div>
 			</div>

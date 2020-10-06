@@ -11,7 +11,7 @@
 		</div>
 		<div class="banner-feature">
 			<div class="banner-title">
-				<h2>About Us</h2>
+				<h2>News</h2>
 			</div>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb text-center">
@@ -31,28 +31,30 @@
 		</div>
 
 		<div class="row">
+			@foreach($finalNewsList as $key => $list)
 			<div class="col-md-4 mb-3">
-				<a href="{{url('featured_news_detail')}}">
+				<a href="{{url('featured_news_detail/'.$list['slug'])}}">
 					<div class="main-post-card ">
 						<div class="post-card-img">
-							<img src="{{url('public/images/5.jpg')}}" class="img-fluid" alt="">
+							<img src="{{url('uploads/thumbnail/'.$list['image'])}}" class="img-fluid" alt="">
 						</div>
 						<div class="post-card-content">
 							<div class="sub-title text-center mt-2">
-								<h5 class="mb-0">Preparing resilient community to fight against COVID-19</h5>
+								<h5 class="mb-0">{{$list['title']}}</h5>
 							</div>
 							<div class="content">
-								<p>In a wake against COVID-19 havoc, communities across Nepal are suffering from shortage of hand sanitizer. All the shelf of super market and shops are.</p>
+								<p>{{substr($list['summary'],0,100)}}</p>
 							</div>
 						</div>
 					</div>
 				</a>
 			</div>
-			<div class="col-md-4 mb-3">
+			@endforeach
+			{{-- <div class="col-md-4 mb-3">
 				<a href="{{url('featured_news_detail')}}">
 					<div class="main-post-card ">
 						<div class="post-card-img">
-								<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
+							<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
 						</div>
 						<div class="post-card-content">
 							<div class="sub-title text-center mt-2">
@@ -82,7 +84,7 @@
 						</div>
 					</div>
 				</a>
-			</div>
+			</div> --}}
 			<!-- <div class="col-md-3 mb-3">
 				<div class="main-post-card ">
 					<div class="post-card-img">
@@ -101,7 +103,8 @@
 			</div> -->
 		</div>
 		<nav aria-label="Page navigation">
-			<ul class="pagination">
+			{{$finalNewsList->links()}}
+			{{-- <ul class="pagination">
 				<li class="page-item">
 					<a class="page-link" href="#" aria-label="Previous">
 						<span aria-hidden="true">&laquo;</span>
@@ -115,7 +118,7 @@
 						<span aria-hidden="true">&raquo;</span>
 					</a>
 				</li>
-			</ul>
+			</ul> --}}
 		</nav>
 	</div>
 </div>

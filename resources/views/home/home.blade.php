@@ -7,15 +7,16 @@
 <div class="home-page">
 	<div id="bannerCarousel" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner bannercarousel-item overlay-bg">
-			<div class="carousel-item  carousel-img active">
-				<img class="d-block w-100" src="{{url('public/images/37.jpg')}}" alt="First slide">
+			@foreach($finalHome['carousel'] as $key => $carousel)
+			<div class="carousel-item <?php echo $key == 0 ?'active':'' ?>">
+				<div class="carousel-img">
+					<img class="d-block w-100" src="{{url('uploads/carousel/'.$carousel['image'])}}" alt="First slide">
+				</div>
+				<div class="banner-feature">
+					<h1>{{$carousel['title']}}</h1>
+				</div>
 			</div>
-			<div class="carousel-item carousel-img">
-				<img class="d-block w-100" src="{{url('public/images/38.jpg')}}" alt="Second slide">
-			</div>
-			<div class="banner-feature">
-				<a href="{{url('covid-19_response')}}"><h1>Unhabitat Covid-19 Response By Nepal</h1></a>
-			</div>
+			@endforeach
 		</div>
 		<a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -43,21 +44,23 @@
 			</h3>
 		</div>
 		<div class="owl-carousel owl-theme home-card-carousel">
+			@foreach($finalHome['projects'] as $key => $projects)
 			<div class="item">
-				<a href="{{url('featured_news_detail')}}" class="carousel-card">
+				<a href="{{url('project_detail/'.$projects['slug'])}}" class="carousel-card">
 					<div class="carousel-news">
 						<div class="carousel-news-img overlay-bg">
-							<img src="{{url('public/images/2.jpg')}}" class="img-fluid overlay-bg" alt="">
+							<img src="{{url('uploads/thumbnail/'.$projects['image'])}}" class="img-fluid overlay-bg" alt="">
 						</div>
 						<div class="caroursel-news-title text-center">
 							<div class="title">
-								<h4>Practicing hand hygiene</h4>
+								<h4>{{$projects['title']}}</h4>
 							</div>
 						</div>
 					</div>
 				</a>
 			</div>
-			<div class="item">
+			@endforeach
+{{-- 			<div class="item">
 				<a href="{{url('featured_news_detail')}}" class="carousel-card">
 					<div class="carousel-news">
 						<div class="carousel-news-img overlay-bg">
@@ -112,7 +115,7 @@
 						</div>
 					</div>
 				</a>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 
@@ -126,17 +129,17 @@
 			</div>
 			<div class="row mt-3">
 				<div class="col-md-8 mb-3">
-					<a href="{{url('featured_news_detail')}}">
+					<a href="{{url('featured_news_detail/'.$finalHome['blog'][0]['slug'])}}">
 						<div class="main-post-card ">
 							<div class="post-card-img full-post-card-img">
-								<img src="{{url('public/images/3.jpg')}}" class="img-fluid" alt="">
+								<img src="{{url('uploads/thumbnail/'.$finalHome['blog'][0]['image'])}}" class="img-fluid" alt="{{$finalHome['blog'][0]['altimage']}}">
 							</div>
 							<div class="post-card-content">
 								<div class="sub-title text-center mt-2">
-									<h5 class="mb-0">Learning to hand wash</h5>
+									<h5 class="mb-0">{{$finalHome['blog'][0]['title']}}</h5>
 								</div>
 								<div class="content">
-									<p>Washing hands can prevent the spread of COVID 19. Women are learning about the steps of hand washing in initiation of Prakash Sachetan Samuha PRAG lorem</p>
+									<p>{{$finalHome['blog'][0]['summary']}}</p>
 								</div>
 							</div>
 						</div>
@@ -144,24 +147,28 @@
 				</div>
 				<div class="col-md-4 mb-3">
 					<div class="row">
+						@foreach($finalHome['blog'] as $key=>$blog)
+						@if($key != 0)
 						<div class="col-md-12 mb-3">
-							<a href="{{url('recent_publish_detail')}}">
+							<a href="{{url('featured_news_detail/'.$blog['slug'])}}">
 								<div class="main-post-card ">
 									<div class="post-card-img post-card-half-img">
-										<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
+										<img src="{{url('uploads/thumbnail/'.$blog['image'])}}" class="img-fluid" alt="{{$blog['altimage']}}">
 									</div>
 									<div class="post-card-content half-post-card-content">
 										<div class="sub-title text-center mt-2">
-											<h5 class="mb-0">Disseminating Message through IEC</h5>
+											<h5 class="mb-0">{{$blog['title']}}</h5>
 										</div>
 										<div class="content">
-											<p>UN Habitat Nepal disseminates the message on essence of Hand Washing.</p>
+											<p>{{$blog['summary']}}</p>
 										</div>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="col-md-12 mb-3">
+						@endif
+						@endforeach
+						{{-- <div class="col-md-12 mb-3">
 							<a href="{{url('recent_publish_detail')}}">
 								<div class="main-post-card ">
 									<div class="post-card-img post-card-half-img">
@@ -196,7 +203,7 @@
 									</div>
 								</div>
 							</a>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>
@@ -205,7 +212,7 @@
 			</div>
 		</div>
 	</div>
-		
+
 
 	<!-- recent publish -->
 	<div class="container ma-t">
@@ -219,14 +226,14 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6">
-					<a href="{{url('featured_news_detail')}}">
+					<a href="{{url('recent_publish_detail/'.$finalHome['publications'][0]['slug'])}}">
 						<div class="main-post-card">
 							<div class="post-card-img full-post-card-img">
-								<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
+								<img src="{{url('uploads/publications/'.$finalHome['publications'][0]['image'])}}" class="img-fluid" alt="{{$finalHome['publications'][0]['altimage']}}">
 							</div>
 							<div class="post-card-content">
 								<div class="sub-title text-center">
-									<h5 class="mb-0">Traditional Building Types of Bungamati</h5>
+									<h5 class="mb-0">{{$finalHome['publications'][0]['title']}}</h5>
 								</div>
 							</div>
 						</div>
@@ -234,21 +241,25 @@
 				</div>
 				<div class="col-md-6">
 					<div class="row">
+						@foreach($finalHome['publications'] as $key => $publications)
+						@if($key != 0)
 						<div class="col-md-6 mb-4">
-							<a href="{{url('featured_news_detail')}}">
+							<a href="{{url('recent_publish_detail/'.$publications['slug'])}}">
 								<div class="main-post-card">
 									<div class="post-card-img half-post-card-img">
-										<img src="{{url('public/images/8.jpg')}}" class="img-fluid" alt="">
+										<img src="{{url('uploads/publications/'.$publications['image'])}}" class="img-fluid" alt="{{$publications['altimage']}}">
 									</div>
 									<div class="post-card-content">
 										<div class="sub-title text-center">
-											<h5 class="mb-0">Title goes here</h5>
+											<h5 class="mb-0">{{$publications['title']}}</h5>
 										</div>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="col-md-6 mb-4">
+						@endif
+						@endforeach
+					{{-- 	<div class="col-md-6 mb-4">
 							<a href="{{url('recent_publish_detail')}}">
 								<div class="main-post-card">
 									<div class="post-card-img half-post-card-img">
@@ -289,7 +300,7 @@
 									</div>
 								</div>
 							</a>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>
@@ -309,17 +320,19 @@
 				<p>UN-Habitat promotes transformative change in cities and human settlements through knowledge, policy advice, technical assistance and collaborative action to leave no one and no place behind.</p>
 			</div>
 			<div class="row mt-5">
+				@foreach($finalHome['features'] as $key => $features)
 				<div class="col-md-3 static-card">
 					<div class="focus-card">
 						<div class="focus-img">
-							<img src="{{url('public/images/12.png')}}" class="img-fluid" alt="">
+							<img src="{{url('uploads/thumbnail/'.$features['image'])}}" class="img-fluid" alt="">
 						</div>
 						<div class="content">
-							<p>Reduced spatial inequality and poverty in communities across the urban-rural continuum</p>
+							<p>{{$features['summary']}}</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 static-card">
+				@endforeach
+				{{-- <div class="col-md-3 static-card">
 					<div class="focus-card">
 						<div class="focus-img">
 							<img src="{{url('public/images/13.png')}}" class="img-fluid" alt="">
@@ -348,7 +361,7 @@
 							<p>Effective urban crises prevention and response</p>
 						</div>
 					</div>
-				</div>
+				</div> --}}
 			</div>
 		</div>
 	</div>
@@ -366,12 +379,14 @@
 			<div class="row">
 				<div class="col-md-8">
 					<div class="row">
+						@foreach($finalHome['goals'] as $key => $goals)
 						<div class="col-md-2 p-1">
 							<div class="goal-img">
-								<img src="{{url('public/images/png1.png')}}" class="img-fluid" alt="">
+								<img src="{{url('uploads/thumbnail/'.$goals['image'])}}"  class="img-fluid" alt="">
 							</div>
 						</div>
-						<div class="col-md-2 p-1">
+						@endforeach
+						{{-- <div class="col-md-2 p-1">
 							<div class="goal-img">
 								<img src="{{url('public/images/png2.png')}}" class="img-fluid" alt="">
 							</div>
@@ -455,21 +470,23 @@
 							<div class="goal-img">
 								<img src="{{url('public/images/logo.png')}}" class="img-fluid" alt="">
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div id="sustainableCarousel" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner">
-							<div class="carousel-item goal-carousel-img active">
-								<img class="d-block w-100" src="{{url('public/images/png1.png')}}" alt="">
+							@foreach($finalHome['goals'] as $key=>$goals)
+							<div class="carousel-item goal-carousel-img <?php echo $key == 0 ?'active':'' ?>">
+								<img class="d-block w-100" src="{{url('uploads/thumbnail/'.$goals['image'])}}" alt="">
 							</div>
-							<div class="carousel-item goal-carousel-img">
+							@endforeach
+							{{-- <div class="carousel-item goal-carousel-img">
 								<img class="d-block w-100" src="{{url('public/images/png2.png')}}" alt="">
 							</div>
 							<div class="carousel-item goal-carousel-img">
 								<img class="d-block w-100" src="{{url('public/images/png3.png')}}" alt="">
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</div>
@@ -520,19 +537,21 @@
 				</h3>
 			</div>
 			<div class="owl-carousel owl-theme home-card-carousel">
+				@foreach($finalHome['video-gallery'] as $key=>$videoGallery)
 				<div class="item">
 					<div class="video-card">
 						<div class="video-card-img">
-							<a href="https://www.youtube.com/embed/dFsK-G5NSNU" target="_blank">
-								<img src="https://img.youtube.com/vi/dFsK-G5NSNU/sddefault.jpg">
+							<a href="{{$videoGallery['embeded_url']}}" target="_blank">
+								<img src="https://img.youtube.com/vi/{{$videoGallery['video_id']}}/sddefault.jpg">
 							</a>
 						</div>
 						<div class="video-card-title">
-							<h6>COVID PROOFING: Reinventing Tranquility in Community</h6>
+							<h6>{{$videoGallery['title']}}</h6>
 						</div>
 					</div>
 				</div>
-				<div class="item">
+				@endforeach
+				{{-- <div class="item">
 					<div class="video-card">
 						<div class="video-card-img">
 							<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank">
@@ -555,7 +574,7 @@
 							<h6>Nepal Lifetime Experiences Rice Planting Festival</h6>
 						</div>
 					</div>
-				</div>
+				</div> --}}
 			</div>
 			<div class="view-more text-center mt-4">
 				<a href="{{url('our_video')}}" class="btn btn2">View More &nbsp;&nbsp; +</a>
@@ -565,7 +584,7 @@
 
 
 	<!-- latest story -->
-	<div class="container ma-t">	
+	{{-- <div class="container ma-t">	
 		<div class="recent-publish latest-story">
 			<div class="container-title">
 				<h3>
@@ -579,7 +598,7 @@
 							<div class="row">
 								<div class="col-md-4">
 									<div class="popular-post-img story-card-img">
-											<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
+										<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
 									</div>
 								</div>
 								<div class="col-md-8">
@@ -645,7 +664,7 @@
 				</div> -->
 			</div>
 		</div>
-	</div>
+	</div> --}}
 
 	<!-- our work -->
 	<div class="container-fluid our-work box-shadow ma-t">
