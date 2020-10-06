@@ -35,10 +35,10 @@ window.onscroll = function() {
   var currentScrollpos = window.pageYOffset;
   if(prevScrollpos > currentScrollpos) {
     document.getElementById("navbar").style.top = "0px";
-} else {
+  } else {
     document.getElementById("navbar").style.top = "-180px";
-}
-prevScrollpos = currentScrollpos;
+  }
+  prevScrollpos = currentScrollpos;
 }
 
 
@@ -56,7 +56,7 @@ $(document).ready(function () {
     $("html, body").animate({
       scrollTop: 0
     }, 100);
-      return false;
+    return false;
   });
 
 });
@@ -65,24 +65,24 @@ $(document).ready(function () {
 
 
 $('.home-card-carousel').owlCarousel({
-    loop:false,
-    margin:15,
-    nav:false,
-    dots:false,
-    items:1,
-    rewind: true,
-    autoplay:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:3
-        }
+  loop:false,
+  margin:15,
+  nav:false,
+  dots:false,
+  items:1,
+  rewind: true,
+  autoplay:true,
+  responsive:{
+    0:{
+      items:1
+    },
+    600:{
+      items:3
+    },
+    1000:{
+      items:3
     }
+  }
 })
 
 
@@ -92,36 +92,36 @@ $('.home-card-carousel').owlCarousel({
 
 // read more js
 $(document).ready(function () {
-    $(".read-more-btn").click(function () {
-        $(this).prev().slideToggle();
-        if ($(this).text() == "Read More") {
-            $(this).text("Read Less");
-        } else {
-            $(this).text("Read More");
-        }
-    });
+  $(".read-more-btn").click(function () {
+    $(this).prev().slideToggle();
+    if ($(this).text() == "Read More") {
+      $(this).text("Read Less");
+    } else {
+      $(this).text("Read More");
+    }
+  });
 });
 
 
 
 
 $('.publication-carousel').owlCarousel({
-    loop:false,
-    margin:10,
-    nav:true,
-    items:1,
-    rewind: true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:2
-        }
+  loop:false,
+  margin:10,
+  nav:true,
+  items:1,
+  rewind: true,
+  responsive:{
+    0:{
+      items:1
+    },
+    600:{
+      items:2
+    },
+    1000:{
+      items:2
     }
+  }
 })
 
 
@@ -149,7 +149,10 @@ function myFunction(imgs) {
 
 // thumb hover effect
 var view = function(e){
-    $(".preview").html( $("<img>").attr("src", $(e.target).attr("rel")) );
+
+  $(".preview").html( $("<img>").attr("src", $(e.target).attr("rel")));
+  $(".preview").append($("<p>").html($(e.target).attr("data-text")));  
+  
 };
 
 $("img.zoom").mouseover(view);

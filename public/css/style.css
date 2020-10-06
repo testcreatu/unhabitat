@@ -1965,6 +1965,10 @@ transform: translate(-50%, -50%);*/
   display: none;
 }
 
+.img-preview .preview img + p {
+  color:#fff !important;
+}
+
 /*.video-list .video-card-img {
 height: 260px;
 width: 100%;

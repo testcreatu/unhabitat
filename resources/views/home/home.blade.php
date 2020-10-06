@@ -139,7 +139,7 @@
 									<h5 class="mb-0">{{$finalHome['blog'][0]['title']}}</h5>
 								</div>
 								<div class="content">
-									<p>{{$finalHome['blog'][0]['summary']}}</p>
+									<p>{{substr($finalHome['blog'][0]['summary'],0,100)}}</p>
 								</div>
 							</div>
 						</div>
@@ -160,7 +160,7 @@
 											<h5 class="mb-0">{{$blog['title']}}</h5>
 										</div>
 										<div class="content">
-											<p>{{$blog['summary']}}</p>
+											<p>{{substr($blog['summary'],0,100)}}</p>
 										</div>
 									</div>
 								</div>
@@ -225,21 +225,23 @@
 				</h3>
 			</div>
 			<div class="row">
-				<div class="col-md-6">
-					<a href="{{url('recent_publish_detail/'.$finalHome['publications'][0]['slug'])}}">
+				@foreach($finalHome['publications'] as $publications)
+				<div class="col-md-3 p-0 p-2">
+					<a href="{{url('recent_publish_detail/'.$publications['slug'])}}">
 						<div class="main-post-card">
-							<div class="post-card-img full-post-card-img">
-								<img src="{{url('uploads/publications/'.$finalHome['publications'][0]['image'])}}" class="img-fluid" alt="{{$finalHome['publications'][0]['altimage']}}">
+							<div class="post-card-img">
+								<img src="{{url('uploads/publications/'.$publications['image'])}}" class="img-fluid" alt="{{$publications['altimage']}}">
 							</div>
 							<div class="post-card-content">
 								<div class="sub-title text-center">
-									<h5 class="mb-0">{{$finalHome['publications'][0]['title']}}</h5>
+									<h5 class="mb-0">{{$publications['title']}}</h5>
 								</div>
 							</div>
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3 p-0 p-2">
+				@endforeach
+				{{-- <div class="col-md-3 p-0 p-2">
 					<a href="{{url('featured_news_detail')}}">
 						<div class="main-post-card">
 							<div class="post-card-img">
@@ -280,7 +282,7 @@
 							</div>
 						</div>
 					</a>
-				</div>
+				</div> --}}
 				<!-- <div class="col-md-6">
 					<div class="row">
 						@foreach($finalHome['publications'] as $key => $publications)
@@ -549,31 +551,16 @@
 					<div class="row">
 						<div class="col-md-8">
 							<div class="thumbs"> 
-								<img src="{{url('public/images/png1.png')}}" rel="{{url('public/images/png1.png')}}" class="zoom" />   
-								<img src="{{url('public/images/png2.png')}}" rel="{{url('public/images/png2.png')}}" class="zoom" />
-								<img src="{{url('public/images/png3.png')}}" rel="{{url('public/images/png3.png')}}" class="zoom" />
-								<img src="{{url('public/images/png4.png')}}" rel="{{url('public/images/png4.png')}}" class="zoom" />
-								<img src="{{url('public/images/png5.png')}}" rel="{{url('public/images/png5.png')}}" class="zoom" />
-								<img src="{{url('public/images/png6.png')}}" rel="{{url('public/images/png6.png')}}" class="zoom" />
-								<img src="{{url('public/images/png7.png')}}" rel="{{url('public/images/png7.png')}}" class="zoom" />
-								<img src="{{url('public/images/png8.png')}}" rel="{{url('public/images/png8.png')}}" class="zoom" />
-								<img src="{{url('public/images/png9.png')}}" rel="{{url('public/images/png9.png')}}" class="zoom" />
-								<img src="{{url('public/images/png10.png')}}" rel="{{url('public/images/png10.png')}}" class="zoom" />
-								<img src="{{url('public/images/png11.png')}}" rel="{{url('public/images/png11.png')}}" class="zoom" />
-								<img src="{{url('public/images/png16.png')}}" rel="{{url('public/images/png11.png')}}" class="zoom" />
-								<img src="{{url('public/images/png17.png')}}" rel="{{url('public/images/png11.png')}}" class="zoom" />
-								<img src="{{url('public/images/png15.png')}}" rel="{{url('public/images/png15.png')}}" class="zoom" />
-								<img src="{{url('public/images/png14.png')}}" rel="{{url('public/images/png14.png')}}" class="zoom" />
-								<img src="{{url('public/images/png12.png')}}" rel="{{url('public/images/png12.png')}}" class="zoom" />
-								<img src="{{url('public/images/png13.png')}}" rel="{{url('public/images/png13.png')}}" class="zoom" />
-								
-								
+								@foreach($finalHome['goals'] as $goals)
+								<img src="{{url('uploads/thumbnail/'.$goals['image'])}}" rel="{{url('uploads/thumbnail/'.$goals['image'])}}" data-text="{{$goals['summary']}}" class="zoom" />
+								@endforeach
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="img-preview">
 								<div class="preview">
 									<img src="http://placehold.it/400x220">
+									<p class="img-text-goals"></p>
 								</div>
 								<!-- <div class="img-preview-content">
 									<p>

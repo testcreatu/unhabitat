@@ -37,10 +37,23 @@
 			<form class="form-horizontal" method="post" action="{{url('cd-admin/add-goals')}}" enctype="multipart/form-data" role="form">
 				<div class="form-body">
 					@csrf
-					<div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter Goal Images(Multiple)</label>
+
+
+					<div class="form-group{{ $errors->has('summary') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Enter Goal Summary</label>
 						<div class="col-md-6">
-							<input type="file" name="image[]" class="form-control" placeholder="Enter Service Icon" value="{{old('image')}}" multiple>
+							<textarea type="file" name="summary" class="form-control" placeholder="Enter Summary">{{old('summary')}}</textarea>
+						</div>
+					</div>
+					@if ($errors->has('summary'))
+					<span class="help-block">
+						<strong>{{ $errors->first('summary') }}</strong>
+					</span>
+					@endif
+					<div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Enter Goal Image</label>
+						<div class="col-md-6">
+							<input type="file" name="image" class="form-control" placeholder="Enter Service Icon" value="{{old('image')}}" >
 						</div>
 					</div>
 					@if ($errors->has('image'))

@@ -11,11 +11,11 @@
 			<i class="fa fa-circle"></i>
 		</li>
 		<li>
-			<a href="{{url('cd-admin/view-all-features')}}">Edit Features</a>
+			<a href="{{url('cd-admin/view-goals')}}">View Goals</a>
 			<i class="fa fa-circle"></i>
 		</li>
 		<li>
-			<span>Edit Features</span>
+			<span>Edit Goals</span>
 		</li>
 	</ul>
 </div>
@@ -30,46 +30,59 @@
 		<div class="portlet-title">
 			<div class="caption">
 				<i class="icon-settings font-dark"></i>
-				<span class="caption-subject font-dark sbold uppercase">Edit Features</span>
+				<span class="caption-subject font-dark sbold uppercase">Edit Goals</span>
 			</div>
 		</div>
 		<div class="portlet-body form">
-			<form class="form-horizontal" method="post" action="{{url('cd-admin/edit-features/'.$data['id'])}}" enctype="multipart/form-data" role="form">
+			<form class="form-horizontal" method="post" action="{{url('cd-admin/edit-goals/'.$data['id'])}}" enctype="multipart/form-data" role="form">
 				<div class="form-body">
 					@csrf
 
 
 					<div class="form-group{{ $errors->has('summary') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter Feature Summary</label>
+						<label class="col-md-3 control-label">Enter Goal Summary</label>
 						<div class="col-md-6">
-							<textarea type="text" name="summary" class="form-control" placeholder="Enter Feature Summary">{{$data['summary']}}</textarea>
+							<textarea type="file" name="summary" class="form-control" placeholder="Enter Summary">{{$data['summary']}}</textarea>
 						</div>
 					</div>
-
+					@if ($errors->has('summary'))
+					<span class="help-block">
+						<strong>{{ $errors->first('summary') }}</strong>
+					</span>
+					@endif
 					<div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter Feature Image</label>
+						<label class="col-md-3 control-label">Enter Goal Image</label>
 						<div class="col-md-6">
-							<input type="file" name="image" class="form-control" placeholder="Enter Service Icon" value="{{old('image')}}">
+							<input type="file" name="image" class="form-control" placeholder="Enter Service Icon" value="{{old('image')}}" >
 						</div>
 					</div>
-
+					@if ($errors->has('image'))
+					<span class="help-block">
+						<strong>{{ $errors->first('image') }}</strong>
+					</span>
+					@endif
+					@if ($errors->has('image.*'))
+					<span class="help-block">
+						<strong>{{ $errors->first('image.*') }}</strong>
+					</span>
+					@endif
 					<!-- status section starts -->
-					<hr>
+					{{-- <hr>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Status</label>
 						<div class="col-md-6">
 							<div class="mt-radio-inline">
 								<label class="mt-radio">
-									<input type="radio" name="status" id="optionsRadios25" value="active" <?php echo $data['status'] == 'active'?'checked':''  ?>> Active
+									<input type="radio" name="status" id="optionsRadios25" value="active" checked=""> Active
 									<span></span>
 								</label>
 								<label class="mt-radio">
-									<input type="radio" name="status" id="optionsRadios26" value="inactive" <?php echo $data['status'] == 'inactive'?'checked':''  ?>> Inactive
+									<input type="radio" name="status" id="optionsRadios26" value="inactive"> Inactive
 									<span></span>
 								</label>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 					<!-- status section ends -->
 
 				</div>

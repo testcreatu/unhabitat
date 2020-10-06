@@ -32,13 +32,12 @@ class GoalsController extends Controller
 		$data = Request()->validate([
 			'image' => '',
 			'image.*' => 'required|mimes:jpg,jpeg,png,svg,gif|image',
+			'summary' => 'required',
 		]);
-		foreach($data['image'] as $image)
-		{
-			$goal = new Goals();
-			$goal->image = $this->uploadImage($image,'uploads/goals');
-			$goal->save();
-		}
+		$goal = new Goals();
+		$goal->image = $this->uploadImage($data['image'],'uploads/goals');
+		$goal->summary = $data['summary'];
+		$goal->save();
 		Session::flash('ServiceSuccess');
 		return redirect('cd-admin/view-goals');
 	}
@@ -47,20 +46,19 @@ class GoalsController extends Controller
 	public function editGoals($id)
 	{
 		$data = Request()->validate([
-			'summary' => '',
+			'summary' => 'required',
 			'image' => 'mimes:jpg,jpeg,png,svg,gif|image',
-			'status' => 'required',
 
 		]);
 		$goal = Goals::find($id);
-		// $goal->summary = $data['summary'];
+		$goal->summary = $data['summary'];
 		if(isset($data['image']))
 		{
 			$this->unlinkImage('uploads/goals/'.$goal['image']);
 			$this->unlinkImage('uploads/thumbnail/'.$goal['image']);
 			$goal->image = $this->uploadImage($data['image'],'uploads/goals');
 		}
-		$goal->status = $data['status'];
+		// $goal->status = $data['status'];
 		$goal->save();
 		Session::flash('ServiceUpdateSuccess');
 		return redirect('cd-admin/view-goals');

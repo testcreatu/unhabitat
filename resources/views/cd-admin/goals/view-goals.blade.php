@@ -47,7 +47,7 @@
 					<span class="caption-subject bold uppercase"> View Goals </span>
 				</div>
 				<div class="btn-group pull-right">
-					<a href="{{url('cd-admin/add-features')}}">
+					<a href="{{url('cd-admin/add-goals')}}">
 						<button id="sample_editable_1_new" class="btn sbold green"> Add Goals
 							<i class="fa fa-plus"></i>
 						</button>
@@ -80,11 +80,11 @@
 												<i class="fa fa-eye"></i> View
 											</a>
 										</li>
-										{{-- <li>
+										<li>
 											<a href="{{url('cd-admin/edit-goals/'.$goals->id)}}">
 												<i class="fa fa-edit"></i> Edit
 											</a>
-										</li> --}}
+										</li>
 										<li>
 											<a data-toggle="modal" href="#delete-modal{{$goals->id}}">
 												<i class="fa fa-trash"></i> Delete
@@ -118,10 +118,10 @@
 					<div class="panel-heading">  Image </div>
 					<div class="panel-body"> <img src="{{url('uploads/thumbnail/'.$ch['image'])}}" height="200px" width="200px"> </div>
 				</div>
-				{{-- <div class="panel panel-default">
+				<div class="panel panel-default">
 					<div class="panel-heading">  Summary </div>
 					<div class="panel-body"> {!!$ch['summary']!!} </div>
-				</div> --}}
+				</div>
 
 				
 			</div>
