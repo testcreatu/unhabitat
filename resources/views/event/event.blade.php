@@ -10,7 +10,7 @@
 			<img src="{{url('public/images/1.jpg')}}" class="img-fluid overlay-bg" alt="">
 		</div>
 		<div class="banner-feature">
-			<a href="{{url('covid-19_response')}}"><h1>Unhabitat Covid-19 Response By Nepal</h1></a>
+			<a href="{{url('covid-19_response')}}"><h1>Un-Habitat Covid-19 Response By Nepal</h1></a>
 		</div>
 	</div>
 

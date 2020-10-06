@@ -14,7 +14,7 @@
 				<img class="d-block w-100" src="{{url('public/images/38.jpg')}}" alt="Second slide">
 			</div>
 			<div class="banner-feature">
-				<a href="{{url('covid-19_response')}}"><h1>Unhabitat Covid-19 Response By Nepal</h1></a>
+				<a href="{{url('covid-19_response')}}"><h1>Un-Habitat Covid-19 Response By Nepal</h1></a>
 			</div>
 		</div>
 		<a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
@@ -148,23 +148,6 @@
 							<a href="{{url('recent_publish_detail')}}">
 								<div class="main-post-card ">
 									<div class="post-card-img post-card-half-img">
-										<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
-									</div>
-									<div class="post-card-content half-post-card-content">
-										<div class="sub-title text-center mt-2">
-											<h5 class="mb-0">Disseminating Message through IEC</h5>
-										</div>
-										<div class="content">
-											<p>UN Habitat Nepal disseminates the message on essence of Hand Washing.</p>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-12 mb-3">
-							<a href="{{url('recent_publish_detail')}}">
-								<div class="main-post-card ">
-									<div class="post-card-img post-card-half-img">
 
 										<img src="{{url('public/images/5.jpg')}}" class="img-fluid" alt="">
 									</div>
@@ -218,21 +201,63 @@
 				</h3>
 			</div>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-3 p-0 p-2">
 					<a href="{{url('featured_news_detail')}}">
 						<div class="main-post-card">
-							<div class="post-card-img full-post-card-img">
+							<div class="post-card-img">
 								<img src="{{url('public/images/4.png')}}" class="img-fluid" alt="">
 							</div>
 							<div class="post-card-content">
 								<div class="sub-title text-center">
-									<h5 class="mb-0">Traditional Building Types of Bungamati</h5>
+									<h5 class="mb-0">Title goes here</h5>
 								</div>
 							</div>
 						</div>
 					</a>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-3 p-0 p-2">
+					<a href="{{url('featured_news_detail')}}">
+						<div class="main-post-card">
+							<div class="post-card-img">
+								<img src="{{url('public/images/8.jpg')}}" class="img-fluid" alt="">
+							</div>
+							<div class="post-card-content">
+								<div class="sub-title text-center">
+									<h5 class="mb-0">Title goes here</h5>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 p-0 p-2">
+					<a href="{{url('recent_publish_detail')}}">
+						<div class="main-post-card">
+							<div class="post-card-img">
+								<img src="{{url('public/images/17.png')}}" class="img-fluid" alt="">
+							</div>
+							<div class="post-card-content">
+								<div class="sub-title text-center">
+									<h5 class="mb-0">Title goes here</h5>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 p-0 p-2">
+					<a href="{{url('recent_publish_detail')}}">
+						<div class="main-post-card">
+							<div class="post-card-img">
+								<img src="{{url('public/images/7.png')}}" class="img-fluid" alt="">
+							</div>
+							<div class="post-card-content">
+								<div class="sub-title text-center">
+									<h5 class="mb-0">Title goes here</h5>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- <div class="col-md-6">
 					<div class="row">
 						<div class="col-md-6 mb-4">
 							<a href="{{url('featured_news_detail')}}">
@@ -291,9 +316,9 @@
 							</a>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
-			<div class="view-more text-center mt-4">
+			<div class="view-more text-center mt-5">
 				<a href="{{url('recent_publish')}}" class="btn btn2">View More &nbsp;&nbsp; +</a>
 			</div>
 		</div>
@@ -354,7 +379,7 @@
 	</div>
 
 	<!-- sustainable development -->
-	<div class="container">
+	<!-- <div class="container">
 		<div class="sustainable-goal ma-tb">
 			<div class="container-title">
 				<h3>
@@ -475,8 +500,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- <div class="container ma-t">
+	</div> -->
+	<div class="container pa-tb">
 		<div class="row no-gutters">
 			<div class="col-md-12 left-container">
 				<div class="gif-post">
@@ -488,26 +513,51 @@
 						</h3>
 					</div>
 					<div class="row">
-						<div class="col-md-6">
-							<div class="thumbs">    
-								<img src="{{url('public/images/2.jpg')}}" rel="{{url('public/images/2.jpg')}}" class="zoom" />
-								<img src="{{url('public/images/3.jpg')}}" rel="{{url('public/images/3.jpg')}}" class="zoom" />
-								<img src="{{url('public/images/5.jpg')}}" rel="{{url('public/images/5.jpg')}}" class="zoom" />
-								<img src="{{url('public/images/6.jpeg')}}" rel="{{url('public/images/6.jpeg')}}" class="zoom" />
-								<img src="{{url('public/images/4.png')}}" rel="{{url('public/images/4.png')}}" class="zoom" />
-								<img src="{{url('public/images/7.png')}}" rel="{{url('public/images/7.png')}}" class="zoom" />
+						<div class="col-md-8">
+							<div class="thumbs"> 
+								<img src="{{url('public/images/png1.png')}}" rel="{{url('public/images/png1.png')}}" class="zoom" />   
+								<img src="{{url('public/images/png2.png')}}" rel="{{url('public/images/png2.png')}}" class="zoom" />
+								<img src="{{url('public/images/png3.png')}}" rel="{{url('public/images/png3.png')}}" class="zoom" />
+								<img src="{{url('public/images/png4.png')}}" rel="{{url('public/images/png4.png')}}" class="zoom" />
+								<img src="{{url('public/images/png5.png')}}" rel="{{url('public/images/png5.png')}}" class="zoom" />
+								<img src="{{url('public/images/png6.png')}}" rel="{{url('public/images/png6.png')}}" class="zoom" />
+								<img src="{{url('public/images/png7.png')}}" rel="{{url('public/images/png7.png')}}" class="zoom" />
+								<img src="{{url('public/images/png8.png')}}" rel="{{url('public/images/png8.png')}}" class="zoom" />
+								<img src="{{url('public/images/png9.png')}}" rel="{{url('public/images/png9.png')}}" class="zoom" />
+								<img src="{{url('public/images/png10.png')}}" rel="{{url('public/images/png10.png')}}" class="zoom" />
+								<img src="{{url('public/images/png11.png')}}" rel="{{url('public/images/png11.png')}}" class="zoom" />
+								<img src="{{url('public/images/png16.png')}}" rel="{{url('public/images/png11.png')}}" class="zoom" />
+								<img src="{{url('public/images/png17.png')}}" rel="{{url('public/images/png11.png')}}" class="zoom" />
+								<img src="{{url('public/images/png15.png')}}" rel="{{url('public/images/png15.png')}}" class="zoom" />
+								<img src="{{url('public/images/png14.png')}}" rel="{{url('public/images/png14.png')}}" class="zoom" />
+								<img src="{{url('public/images/png12.png')}}" rel="{{url('public/images/png12.png')}}" class="zoom" />
+								<img src="{{url('public/images/png13.png')}}" rel="{{url('public/images/png13.png')}}" class="zoom" />
+								
+								
 							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="preview">
-								<img src="http://placehold.it/400x220">
+						<div class="col-md-4">
+							<div class="img-preview">
+								<div class="preview">
+									<img src="http://placehold.it/400x220">
+								</div>
+								<!-- <div class="img-preview-content">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div> -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
 	<!-- recent video -->
 	<div class="recent-video pa-tb">
@@ -565,7 +615,7 @@
 
 
 	<!-- latest story -->
-	<div class="container ma-t">	
+	<!-- <div class="container ma-t">	
 		<div class="recent-publish latest-story">
 			<div class="container-title">
 				<h3>
@@ -626,29 +676,12 @@
 						</div>
 					</a>
 				</div>
-				<!-- <div class="col-md-4">
-					<div class="container-title">
-						<h3>
-							<span>Notice</span>
-						</h3>
-					</div>
-					<div class="sidebar">
-						<div class="link-list mt-4">
-							<div class="sub-title">
-								<h6>Notice</h6>
-							</div>
-							<ul class="">
-								<li><a href="http://localhost/creatu/unhabitat/notice">Call for Proposal (CFP)</a></li>
-							</ul>
-						</div>
-					</div>
-				</div> -->
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- our work -->
-	<div class="container-fluid our-work box-shadow ma-t">
+	<div class="container-fluid our-work box-shadow ">
 		<div class="container">
 			<div class="title">
 				<h4>Our Work</h4>

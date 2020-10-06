@@ -171,7 +171,7 @@
 									</p>
 									<p>
 										SHELTER CLUSTER CO-LEAD: <br>
-										Under the UN Inter Agency Standing Committee, UNHabitat is identified as co-lead to shelter cluster. While IFRC is responsible for emergency response UN-Habitat takes the charge in recovery part. UN-Habitat in Nepal is supporting the cluster in designing contingency plan for shelter and keeps it prepared to support as deemed necessary. The support provided by UNHabitat
+										Under the UN Inter Agency Standing Committee, Un-Habitat is identified as co-lead to shelter cluster. While IFRC is responsible for emergency response UN-Habitat takes the charge in recovery part. UN-Habitat in Nepal is supporting the cluster in designing contingency plan for shelter and keeps it prepared to support as deemed necessary. The support provided by Un-Habitat
 										in association with UNDP for housing landless Koshi flood victims in 2009/10 and in 2012 Aurahi fire  by demonstrating sustainable housing in Siraha is one of the examples promoted by UN-Habitat.
 									</p>
 								</div>
