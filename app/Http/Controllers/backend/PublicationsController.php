@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\backend\ImageController;
 use App\Publications;
+use App\Projects;
 use DB;
 use Session;
 use Illuminate\Support\Str;
@@ -17,7 +18,8 @@ class PublicationsController extends Controller
 
 	public function addPublicationsForm()
 	{
-		return view('cd-admin.publications.add-publications');
+		$projects = Projects::get();
+		return view('cd-admin.publications.add-publications',compact('projects'));
 	}
 	public function addPublications()
 	{
@@ -36,14 +38,16 @@ class PublicationsController extends Controller
 	public function viewPublications()
 	{
 		$publications = Publications::all();
-		return view('cd-admin.publications.view-publications',compact('publications'));
+		$projects = Projects::get();
+		return view('cd-admin.publications.view-publications',compact('publications','projects'));
 	}
 
 	public function editPublicationsForm($id)
 	{
 		if($data = Publications::where('id',$id)->get()->first())
 		{
-			return view('cd-admin.publications.edit-publications',compact('data'));
+			$projects = Projects::get();
+			return view('cd-admin.publications.edit-publications',compact('data','projects'));
 		}
 	}
 
@@ -52,7 +56,7 @@ class PublicationsController extends Controller
 		$FinalData = [];
 		$request = Request()->all();
 		$publications = Publications::where('id',$id)->get()->first();
-		$data = $this->editValidate();
+		$data = $this->editValidate($id);
 		if(isset($data['image']))
 		{
 			$this->unlinkImage('uploads/publications/'.$publications['image']);
@@ -88,7 +92,8 @@ class PublicationsController extends Controller
 	{
 		$request = Request()->all();
 		$valid = $this->validate(Request(),[
-			'title' => 'required',
+			'project_id' => '',
+			'title' => 'required|unique:publications,title',
 			'image' => 'required|mimes:jpeg,jpg,png,gif',
 			'altimage' => 'required',
 			'description' => 'required',
@@ -106,11 +111,12 @@ class PublicationsController extends Controller
 		return $valid;
 	}
 
-	protected function editValidate()
+	protected function editValidate($id)
 	{
 		$request = Request()->all();
 		$valid = $this->validate(Request(),[
-			'title' => 'required',
+			'project_id' => '',
+			'title' => 'required|unique:publications,title,'.$id,
 			'image' => 'mimes:jpeg,jpg,png,gif',
 			'altimage' => 'required',
 			'description' => 'required',

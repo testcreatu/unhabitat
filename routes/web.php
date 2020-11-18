@@ -164,4 +164,21 @@ Route::group(['middleware'=>'auth'], function(){
     Route::post('/cd-admin/edit-photo-gallery/{id}','backend\PhotoGalleryController@editPhotoGallery')->name('edit-photo-gallery');
     Route::get('/cd-admin/delete-photo-gallery/{id}','backend\PhotoGalleryController@deletePhotoGallery')->name('delete-photo-gallery');
 
+        //NewsLetter
+    Route::get('/cd-admin/add-newsletter','backend\NewsLetterController@addNewsLetterForm')->name('add-newsletter-form');
+    Route::post('/cd-admin/add-newsletter','backend\NewsLetterController@addNewsLetter')->name('add-newsletter');
+    Route::get('/cd-admin/view-newsletter','backend\NewsLetterController@viewNewsLetter')->name('view-newsletter');
+    Route::get('/cd-admin/edit-newsletter/{id}','backend\NewsLetterController@editNewsLetterForm')->name('edit-newsletter-form');
+    Route::post('/cd-admin/edit-newsletter/{id}','backend\NewsLetterController@editNewsLetter')->name('edit-newsletter');
+    Route::get('/cd-admin/delete-newsletter/{id}','backend\NewsLetterController@deleteNewsLetter')->name('delete-newsletter');
+
+
+         //Case Study
+    Route::get('/cd-admin/add-case-study','backend\CaseStudyController@addCaseStudyForm')->name('add-case-study-form');
+    Route::post('/cd-admin/add-case-study','backend\CaseStudyController@addCaseStudy')->name('add-case-study');
+    Route::get('/cd-admin/view-case-study','backend\CaseStudyController@viewCaseStudy')->name('view-case-study');
+    Route::get('/cd-admin/edit-case-study/{id}','backend\CaseStudyController@editCaseStudyForm')->name('edit-case-study-form');
+    Route::post('/cd-admin/edit-case-study/{id}','backend\CaseStudyController@editCaseStudy')->name('edit-case-study');
+    Route::get('/cd-admin/delete-case-study/{id}','backend\CaseStudyController@deleteCaseStudy')->name('delete-case-study');
+
 });

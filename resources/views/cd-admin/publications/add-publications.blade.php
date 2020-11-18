@@ -37,6 +37,22 @@
 			<form class="form-horizontal" method="post" action="{{route('add-publications')}}" enctype="multipart/form-data" role="form">
 				@csrf
 				<div class="form-body">
+
+					<div class="form-group{{ $errors->has('project_id') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Select Project Name  </label>
+						<div class="col-md-6">
+							<select class="form-control" name="project_id">
+								<option selected value="">None</option>
+								@foreach($projects as $project)
+								<option value="{{$project['id']}}">{{$project['title']}}</option>
+								@endforeach
+							</select>
+						</div>
+						@if ($errors->has('project_id'))
+						<span class="text-danger">{{ $errors->first('project_id') }}</span>
+						@endif
+					</div>
+					
 					<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
 						<label class="col-md-3 control-label">Enter Publications Title <span class="cd-admin-required">*</span></label>
 						<div class="col-md-6">

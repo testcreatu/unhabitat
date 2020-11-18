@@ -5,28 +5,33 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\VideoGallery;
+use App\Projects;
 use Session;
 use Carbon\Carbon;
 class VideoGalleryController extends Controller
 {
 	public function addVideoGalleryForm()
 	{
-		return view('cd-admin.videogallery.add-video-gallery');
+		$projects = Projects::get();
+		return view('cd-admin.videogallery.add-video-gallery',compact('projects'));
 	}
 
 	public function viewVideoGallery()
 	{
 		$video = VideoGallery::get();
-		return view('cd-admin.videogallery.view-video-gallery',compact('video'));
+		$projects = Projects::get();
+		return view('cd-admin.videogallery.view-video-gallery',compact('video','projects'));
 	}
 	public function editVideoGalleryForm($id)
 	{
 		$data = VideoGallery::find($id);
-		return view('cd-admin.videogallery.edit-video-gallery',compact('data'));
+		$projects = Projects::get();
+		return view('cd-admin.videogallery.edit-video-gallery',compact('data','projects'));
 	}
 	public function addVideoGallery()
 	{
 		$data = Request()->validate([
+			'project_id' => '',
 			'url' => 'required',
 			'status' => 'required',
 			'title' => 'required',
@@ -39,6 +44,7 @@ class VideoGalleryController extends Controller
 		$gallery->embeded_url = $new_url;
 		$gallery->video_id = $video_id;
 		$gallery->status = $data['status'];
+		$gallery->project_id = $data['project_id'];
 		$gallery->save();
 		Session::flash('VideoAddSuccess');
 		return redirect()->route('view-video-gallery');
@@ -70,6 +76,7 @@ class VideoGalleryController extends Controller
 	public function editVideoGallery($id)
 	{
 		$data = Request()->validate([
+			'project_id' => '',
 			'url' => 'required',
 			'status' => 'required',
 			'title' => 'required',
@@ -82,6 +89,7 @@ class VideoGalleryController extends Controller
 		$gallery->embeded_url = $new_url;
 		$gallery->video_id = $video_id;
 		$gallery->status = $data['status'];
+		$gallery->project_id =$data['project_id'];
 		$gallery->save();
 		Session::flash('VideoEditSuccess');
 		return redirect()->route('view-video-gallery');

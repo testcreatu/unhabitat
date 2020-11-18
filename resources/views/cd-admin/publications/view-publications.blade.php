@@ -60,6 +60,7 @@
 						<tr>
 							<th>SN</th>
 							<th>Title </th>
+							<th>Project Name</th>
 							<th>Year</th>
 							<th>Publisher Name</th>
 							<th>Show In Homepage</th>
@@ -72,6 +73,20 @@
 						<tr class="odd gradeX">
 							<td>{{$loop->iteration}}</td>
 							<td>{{$publication['title']}}</td>
+							<td align="center">
+								@if($publication['project_id'] != NULL)
+								@foreach($projects as $project)
+								@if($project['id'] == $publication['project_id'])
+								<span class="badge badge-success">
+									{{$project['title']}}
+								</span>
+								@endif
+								@endforeach
+								@else
+								<span class="badge badge-danger">No Project Assigned</span>
+								@endif
+
+							</td>
 							<td>{{$publication['year']}}</td>
 							<td>{{$publication['publisher_name']}}</td>
 							<td><span class="badge badge-default">{{ucfirst($publication['show_in_homepage'])}}</span></td>
