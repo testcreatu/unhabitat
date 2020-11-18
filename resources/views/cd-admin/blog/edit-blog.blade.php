@@ -161,21 +161,7 @@
 
 					<!-- status section starts -->
 					<hr>
-					{{-- <div class="form-group">
-						<label class="col-md-3 control-label">Is Popular News</label>
-						<div class="col-md-6">
-							<div class="mt-radio-inline">
-								<label class="mt-radio">
-									<input type="radio" name="is_popular" id="optionsRadios25" value="yes" > Yes
-									<span></span>
-								</label>
-								<label class="mt-radio">
-									<input type="radio" name="is_popular" id="optionsRadios26" value="no" checked> No
-									<span></span>
-								</label>
-							</div>
-						</div>
-					</div> --}}
+
 					<div class="form-group">
 						<label class="col-md-3 control-label">Status</label>
 						<div class="col-md-6">

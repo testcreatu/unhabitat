@@ -28,7 +28,7 @@ class CaseStudyController extends Controller
 		$FinalData['slug'] = Str::slug($data['title']);
 		$FinalData['image'] = $this->uploadImage($data['image'],'uploads/caseStudy');
 		$merge = array_merge($data,$FinalData);
-		DB::table('blogs')->insert($merge);
+		DB::table('case_studies')->insert($merge);
 		Session::flash('success');
 		return redirect()->to('cd-admin/view-case-study');
 	}
@@ -71,9 +71,9 @@ class CaseStudyController extends Controller
 
 	public function viewCaseStudy()
 	{
-		$blog = CaseStudy::all();
+		$case_studies = CaseStudy::all();
 		$projects = Projects::get();
-		return view('cd-admin.case_study.view-case-study',compact('blog','projects'));
+		return view('cd-admin.case_study.view-case-study',compact('case_studies','projects'));
 	}
 
 	public function editCaseStudyForm($id)
@@ -93,26 +93,26 @@ class CaseStudyController extends Controller
 		$data = $this->editValidate();
 		if(isset($data['image']))
 		{
-			$this->unlinkImage('uploads/blogs/'.$blog['image']);
+			$this->unlinkImage('uploads/caseStudy/'.$blog['image']);
 			$this->unlinkImage('uploads/thumbnail/'.$blog['image']);
-			$FinalData['image'] = $this->uploadImage($data['image'],'uploads/blogs');
+			$FinalData['image'] = $this->uploadImage($data['image'],'uploads/caseStudy');
 		}
 		$FinalData['slug'] = Str::slug($data['title']);
 		$merge = array_merge($data,$FinalData);
-		DB::table('blogs')->where('id',$id)->update($merge);
+		DB::table('case_studies')->where('id',$id)->update($merge);
 		Session::flash('success1');
-		return redirect()->to('cd-admin/view-blog');
+		return redirect()->to('cd-admin/view-case-study');
 	}
 
 	public function deleteCaseStudy($id)
 	{
 		if($check = CaseStudy::where('id',$id)->get()->first())
 		{
-			$this->unlinkImage('uploads/blogs/'.$check['image']);
+			$this->unlinkImage('uploads/caseStudy/'.$check['image']);
 			$this->unlinkImage('uploads/thumbnail/'.$check['image']);
 			$check->delete();
 			Session::flash('failure');
-			return redirect()->to('cd-admin/view-blog');
+			return redirect()->to('cd-admin/view-case-study');
 		}
 	}
 

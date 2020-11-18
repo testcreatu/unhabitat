@@ -3,21 +3,21 @@
 <!-- page content -->
 @section('content')
 
-@if(Session::has('failure'))
+@if(Session::has('PublicationCategoryDeleteSuccess'))
 <div class="alert alert-danger">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>Case Study Deleted Successfully</strong> {{ Session::get('message', '') }}
+	<strong>PublicationCategory DELETED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
-@elseif(Session::has('success'))
+@elseif(Session::has('PublicationCategorySuccess'))
 <div class="alert alert-success">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>Case Study Added Successfully</strong> {{ Session::get('message', '') }}
+	<strong>PublicationCategory INSERTED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
 
-@elseif(Session::has('success1'))
+@elseif(Session::has('PublicationCategoryUpdateSuccess'))
 <div class="alert alert-success">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>Case Study Updated Successfully</strong> {{ Session::get('message', '') }}
+	<strong>PublicationCategory UPDATED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
 
 @endif
@@ -31,7 +31,7 @@
 		</li>
 	</li>
 	<li>
-		<span>View Case Study</span>
+		<span>View PublicationCategory</span>
 	</li>
 </ul>
 </div>
@@ -44,11 +44,11 @@
 			<div class="portlet-title">
 				<div class="caption font-dark">
 					<i class="icon-settings font-dark"></i>
-					<span class="caption-subject bold uppercase"> View Case Study </span>
+					<span class="caption-subject bold uppercase"> View PublicationCategory </span>
 				</div>
 				<div class="btn-group pull-right">
-					<a href="{{url('cd-admin/add-case-study')}}">
-						<button id="sample_editable_1_new" class="btn sbold green"> Add Case Study
+					<a href="{{url('cd-admin/add-notice')}}">
+						<button id="sample_editable_1_new" class="btn sbold green"> Add PublicationCategory
 							<i class="fa fa-plus"></i>
 						</button>
 					</a>
@@ -59,36 +59,21 @@
 					<thead>
 						<tr>
 							<th>SN</th>
-							<th>Title </th>
-							<th>Project Name</th>
+							<th> PublicationCategory Title </th>
 							<th>Status</th>
 							<th> Actions </th>
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($case_studies as $case)
+						@foreach($notice as $c)
+
 						<tr class="odd gradeX">
 							<td>{{$loop->iteration}}</td>
-							<td>{{$case['title']}}</td>
-							<td align="center">
-								@if($case['project_id'] != NULL)
-								@foreach($projects as $project)
-								@if($project['id'] == $case['project_id'])
-								<span class="badge badge-success">
-									{{$project['title']}}
-								</span>
-								@endif
-								@endforeach
-								@else
-								<span class="badge badge-danger">No Project Assigned</span>
-								@endif
-
-							</td>
-							<td>
-								@if($case['status'] == 'active')
+							<td>{!!$c['title']!!}</td>
+							<td>@if($c['status'] == 'active')
 								<span class="badge badge-success"> Active </span>
 								@else
-								<span class="badge badge-danger"> Inactive </span>
+								<span class="badge badge-danger"> In-Active </span>
 								@endif
 							</td>
 							
@@ -99,17 +84,17 @@
 									</button>
 									<ul class="dropdown-menu pull-left" role="menu">
 										<li>
-											<a data-toggle="modal" href="#view-modal{{$case['id']}}">
+											<a data-toggle="modal" href="#view-modal{{$c->id}}">
 												<i class="fa fa-eye"></i> View
 											</a>
 										</li>
 										<li>
-											<a href="{{route('edit-case-study',$case['id'])}}">
+											<a href="{{url('cd-admin/edit-notice/'.$c->id)}}">
 												<i class="fa fa-edit"></i> Edit
 											</a>
 										</li>
 										<li>
-											<a data-toggle="modal" href="#delete-modal{{$case['id']}}">
+											<a data-toggle="modal" href="#delete-modal{{$c->id}}">
 												<i class="fa fa-trash"></i> Delete
 											</a>
 										</li>
@@ -128,44 +113,36 @@
 </div>
 
 <!-- view modals -->
-@foreach($case_studies as $ch)
-<div id="view-modal{{$ch['id']}}" class="modal fade modal-scroll" tabindex="-1" data-replace="true">
+@foreach($notice as $ch)
+<div id="view-modal{{$ch->id}}" class="modal fade modal-scroll" tabindex="-1" data-replace="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title pull-left">{{$ch['title']}}</h4>
-				<p class="modal-title pull-right">Status 
-					@if($ch['status'] == 'active')
+				<h4 class="modal-title pull-left">Name</h4>
+				<p class="modal-title pull-right">status 
 					<span class="badge badge-success"> Active </span>
-					@else
-					<span class="badge badge-danger"> Inactive </span>
-					@endif
 				</p>
 			</div>
 			<div class="modal-body">
-				<img src="{{url('uploads/thumbnail/'.$ch['image'])}}" alt="" class="img-responsive">
-				<hr>
 				<div class="panel panel-default">
 					<div class="panel-heading"> Description </div>
-					<div class="panel-body"> {!!$ch['description']!!} </div>
+					<div class="panel-body"> {!!$ch->description!!} </div>
 				</div>
 				<div class="panel panel-default">
 					<div class="panel-heading"> Summary </div>
-					<div class="panel-body"> {{$ch['summary']}} </div>
-				</div>
-				<h2 align="center">SEO</h2>
-				<div class="panel panel-default">
-					<div class="panel-heading"> Title </div>
-					<div class="panel-body"> {{$ch['seo_title']}} </div>
+					<div class="panel-body"> {!!$ch->summary!!} </div>
 				</div>
 				<div class="panel panel-default">
-					<div class="panel-heading"> Description </div>
-					<div class="panel-body"> {{$ch['seo_description']}} </div>
+					<div class="panel-heading"> Seo Title </div>
+					<div class="panel-body"> {!!$ch->seo_title!!} </div>
 				</div>
-
 				<div class="panel panel-default">
-					<div class="panel-heading"> Keywords </div>
-					<div class="panel-body"> {{$ch['seo_keyword']}} </div>
+					<div class="panel-heading"> Seo Keyword </div>
+					<div class="panel-body"> {!!$ch->seo_keyword!!} </div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading"> Seo Description </div>
+					<div class="panel-body"> {!!$ch->seo_description!!} </div>
 				</div>
 			</div>
 			<div class="modal-footer">
@@ -174,11 +151,11 @@
 		</div>
 	</div>
 </div>
-
+@endforeach
 
 <!-- delete modal -->
-
-<div class="modal fade" id="delete-modal{{$ch['id']}}" tabindex="-1" role="basic" aria-hidden="true">
+@foreach($notice as $c)
+<div class="modal fade" id="delete-modal{{$c->id}}" tabindex="-1" role="basic" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -188,7 +165,7 @@
 			<div class="modal-body"> Are you sure want to delete this ? </div>
 			<div class="modal-footer">
 				<button type="button" class="btn dark btn-outline" data-dismiss="modal">No</button>
-				<a href="{{url('cd-admin/delete-case-study/'.$ch['id'])}}"  class="btn green">YES</a>
+				<a href="{{url('/cd-admin/delete-notice/'.$c->id)}}"  class="btn green">YES</a>
 			</div>
 		</div>
 		<!-- /.modal-content -->
