@@ -60,6 +60,7 @@
 						<tr>
 							<th>SN</th>
 							<th> Title </th>
+							<th>Project Name</th>
 							<th>Status</th>
 							<th> Actions </th>
 						</tr>
@@ -70,6 +71,20 @@
 						<tr class="odd gradeX">
 							<td>{{$loop->iteration}}</td>
 							<td>{!!$c->title!!}</td>
+							<td align="center">
+								@if($c['project_id'] != NULL)
+								@foreach($projects as $project)
+								@if($project['id'] == $c['project_id'])
+								<span class="badge badge-success">
+									{{$project['title']}}
+								</span>
+								@endif
+								@endforeach
+								@else
+								<span class="badge badge-danger">No Project Assigned</span>
+								@endif
+
+							</td>
 							<td>@if($c->status == 'active')
 								<span class="badge badge-success"> Active </span>
 								@else

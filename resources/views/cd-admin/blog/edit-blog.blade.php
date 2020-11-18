@@ -37,6 +37,31 @@
 			<form class="form-horizontal" method="post" action="{{route('edit-blog',$data['id'])}}" enctype="multipart/form-data" role="form">
 				@csrf
 				<div class="form-body">
+					<div class="form-group{{ $errors->has('project_id') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Select Project Name  </label>
+						<div class="col-md-6">
+							<select class="form-control" name="project_id">
+								@if($data['project_id'] == NULL)
+								<option selected value="">None</option>
+								@foreach($projects as $project)
+								<option value="{{$project['id']}}">{{$project['title']}}</option>
+								@endforeach
+								@else
+								<option value="">None</option>
+								@foreach($projects as $project)
+								@if($project['id'] == $data['project_id'])
+								<option value="{{$project['id']}}" selected>{{$project['title']}}</option>
+								@else
+								<option value="{{$project['id']}}">{{$project['title']}}</option>
+								@endif
+								@endforeach
+								@endif
+							</select>
+						</div>
+						@if ($errors->has('project_id'))
+						<span class="text-danger">{{ $errors->first('project_id') }}</span>
+						@endif
+					</div>
 
 					<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
 						<label class="col-md-3 control-label">Enter News Title<span class="cd-admin-required">*</span></label>
@@ -136,21 +161,7 @@
 
 					<!-- status section starts -->
 					<hr>
-					{{-- <div class="form-group">
-						<label class="col-md-3 control-label">Is Popular News</label>
-						<div class="col-md-6">
-							<div class="mt-radio-inline">
-								<label class="mt-radio">
-									<input type="radio" name="is_popular" id="optionsRadios25" value="yes" > Yes
-									<span></span>
-								</label>
-								<label class="mt-radio">
-									<input type="radio" name="is_popular" id="optionsRadios26" value="no" checked> No
-									<span></span>
-								</label>
-							</div>
-						</div>
-					</div> --}}
+
 					<div class="form-group">
 						<label class="col-md-3 control-label">Status</label>
 						<div class="col-md-6">
