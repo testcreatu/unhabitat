@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -165,3 +165,4 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/cd-admin/delete-photo-gallery/{id}','backend\PhotoGalleryController@deletePhotoGallery')->name('delete-photo-gallery');
 
 });
+

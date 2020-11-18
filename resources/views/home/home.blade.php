@@ -139,7 +139,7 @@
 									<h5 class="mb-0">{{$finalHome['blog'][0]['title']}}</h5>
 								</div>
 								<div class="content">
-									<p>{{substr($finalHome['blog'][0]['summary'],0,100)}}</p>
+									<p>{{substr($finalHome['blog'][0]['summary'],0,200)}}</p>
 								</div>
 							</div>
 						</div>
@@ -213,7 +213,6 @@
 		</div>
 	</div>
 
-
 	<!-- recent publish -->
 	<div class="container ma-t">
 		<div class="recent-publish">
@@ -226,7 +225,7 @@
 			</div>
 			<div class="row">
 				@foreach($finalHome['publications'] as $publications)
-				<div class="col-md-3 p-0 p-2">
+				<div class="col-md-3">
 					<a href="{{url('recent_publish_detail/'.$publications['slug'])}}">
 						<div class="main-post-card">
 							<div class="post-card-img">
@@ -241,7 +240,7 @@
 					</a>
 				</div>
 				@endforeach
-				{{-- <div class="col-md-3 p-0 p-2">
+			<!-- 	<div class="col-md-4 p-0 p-2">
 					<a href="{{url('featured_news_detail')}}">
 						<div class="main-post-card">
 							<div class="post-card-img">
@@ -282,7 +281,7 @@
 							</div>
 						</div>
 					</a>
-				</div> --}}
+				</div> -->
 				<!-- <div class="col-md-6">
 					<div class="row">
 						@foreach($finalHome['publications'] as $key => $publications)

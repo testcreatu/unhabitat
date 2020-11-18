@@ -254,7 +254,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item">
+        <!--     <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-group"></i>
                     <span class="title">Clients</span>
@@ -274,9 +274,9 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> -->
 
-            <li class="nav-item">
+           <!--  <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-group"></i>
                     <span class="title">FAQ</span>
@@ -296,35 +296,15 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> -->
 
-           {{--   <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-group"></i>
-                    <span class="title">Team</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/add-team')}}" class="nav-link">
-                            <i class="fa fa-plus"></i>
-                            <span class="title">Add new Team</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/view-team')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Team</span>
-                        </a>
-                    </li>
-                </ul>
-            </li> --}}
-            <li class="nav-item">
+
+            <!-- <li class="nav-item">
                 <a href="{{url('cd-admin/view-social-links')}}" class="nav-link nav-toggle">
                     <i class="fa fa-group"></i>
                     <span class="title">Social Links</span>
                 </a>
-            </li>
+            </li> -->
 
 
            {{--  <li class="nav-item">
@@ -385,7 +365,7 @@
             </li> --}}
 
 
-            <li class="heading">
+           <!--  <li class="heading">
                 <h3 class="uppercase">Message Section</h3>
             </li>
             <li class="nav-item">
@@ -414,10 +394,10 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> -->
 
 
-            <li class="nav-item">
+           <!--  <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-envelope"></i>
                     <span class="title">SEO Report Request</span>
@@ -437,7 +417,7 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> -->
             {{-- <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-list-ol"></i>
@@ -590,7 +570,7 @@
                     <span class="title">Service Inquiry</span>
                 </a>
             </li> --}}
-
+<!-- 
             <li class="heading">
                 <h3 class="uppercase">Others</h3>
             </li>
@@ -609,7 +589,7 @@
                     </li>
                     
                 </ul>
-            </li>
+            </li> -->
 
         </ul>
         <!-- END SIDEBAR MENU -->

@@ -7,10 +7,10 @@
 
 <div class="notice project">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-9 left-conatiner">
+		<div class="row header-margin">
+			<div class="col-md-8 left-conatiner">
 				<div class="left-col">
-					<div class="news-detail-post box-shadow mb-5">
+					<div class="news-detail-post mb-5">
 						<div class="news-detail-post-img">
 							<img src="{{url('public/images/22.jpg')}}" class="img-fluid" alt="">
 						</div>
@@ -91,9 +91,26 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3 right-container">
-				<div class="sidebar">
-					<div class="link-list box-shadow">
+			<div class="col-md-4 right-container">
+				<div class="sidebar sidebar-tab box-shadow">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<a class="nav-link active" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true">News</a>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a class="nav-link" id="newsletter-tab" data-toggle="tab" href="#Newsletter" role="tab" aria-controls="Newsletter" aria-selected="false">Newsletter</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
+							
+						</div>
+						<div class="tab-pane fade" id="Newsletter" role="tabpanel" aria-labelledby="newsletter-tab">
+							
+						</div>
+					</div>
+
+					<!-- <div class="link-list box-shadow">
 						<div class="sub-title">
 							<h6>Quick Link</h6>
 						</div>
@@ -105,7 +122,7 @@
 							<li><a href="{{url('our_video')}}">Videos</a></li>
 							<li><a href="{{url('newsletter_list')}}">Newsletters</a></li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
