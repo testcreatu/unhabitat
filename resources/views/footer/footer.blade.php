@@ -21,6 +21,11 @@
 						<li>
 							<a href="#">Mandate</a>
 						</li>
+						@foreach($finalFooter['custom_pages'] as $footer)
+						<li>
+							<a href="{{url('/pages/'.$footer['slug'])}}">{{$footer['title']}}</a>
+						</li>
+						@endforeach
 					</ul>
 				</section>
 			</div>

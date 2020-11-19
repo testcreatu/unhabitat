@@ -79,6 +79,10 @@ Route::get('event', function () {
     return view('event.event');
 });
 
+Route::get('pages/{slug}','frontend\NewFrontendController@viewCustomPage');
+
+
+
 
 
 
@@ -218,4 +222,22 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('cd-admin/view-one-custom-page/{id}','backend\PagesController@viewOnePage')->name('view-one-custom-pages');
     Route::post('/cd-admin/edit-custom-pages/{id}','backend\PagesController@editPages')->name('edit-custom-pages');
     Route::get('/cd-admin/delete-custom-pages/{id}','backend\PagesController@deletePages')->name('delete-custom-pages');
+
+       //Files Category
+    Route::get('/cd-admin/add-file-category','backend\FilesCategoryController@addFilesCategoryForm')->name('add-file-category-form');
+    Route::post('/cd-admin/add-file-category','backend\FilesCategoryController@addFilesCategory')->name('add-file-category');
+    Route::get('/cd-admin/view-file-category','backend\FilesCategoryController@viewFilesCategory')->name('view-file-category');
+    Route::get('/cd-admin/edit-file-category/{id}','backend\FilesCategoryController@editFilesCategoryForm')->name('edit-file-category-form');
+    Route::post('/cd-admin/edit-file-category/{id}','backend\FilesCategoryController@editFilesCategory')->name('edit-file-category');
+    Route::get('/cd-admin/delete-file-category/{id}','backend\FilesCategoryController@deleteFilesCategory')->name('delete-file-category');
+
+
+          //Files
+    Route::get('/cd-admin/add-files','backend\FilesController@addFilesForm')->name('add-files-form');
+    Route::post('/cd-admin/add-files','backend\FilesController@addFiles')->name('add-files');
+    Route::get('/cd-admin/view-files','backend\FilesController@viewFiles')->name('view-files');
+    Route::get('/cd-admin/edit-files/{id}','backend\FilesController@editFilesForm')->name('edit-files-form');
+    Route::post('/cd-admin/edit-files/{id}','backend\FilesController@editFiles')->name('edit-files');
+    Route::get('/cd-admin/delete-files/{id}','backend\FilesController@deleteFiles')->name('delete-files');
+
 });
