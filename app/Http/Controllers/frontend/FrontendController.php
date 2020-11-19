@@ -14,6 +14,8 @@ use App\VideoGallery;
 use App\About;
 use App\PhotoGallery;
 use App\Notice;
+use App\FilesCategory;
+use App\Files;
 class FrontendController extends Controller
 {
 	public function home()
@@ -33,12 +35,15 @@ class FrontendController extends Controller
 	{
 
 		$finalProject['detail'] = Projects::where('slug',$slug)->get()->first();
-		$finalProject['latest_news'] = Blog::where('status','active')->take(3)->get();
-		$finalProject['publications'] = Publications::where('status','active')->take(3)->get();
+		$finalProject['news'] = Blog::where('status','active')->where('project_id',$finalProject['detail']['id'])->take(3)->get();
+		$finalProject['publications'] = Publications::where('status','active')->where('project_id',$finalProject['detail']['id'])->take(3)->get();
 		$finalProject['notice'] = Notice::where('status','active')->take(5)->get();
-
-		return view('project.project-detail',compact('finalProject'));
-
+		$finalProject['project_report_categories'] = FilesCategory::where('status','active')->where('project_id',$finalProject['detail']['id'])->get();
+		foreach($finalProject['project_report_categories'] as $reportCategory)
+		{
+			$reportCategory['files'] = Files::where('status','active')->where('category_id',$reportCategory['id'])->get();
+		}
+		return view('project.project-detail-content',compact('finalProject'));
 	}
 
 	public function publicationDetail($slug)
