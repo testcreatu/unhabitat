@@ -37,7 +37,23 @@
 			<form class="form-horizontal"action="{{route('edit-publications',$data['id'])}}" enctype="multipart/form-data" role="form"  method="post" >
 				@csrf
 				<div class="form-body">
-
+					<div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Select Category </label>
+						<div class="col-md-6">
+							<select class="form-control" name="category_id">
+								@foreach($category as $cat)
+								@if($cat['id'] == $data['category_id'])
+								<option value="{{$cat['id']}}" selected>{{$cat['title']}}</option>
+								@else
+								<option value="{{$cat['id']}}">{{$cat['title']}}</option>
+								@endif
+								@endforeach
+							</select>
+						</div>
+						@if ($errors->has('category_id'))
+						<span class="text-danger">{{ $errors->first('category_id') }}</span>
+						@endif
+					</div>
 					<div class="form-group{{ $errors->has('project_id') ? ' has-error' : '' }}">
 						<label class="col-md-3 control-label">Select Project Name  </label>
 						<div class="col-md-6">

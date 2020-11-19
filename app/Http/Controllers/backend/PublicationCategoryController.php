@@ -12,8 +12,8 @@ class PublicationCategoryController extends Controller
 {
 	public function viewPublicationCategory()
 	{
-		$notice = PublicationCategories::get();
-		return view('cd-admin.publication_category.view-publication-category',compact('notice'));
+		$category = PublicationCategories::get();
+		return view('cd-admin.publication_category.view-publication-category',compact('category'));
 	}
 	public function addPublicationCategoryForm()
 	{
@@ -35,16 +35,18 @@ class PublicationCategoryController extends Controller
 			'seo_description' => 'required',
 			'seo_keyword' => 'required',
 			'status' => 'required',
+			'url' => '',
 		]);
-		$notice = new PublicationCategories();
-		$notice->description = $data['description'];
-		$notice->title = $data['title'];
-		$notice->seo_title = $data['seo_title'];
-		$notice->seo_description = $data['seo_description'];
-		$notice->seo_keyword = $data['seo_keyword'];
-		$notice->status = $data['status'];
-		$notice->slug = Str::slug($data['title']);
-		$notice->save();
+		$publication_category = new PublicationCategories();
+		$publication_category->description = $data['description'];
+		$publication_category->title = $data['title'];
+		$publication_category->seo_title = $data['seo_title'];
+		$publication_category->seo_description = $data['seo_description'];
+		$publication_category->seo_keyword = $data['seo_keyword'];
+		$publication_category->status = $data['status'];
+		$publication_category->slug = Str::slug($data['title']);
+		$publication_category->url = $data['url'];
+		$publication_category->save();
 		Session::flash('PublicationCategorySuccess');
 		return redirect('cd-admin/view-publication-category');
 	}
@@ -59,25 +61,26 @@ class PublicationCategoryController extends Controller
 			'seo_description' => 'required',
 			'seo_keyword' => 'required',
 			'status' => 'required',
+			'url' => '',
 		]);
-		$notice = PublicationCategories::find($id);
-		$notice->summary = $data['summary'];
-		$notice->description = $data['description'];
-		$notice->title = $data['title'];
-		$notice->seo_title = $data['seo_title'];
-		$notice->seo_description = $data['seo_description'];
-		$notice->seo_keyword = $data['seo_keyword'];
-		$notice->status = $data['status'];
-		$notice->slug = Str::slug($data['title']);
-		$notice->save();
+		$publication_category = PublicationCategories::find($id);
+		$publication_category->description = $data['description'];
+		$publication_category->title = $data['title'];
+		$publication_category->seo_title = $data['seo_title'];
+		$publication_category->seo_description = $data['seo_description'];
+		$publication_category->seo_keyword = $data['seo_keyword'];
+		$publication_category->status = $data['status'];
+		$publication_category->slug = Str::slug($data['title']);
+		$publication_category->url = $data['url'];
+		$publication_category->save();
 		Session::flash('PublicationCategoryUpdateSuccess');
 		return redirect('cd-admin/view-publication-category');
 	}
 
 	public function deletePublicationCategory($id)
 	{
-		$notice = PublicationCategories::find($id);
-		$notice->delete();
+		$publication_category = PublicationCategories::find($id);
+		$publication_category->delete();
 		Session::flash('PublicationCategoryDeleteSuccess');
 		return redirect('cd-admin/view-publication-category');
 	}

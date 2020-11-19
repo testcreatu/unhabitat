@@ -6,18 +6,18 @@
 @if(Session::has('PublicationCategoryDeleteSuccess'))
 <div class="alert alert-danger">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>PublicationCategory DELETED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
+	<strong>Publication Category DELETED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
 @elseif(Session::has('PublicationCategorySuccess'))
 <div class="alert alert-success">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>PublicationCategory INSERTED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
+	<strong>Publication Category INSERTED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
 
 @elseif(Session::has('PublicationCategoryUpdateSuccess'))
 <div class="alert alert-success">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>PublicationCategory UPDATED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
+	<strong>Publication Category UPDATED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
 
 @endif
@@ -31,7 +31,7 @@
 		</li>
 	</li>
 	<li>
-		<span>View PublicationCategory</span>
+		<span>View Publication Category</span>
 	</li>
 </ul>
 </div>
@@ -44,11 +44,11 @@
 			<div class="portlet-title">
 				<div class="caption font-dark">
 					<i class="icon-settings font-dark"></i>
-					<span class="caption-subject bold uppercase"> View PublicationCategory </span>
+					<span class="caption-subject bold uppercase"> View Publication Category </span>
 				</div>
 				<div class="btn-group pull-right">
-					<a href="{{url('cd-admin/add-notice')}}">
-						<button id="sample_editable_1_new" class="btn sbold green"> Add PublicationCategory
+					<a href="{{url('cd-admin/add-publication-category')}}">
+						<button id="sample_editable_1_new" class="btn sbold green"> Add Publication Category
 							<i class="fa fa-plus"></i>
 						</button>
 					</a>
@@ -59,13 +59,13 @@
 					<thead>
 						<tr>
 							<th>SN</th>
-							<th> PublicationCategory Title </th>
+							<th> Title </th>
 							<th>Status</th>
 							<th> Actions </th>
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($notice as $c)
+						@foreach($category as $c)
 
 						<tr class="odd gradeX">
 							<td>{{$loop->iteration}}</td>
@@ -89,7 +89,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="{{url('cd-admin/edit-notice/'.$c->id)}}">
+											<a href="{{url('cd-admin/edit-publication-category/'.$c->id)}}">
 												<i class="fa fa-edit"></i> Edit
 											</a>
 										</li>
@@ -113,12 +113,12 @@
 </div>
 
 <!-- view modals -->
-@foreach($notice as $ch)
+@foreach($category as $ch)
 <div id="view-modal{{$ch->id}}" class="modal fade modal-scroll" tabindex="-1" data-replace="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title pull-left">Name</h4>
+				<h4 class="modal-title pull-left">{{$ch['title']}}</h4>
 				<p class="modal-title pull-right">status 
 					<span class="badge badge-success"> Active </span>
 				</p>
@@ -128,10 +128,12 @@
 					<div class="panel-heading"> Description </div>
 					<div class="panel-body"> {!!$ch->description!!} </div>
 				</div>
+				@if(isset($ch['url']))
 				<div class="panel panel-default">
-					<div class="panel-heading"> Summary </div>
-					<div class="panel-body"> {!!$ch->summary!!} </div>
+					<div class="panel-heading"> URL </div>
+					<div class="panel-body"> <a href="{{$ch['url']}}" target="__blank">{{$ch['url']}}</a> </div>
 				</div>
+				@endif
 				<div class="panel panel-default">
 					<div class="panel-heading"> Seo Title </div>
 					<div class="panel-body"> {!!$ch->seo_title!!} </div>
@@ -154,7 +156,7 @@
 @endforeach
 
 <!-- delete modal -->
-@foreach($notice as $c)
+@foreach($category as $c)
 <div class="modal fade" id="delete-modal{{$c->id}}" tabindex="-1" role="basic" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -165,7 +167,7 @@
 			<div class="modal-body"> Are you sure want to delete this ? </div>
 			<div class="modal-footer">
 				<button type="button" class="btn dark btn-outline" data-dismiss="modal">No</button>
-				<a href="{{url('/cd-admin/delete-notice/'.$c->id)}}"  class="btn green">YES</a>
+				<a href="{{url('/cd-admin/delete-publication-category/'.$c->id)}}"  class="btn green">YES</a>
 			</div>
 		</div>
 		<!-- /.modal-content -->
