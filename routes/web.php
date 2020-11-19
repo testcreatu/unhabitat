@@ -193,4 +193,17 @@ Route::group(['middleware'=>'auth'], function(){
     Route::post('/cd-admin/edit-publication-category/{id}','backend\PublicationCategoryController@editPublicationCategory')->name('edit-publication-category');
     Route::get('/cd-admin/delete-publication-category/{id}','backend\PublicationCategoryController@deletePublicationCategory')->name('delete-publication-category');
 
+        //Custom Pages
+    Route::get('/cd-admin/add-custom-pages','backend\PagesController@addPagesForm')->name('add-custom-pages-form');
+    Route::post('/cd-admin/add-custom-pages','backend\PagesController@addPages')->name('add-custom-pages');
+    Route::get('/cd-admin/view-custom-pages','backend\PagesController@viewPages')->name('view-custom-pages');
+    Route::get('/cd-admin/add-custom-menu-pages','backend\PagesController@addMenuPagesForm')->name('add-custom-pages-form');
+    Route::post('/cd-admin/add-custom-menu-pages','backend\PagesController@addMenuPages')->name('add-custom-menu-pages');
+    Route::get('/cd-admin/view-custom-menu-pages','backend\PagesController@viewMenuPages')->name('view-custom-pages');
+    Route::get('/cd-admin/edit-custom-menu-pages/{id}','backend\PagesController@editMenuPagesForm')->name('edit-custom-menu-pages-form');
+    Route::post('/cd-admin/edit-custom-menu-pages/{id}','backend\PagesController@editMenuPages')->name('edit-custom-menu-pages');
+    Route::get('/cd-admin/edit-custom-pages/{id}','backend\PagesController@editPagesForm')->name('edit-custom-pages-form');
+    Route::get('cd-admin/view-one-custom-page/{id}','backend\PagesController@viewOnePage')->name('view-one-custom-pages');
+    Route::post('/cd-admin/edit-custom-pages/{id}','backend\PagesController@editPages')->name('edit-custom-pages');
+    Route::get('/cd-admin/delete-custom-pages/{id}','backend\PagesController@deletePages')->name('delete-custom-pages');
 });

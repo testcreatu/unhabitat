@@ -165,6 +165,27 @@
             <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-circle"></i>
+                    <span class="title">Publications Category</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-publication-category')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add Publications Category</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-publication-category')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Publications Category</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-circle"></i>
                     <span class="title">Publications</span>
                     <span class="arrow"></span>
                 </a>
@@ -347,8 +368,52 @@
                 </a>
             </li> -->
 
+            <li class="heading">
+                <h3 class="uppercase">Pages Section</h3>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-envelope"></i>
+                    <span class="title">Custom Pages(Projects)</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-custom-pages')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">Add Pages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-custom-pages')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Pages</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
-
+             <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-envelope"></i>
+                    <span class="title">Custom Pages(Menu)</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-custom-menu-pages')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">Add Pages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-custom-menu-pages')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Pages</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
            <!--  <li class="heading">
                 <h3 class="uppercase">Message Section</h3>

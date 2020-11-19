@@ -60,6 +60,7 @@
 						<tr>
 							<th>SN</th>
 							<th>Title </th>
+							<th>Category</th>
 							<th>Project Name</th>
 							<th>Year</th>
 							<th>Publisher Name</th>
@@ -73,6 +74,13 @@
 						<tr class="odd gradeX">
 							<td>{{$loop->iteration}}</td>
 							<td>{{$publication['title']}}</td>
+							<td>
+								@foreach($category as $cat)
+								@if($cat['id'] == $publication['category_id'])
+								<span class="badge badge-success">{{$cat['title']}}</span>
+								@endif
+								@endforeach
+							</td>
 							<td align="center">
 								@if($publication['project_id'] != NULL)
 								@foreach($projects as $project)

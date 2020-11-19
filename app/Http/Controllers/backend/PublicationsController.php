@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\backend\ImageController;
 use App\Publications;
+use App\PublicationCategories;
 use App\Projects;
 use DB;
 use Session;
@@ -19,7 +20,8 @@ class PublicationsController extends Controller
 	public function addPublicationsForm()
 	{
 		$projects = Projects::get();
-		return view('cd-admin.publications.add-publications',compact('projects'));
+		$category = PublicationCategories::where('url',NULL)->get();
+		return view('cd-admin.publications.add-publications',compact('projects','category'));
 	}
 	public function addPublications()
 	{
@@ -39,7 +41,8 @@ class PublicationsController extends Controller
 	{
 		$publications = Publications::all();
 		$projects = Projects::get();
-		return view('cd-admin.publications.view-publications',compact('publications','projects'));
+		$category = PublicationCategories::get();
+		return view('cd-admin.publications.view-publications',compact('publications','projects','category'));
 	}
 
 	public function editPublicationsForm($id)
@@ -47,7 +50,8 @@ class PublicationsController extends Controller
 		if($data = Publications::where('id',$id)->get()->first())
 		{
 			$projects = Projects::get();
-			return view('cd-admin.publications.edit-publications',compact('data','projects'));
+			$category = PublicationCategories::where('url',NULL)->get();
+			return view('cd-admin.publications.edit-publications',compact('data','projects','category'));
 		}
 	}
 
@@ -92,6 +96,7 @@ class PublicationsController extends Controller
 	{
 		$request = Request()->all();
 		$valid = $this->validate(Request(),[
+			'category_id' => 'required',
 			'project_id' => '',
 			'title' => 'required|unique:publications,title',
 			'image' => 'required|mimes:jpeg,jpg,png,gif',
@@ -115,6 +120,7 @@ class PublicationsController extends Controller
 	{
 		$request = Request()->all();
 		$valid = $this->validate(Request(),[
+			'category_id' => 'required',
 			'project_id' => '',
 			'title' => 'required|unique:publications,title,'.$id,
 			'image' => 'mimes:jpeg,jpg,png,gif',
