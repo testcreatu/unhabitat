@@ -55,6 +55,10 @@ Route::get('newsletter_list', function () {
     return view('project.newsletter-list');
 });
 
+Route::get('newsletter_list_detail', function () {
+    return view('project.newsletter-list-detail');
+});
+
 Route::get('covid-19_response', function () {
     return view('covid-19.covid-19');
 });
