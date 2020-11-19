@@ -317,50 +317,6 @@
                 </ul>
             </li>
 
-        <!--     <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-group"></i>
-                    <span class="title">Clients</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/add-clients')}}" class="nav-link">
-                            <i class="fa fa-plus"></i>
-                            <span class="title">Add new Clients</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/view-clients')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Clients</span>
-                        </a>
-                    </li>
-                </ul>
-            </li> -->
-
-           <!--  <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-group"></i>
-                    <span class="title">FAQ</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/add-faq')}}" class="nav-link">
-                            <i class="fa fa-plus"></i>
-                            <span class="title">Add new Faq</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/view-faq')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Faq</span>
-                        </a>
-                    </li>
-                </ul>
-            </li> -->
-
             <li class="nav-item">
                 <a href="{{url('cd-admin/view-social-links')}}" class="nav-link nav-toggle">
                     <i class="fa fa-group"></i>
@@ -393,7 +349,7 @@
                 </ul>
             </li>
 
-             <li class="nav-item">
+            <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-envelope"></i>
                     <span class="title">Custom Pages(Menu)</span>
@@ -415,80 +371,51 @@
                 </ul>
             </li>
 
-           <!--  <li class="heading">
-                <h3 class="uppercase">Message Section</h3>
-            </li>
-            <li class="nav-item">
-                <a href="{{url('cd-admin/view-Subscription')}}" class="nav-link nav-toggle">
-                    <i class="fa fa-comments"></i>
-                    <span class="title">Subscription</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-envelope"></i>
-                    <span class="title">Message</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/view-contact')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Inbox</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/contact-replies')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Reply</span>
-                        </a>
-                    </li>
-                </ul>
-            </li> -->
-
-
-           <!--  <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-envelope"></i>
-                    <span class="title">SEO Report Request</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/view-seo-report')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Requests</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/seo-report-replies')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Replied Requests</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
             <li class="heading">
-                <h3 class="uppercase">Others</h3>
+                <h3 class="uppercase">Files Section</h3>
             </li>
             <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-circle-o"></i>
-                    <span class="title">SEO</span>
+                    <i class="fa fa-envelope"></i>
+                    <span class="title">Files Category</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
                     <li class="nav-item">
-                        <a href="{{url('/seo-view')}}" class="nav-link">
+                        <a href="{{url('cd-admin/add-file-category')}}" class="nav-link">
                             <i class="fa fa-eye"></i>
-                            <span class="title">View Seo</span>
+                            <span class="title">Add Category</span>
                         </a>
                     </li>
-                    
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-file-category')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Category</span>
+                        </a>
+                    </li>
                 </ul>
-            </li> -->
-
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-envelope"></i>
+                    <span class="title">Files</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-files')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">Add Files</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-files')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Files</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
         <!-- END SIDEBAR MENU -->
         <!-- END SIDEBAR MENU -->
