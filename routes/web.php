@@ -51,12 +51,24 @@ Route::get('case_list_detail', function () {
     return view('project.case-list-detail');
 });
 
+Route::get('project_publication_list', function () {
+    return view('project.project-publication-list');
+});
+
 Route::get('newsletter_list', function () {
     return view('project.newsletter-list');
 });
 
 Route::get('newsletter_list_detail', function () {
     return view('project.newsletter-list-detail');
+});
+
+Route::get('project_news_list', function () {
+    return view('project.project-news-list');
+});
+
+Route::get('project_video_list', function () {
+    return view('project.project-video-list');
 });
 
 Route::get('covid-19_response', function () {

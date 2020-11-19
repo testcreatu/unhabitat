@@ -22,7 +22,7 @@
 								<a class="nav-link active" id="pills-first-tab" data-toggle="pill" href="#pills-first" role="tab" aria-controls="pills-first" aria-selected="true">About</a>
 							</li>
 							<li class="nav-item" role="presentation">
-								<a class="nav-link" id="pills-second-tab" data-toggle="pill" href="#pills-second" role="tab" aria-controls="pills-second" aria-selected="false">Dynamic Title</a>
+								<a class="nav-link" id="pills-second-tab" data-toggle="pill" href="#pills-second" role="tab" aria-controls="pills-second" aria-selected="false">Project Report</a>
 							</li>
 						</ul>
 						<div class="tab-content project-detail-content-tab" id="project-pills-tabContent">
@@ -108,20 +108,43 @@
 								</div>
 							</div>
 							<div class="tab-pane fade" id="pills-second" role="tabpanel" aria-labelledby="pills-second-tab">
-								<p>Dynamic content</p>
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th scope="col">Document title</th>
+											<th scope="col">Document</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Applying Social Tenure Domain Model (STDM) in IVR process of informal land tenure and its User Manual</td>
+											<td>STDM_Report_and_Manual</td>
+										</tr>
+										<tr>
+											<td>Development of Pro-Poor Gender Responsive System     (ProGResS), the open-source Software package and its   User Manual</td>
+											<td>	ProGResS_Report_and_Manual</td>
+										</tr>
+										<tr>
+											<td>Reforming Land Transaction Service Delivery</td>
+											<td>Final Report on Reforming Land Transaction Service Delivery-SS – 6 Sept, 2016</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
-						
 					</div>
 				</div>
 				<div class="col-md-4 right-container">
-					<div class="sidebar sidebar-tab box-shadow">
+					<div class="sidebar sidebar-tab box-shadow mb-5">
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							<li class="nav-item" role="presentation">
 								<a class="nav-link active" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true">News</a>
 							</li>
 							<li class="nav-item" role="presentation">
 								<a class="nav-link" id="newsletter-tab" data-toggle="tab" href="#Newsletter" role="tab" aria-controls="Newsletter" aria-selected="false">Newsletter</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" id="videos-tab" data-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Videos</a>
 							</li>
 						</ul>
 						<div class="tab-content" id="myTabContent">
@@ -184,7 +207,7 @@
 										</div>
 									</div>
 									<div class="view-more text-center pb-3">
-										<a href="#" class="btn btn3">View More &nbsp;&nbsp; +</a>
+										<a href="{{url('project_news_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
 									</div>
 								</div>
 							</div>
@@ -248,24 +271,176 @@
 									</div>
 								</div>
 								<div class="view-more text-center pb-3">
-									<a href="#" class="btn btn3">View More &nbsp;&nbsp; +</a>
+									<a href="{{url('newsletter_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab">
+								<div class="tab-news">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="latest-story-card">
+												<div class="row">
+													<div class="col-5 col-sm-5 col-md-5">
+														<div class="popular-post-img">
+															<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank">
+																<img src="https://img.youtube.com/vi/DgKon3LY5mk/sddefault.jpg">
+															</a>
+														</div>
+													</div>
+													<div class="col-7 col-sm-7 col-md-7">
+														<div class="sub-title">
+															<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank"><h6>Carving Heritage of Bungamati</h6></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="view-more text-center pb-3">
+									<a href="{{url('project_video_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
 								</div>
 							</div>
 						</div>
+					</div>
 
-						<!-- <div class="link-list box-shadow">
-							<div class="sub-title">
-								<h6>Quick Link</h6>
+					<div class="sidebar sidebar-tab box-shadow mb-5">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a class="nav-link active" id="publication-tab" data-toggle="tab" href="#publication" role="tab" aria-controls="publication" aria-selected="true">Publication</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" id="casse-study-tab" data-toggle="tab" href="#caseStudy" role="tab" aria-controls="caseStudy" aria-selected="false">Case Study</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="publication" role="tabpanel" aria-labelledby="publication-tab">
+								<div class="tab-news">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="latest-story-card">
+												<div class="row">
+													<div class="col-5 col-sm-5 col-md-5">
+														<div class="popular-post-img">
+															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}">
+																<img src="{{url('public/images/8.jpg')}}" class="img-fluid" alt="">
+															</a>
+														</div>
+													</div>
+													<div class="col-7 col-sm-7 col-md-7">
+														<div class="sub-title">
+															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}"><h6>IEC Materials for COVID-19</h6></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="latest-story-card">
+												<div class="row">
+													<div class="col-5 col-sm-5 col-md-5">
+														<div class="popular-post-img">
+															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}">
+																<img src="{{url('public/images/23.jpg')}}" class="img-fluid" alt="">
+															</a>
+														</div>
+													</div>
+													<div class="col-7 col-sm-7 col-md-7">
+														<div class="sub-title">
+															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}"><h6>Annual Report 2018 (Global Sanitation Fund Programme)</h6></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="latest-story-card">
+												<div class="row">
+													<div class="col-5 col-sm-5 col-md-5">
+														<div class="popular-post-img">
+															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}">
+																<img src="{{url('public/images/24.jpg')}}" class="img-fluid" alt="">
+															</a>
+														</div>
+													</div>
+													<div class="col-7 col-sm-7 col-md-7">
+														<div class="sub-title">
+															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}"><h6>GSF Nepal Annual Report 2017</h6></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="view-more text-center pb-3">
+										<a href="{{url('project_publication_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+									</div>
+								</div>
 							</div>
-							<ul>
-								<li><a href="{{url('about_us')}}">About</a></li>
-								<li><a href="{{url('featured_news')}}">News</a></li>
-								<li><a href="{{url('recent_publish')}}">Publication</a></li>
-								<li><a href="{{url('case_list')}}">Case Study</a></li>
-								<li><a href="{{url('our_video')}}">Videos</a></li>
-								<li><a href="{{url('newsletter_list')}}">Newsletters</a></li>
-							</ul>
-						</div> -->
+							<div class="tab-pane fade" id="caseStudy" role="tabpanel" aria-labelledby="casse-study-tab">
+								<div class="tab-news">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="latest-story-card">
+												<div class="row">
+													<div class="col-5 col-sm-5 col-md-5">
+														<div class="popular-post-img">
+															<a href="{{url('case_list_detail')}}">
+																<img src="{{url('public/images/29.png')}}" class="img-fluid" alt="">
+															</a>
+														</div>
+													</div>
+													<div class="col-7 col-sm-7 col-md-7">
+														<div class="sub-title">
+															<a href="{{url('case_list_detail')}}"><h6>Saving old age pension to build toilet</h6></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="latest-story-card">
+												<div class="row">
+													<div class="col-5 col-sm-5 col-md-5">
+														<div class="popular-post-img">
+															<a href="{{url('case_list_detail')}}">
+																<img src="{{url('public/images/30.jpg')}}" class="img-fluid" alt="">
+															</a>
+														</div>
+													</div>
+													<div class="col-7 col-sm-7 col-md-7">
+														<div class="sub-title">
+															<a href="{{url('case_list_detail')}}"><h6>Gita Devi’s desire to construct toilet</h6></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>	
+										<div class="col-md-12">
+											<div class="latest-story-card">
+												<div class="row">
+													<div class="col-5 col-sm-5 col-md-5">
+														<div class="popular-post-img">
+															<a href="{{url('case_list_detail')}}">
+																<img src="{{url('public/images/31.jpg')}}" class="img-fluid" alt="">
+															</a>
+														</div>
+													</div>
+													<div class="col-7 col-sm-7 col-md-7">
+														<div class="sub-title">
+															<a href="{{url('case_list_detail')}}"><h6>Gold Ear Rings or Toilet…? My best decision ever!</h6></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>	
+									</div>
+								</div>
+								<div class="view-more text-center pb-3">
+									<a href="{{url('case_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

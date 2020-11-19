@@ -721,7 +721,7 @@ background: var(--danger);
 .container-title h3 span {
   /*background: var(--primary-color);*/
   color: var(--primary-color);
-  padding: 5px 15px;
+  /*padding: 5px 15px;*/
 }
 
 .carousel-news-img {
@@ -1571,6 +1571,10 @@ margin: 100px 0;
   font-size: 14px !important;
 }
 
+.breadcrumb .breadcrumb-item a {
+  display: inline-block;
+}
+
 .breadcrumb-item.active {
     color: var(--primary-color);
 }
@@ -1632,7 +1636,7 @@ overflow: hidden;*/
 
 /*recent publish detail start*/
 .publish-detail-img {
-  height:250px;
+  height:400px;
   overflow: hidden; 
 }
 
@@ -1667,7 +1671,7 @@ position: relative;*/
 .publish-detail .title,
 .publish-detail .content,
 .meta-content {
-  padding: 0 30px;
+  /*padding: 0 30px;*/
 }
 /*
 .link-list {
@@ -1683,7 +1687,7 @@ padding: 30px !important;
 .link-list ul li {
   padding:5px 30px;
   position: relative;
-  border-bottom: 2px solid #fff;
+  /*border-bottom: 2px solid #fff;*/
 }
 
 .link-list ul li:active a {
@@ -1819,7 +1823,7 @@ padding: 5px 0;
 }
 
 .related-news-list {
-  padding: 0 20px 20px 20px;
+  /*padding: 0 20px 20px 20px;*/
 }
 
 .related-news {
@@ -1867,18 +1871,6 @@ padding: 5px 0;
   color: var(--primary-color) !important;
 }
 
-/*.publication-carousel .owl-dots {
-display: block !important;
-}
-
-
-
-.owl-theme .owl-dots .owl-dot.active span, 
-.owl-theme .owl-dots .owl-dot:hover span {
-background: var(--primary-color) !important;
-}
-*/
-
 .publication-carousel .owl-nav button::before  {
   content: '\f054';
   font-family: "Font Awesome 5 Free";
@@ -1898,10 +1890,6 @@ background: var(--primary-color) !important;
   background: #fff !important;
   position: absolute;
   top: 50%;
-/* position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);*/
 }
 
 .publication-carousel .owl-nav button.owl-prev {
@@ -1927,6 +1915,30 @@ transform: translate(-50%, -50%);*/
 
 .left-col .related-news {
   border-top: none;
+}
+
+.newsletter-list-img {
+  height: 350px;
+}
+
+.search-input .form-group {
+  position: relative;
+}
+
+.search-input .form-group button{
+  position: absolute;
+  top:0;
+  right: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.search-input .form-group .form-group {
+  padding-right: 55px;
+}
+
+.search-input .title h5 {
+  color: var(--primary-color) !important;
 }
 /*project list ends*/
 
@@ -1988,7 +2000,7 @@ transform: translate(-50%, -50%);*/
   width: 100%;
   height: 335px;
 }
-
+/*events ends*/
 
 
 
@@ -2026,28 +2038,9 @@ transform: translate(-50%, -50%);*/
     position: relative;
 }
 
-/*.preview p {
-  position: absolute;
-  top: 0;
-  left: 0;
-}*/
-
-
 .img-preview .preview img + p {
   color:#fff !important;
 }
-
-/*.video-list .video-card-img {
-height: 260px;
-width: 100%;
-overflow: hidden;
-}
-
-.video-list .video-card-img img {
-height: 100%;
-width: 100%;
-object-fit: contain;
-}*/
 
 .video-card-img {
   height: 270px;

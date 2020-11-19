@@ -28,56 +28,56 @@
 							
 							<div class="row">
 								<div class="col-md-6 mb-5">
-									<a href="{{url('newsletter_list_detail')}}" class="carousel-card newsletter-list">
+									<a href="{{url('featured_news_detail/through-un-habitats-skill-based-training-now-i-can-make-perfect-yomari-and-hoping-to-sell-them-in-future-from-home')}}" class="carousel-card newsletter-list">
 										<div class="carousel-news">
 											<div class="carousel-news-img newsletter-list-img overlay-bg">
-												<img src="{{url('public/images/32.jpg')}}" class="img-fluid overlay-bg" alt="">
+												<img src="{{url('public/images/5.jpg')}}" class="img-fluid overlay-bg" alt="">
 											</div>
 											<div class="caroursel-news-title text-center">
 												<div class="title">
-													<h4>Sani-News (July-December 2015 ) Volume 4 Issue 2</h4>
+													<h4>Preparing resilient community to fight against COVID-19</h4>
 												</div>
 											</div>
 										</div>
 									</a>
 								</div>
 								<div class="col-md-6 mb-5">
-									<a href="{{url('newsletter_list_detail')}}" class="carousel-card newsletter-list">
+									<a href="{{url('featured_news_detail/through-un-habitats-skill-based-training-now-i-can-make-perfect-yomari-and-hoping-to-sell-them-in-future-from-home')}}" class="carousel-card newsletter-list">
 										<div class="carousel-news">
 											<div class="carousel-news-img newsletter-list-img overlay-bg">
-												<img src="{{url('public/images/33.jpg')}}" class="img-fluid overlay-bg" alt="">
+												<img src="{{url('public/images/2.jpg')}}" class="img-fluid overlay-bg" alt="">
 											</div>
 											<div class="caroursel-news-title text-center">
 												<div class="title">
-													<h4>सरसफाई सन्देश, चैत्र २०७१ – कार्तिक २०७२, बर्ष ४, संयुक्त अंक १०-११</h4>
+													<h4>Practicing hand hygiene</h4>
 												</div>
 											</div>
 										</div>
 									</a>
 								</div>
 								<div class="col-md-6 mb-5">
-									<a href="{{url('newsletter_list_detail')}}" class="carousel-card newsletter-list">
+									<a href="{{url('featured_news_detail/through-un-habitats-skill-based-training-now-i-can-make-perfect-yomari-and-hoping-to-sell-them-in-future-from-home')}}" class="carousel-card newsletter-list">
 										<div class="carousel-news">
 											<div class="carousel-news-img newsletter-list-img overlay-bg">
-												<img src="{{url('public/images/34.jpg')}}" class="img-fluid overlay-bg" alt="">
+												<img src="{{url('public/images/6.jpeg')}}" class="img-fluid overlay-bg" alt="">
 											</div>
 											<div class="caroursel-news-title text-center">
 												<div class="title">
-													<h4>Sani-News (January-June 2015 ) Volume 4 Issue 1</h4>
+													<h4>Grant Project in Nepal mobilises Bungamati Community to produce Protective Face Masks</h4>
 												</div>
 											</div>
 										</div>
 									</a>
 								</div>
 								<div class="col-md-6 mb-5">
-									<a href="{{url('newsletter_list_detail')}}" class="carousel-card newsletter-list">
+									<a href="{{url('featured_news_detail/through-un-habitats-skill-based-training-now-i-can-make-perfect-yomari-and-hoping-to-sell-them-in-future-from-home')}}" class="carousel-card newsletter-list">
 										<div class="carousel-news">
 											<div class="carousel-news-img newsletter-list-img overlay-bg">
-												<img src="{{url('public/images/35.jpg')}}" class="img-fluid overlay-bg" alt="">
+												<img src="{{url('public/images/5.jpg')}}" class="img-fluid overlay-bg" alt="">
 											</div>
 											<div class="caroursel-news-title text-center">
 												<div class="title">
-													<h4>Sani-News (July-December 2014 ) Volume 3 Issue 2</h4>
+													<h4>Preparing resilient community to fight against COVID-19</h4>
 												</div>
 											</div>
 										</div>

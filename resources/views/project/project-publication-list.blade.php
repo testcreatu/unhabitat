@@ -11,7 +11,7 @@
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="{{url('#')}}">Project</a></li>
     				<li class="breadcrumb-item"><a href="{{url('project_detail_content')}}">Project Content Detail</a></li>
-    				<li class="breadcrumb-item active" aria-current="page">Newsletter List</li>
+    				<li class="breadcrumb-item active" aria-current="page">Publication List</li>
 				</ol>
 			</nav>
 			<div class="row">
@@ -21,63 +21,49 @@
 							<div class="container-title">
 								<h3>
 									<span>
-										GSF Newsletter
+										GSF Publication
 									</span>
 								</h3>
 							</div>
 							
 							<div class="row">
 								<div class="col-md-6 mb-5">
-									<a href="{{url('newsletter_list_detail')}}" class="carousel-card newsletter-list">
+									<a href="{{url('featured_news_detail/through-un-habitats-skill-based-training-now-i-can-make-perfect-yomari-and-hoping-to-sell-them-in-future-from-home')}}" class="carousel-card newsletter-list">
 										<div class="carousel-news">
 											<div class="carousel-news-img newsletter-list-img overlay-bg">
-												<img src="{{url('public/images/32.jpg')}}" class="img-fluid overlay-bg" alt="">
+												<img src="{{url('public/images/8.jpg')}}" class="img-fluid overlay-bg" alt="">
 											</div>
 											<div class="caroursel-news-title text-center">
 												<div class="title">
-													<h4>Sani-News (July-December 2015 ) Volume 4 Issue 2</h4>
+													<h4>IEC Materials for COVID-19</h4>
 												</div>
 											</div>
 										</div>
 									</a>
 								</div>
 								<div class="col-md-6 mb-5">
-									<a href="{{url('newsletter_list_detail')}}" class="carousel-card newsletter-list">
+									<a href="{{url('featured_news_detail/through-un-habitats-skill-based-training-now-i-can-make-perfect-yomari-and-hoping-to-sell-them-in-future-from-home')}}" class="carousel-card newsletter-list">
 										<div class="carousel-news">
 											<div class="carousel-news-img newsletter-list-img overlay-bg">
-												<img src="{{url('public/images/33.jpg')}}" class="img-fluid overlay-bg" alt="">
+												<img src="{{url('public/images/23.jpg')}}" class="img-fluid overlay-bg" alt="">
 											</div>
 											<div class="caroursel-news-title text-center">
 												<div class="title">
-													<h4>सरसफाई सन्देश, चैत्र २०७१ – कार्तिक २०७२, बर्ष ४, संयुक्त अंक १०-११</h4>
+													<h4>Annual Report 2018 (Global Sanitation Fund Programme)</h4>
 												</div>
 											</div>
 										</div>
 									</a>
 								</div>
 								<div class="col-md-6 mb-5">
-									<a href="{{url('newsletter_list_detail')}}" class="carousel-card newsletter-list">
+									<a href="{{url('featured_news_detail/through-un-habitats-skill-based-training-now-i-can-make-perfect-yomari-and-hoping-to-sell-them-in-future-from-home')}}" class="carousel-card newsletter-list">
 										<div class="carousel-news">
 											<div class="carousel-news-img newsletter-list-img overlay-bg">
-												<img src="{{url('public/images/34.jpg')}}" class="img-fluid overlay-bg" alt="">
+												<img src="{{url('public/images/24.jpg')}}" class="img-fluid overlay-bg" alt="">
 											</div>
 											<div class="caroursel-news-title text-center">
 												<div class="title">
-													<h4>Sani-News (January-June 2015 ) Volume 4 Issue 1</h4>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="col-md-6 mb-5">
-									<a href="{{url('newsletter_list_detail')}}" class="carousel-card newsletter-list">
-										<div class="carousel-news">
-											<div class="carousel-news-img newsletter-list-img overlay-bg">
-												<img src="{{url('public/images/35.jpg')}}" class="img-fluid overlay-bg" alt="">
-											</div>
-											<div class="caroursel-news-title text-center">
-												<div class="title">
-													<h4>Sani-News (July-December 2014 ) Volume 3 Issue 2</h4>
+													<h4>GSF Nepal Annual Report 2017</h4>
 												</div>
 											</div>
 										</div>
