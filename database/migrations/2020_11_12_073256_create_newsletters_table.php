@@ -20,6 +20,7 @@ class CreateNewslettersTable extends Migration
             $table->mediumText('summary')->nullable();
             $table->LongText('description')->nullable();
             $table->LongText('file')->nullable();
+            $table->mediumText('image');
             $table->string('slug');
             $table->string('status');
             $table->string('seo_title');

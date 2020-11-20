@@ -59,9 +59,7 @@ Route::get('newsletter_list', function () {
     return view('project.newsletter-list');
 });
 
-Route::get('newsletter_list_detail', function () {
-    return view('project.newsletter-list-detail');
-});
+Route::get('newsletter_list_detail/{slug}','frontend\NewFrontendController@NewsletterDetail');
 
 Route::get('project_news_list', function () {
     return view('project.project-news-list');

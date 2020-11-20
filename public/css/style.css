@@ -1894,7 +1894,17 @@ padding: 5px 0;
 .search-input .title h5 {
   color: var(--primary-color) !important;
 }
+
+.project-report-list tbody td {
+ font-size: 14px;
+}
+
+.project-report-list .td-download {
+ color: var(--secondary-color);
+ font-style: italic;
+}
 /*project list ends*/
+
 
 
 

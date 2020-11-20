@@ -93,6 +93,16 @@
 						@endif
 					</div>
 
+					<div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
+						<label for="exampleInputFile" class="col-md-3 control-label">Upload Image</label>
+						<div class="col-md-9">
+							<input type="file" name="image" id="exampleInputFile">
+							<p class="help-block"> Upload Image. </p>
+						</div>
+						@if ($errors->has('image'))
+						<span class="text-danger">{{ $errors->first('image') }}</span>
+						@endif
+					</div>
 					<!-- seo section starts -->
 					<hr>
 					<div class="form-group{{ $errors->has('seo_title') ? ' has-error' : '' }}">
