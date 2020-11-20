@@ -99,14 +99,16 @@
 							</li>
 							@endif
 
-							@if(count($finalProject['publications']) > 0)
+							@if(count($finalProject['newsletter']) > 0)
 							<li class="nav-item" role="presentation">
 								<a class="nav-link" id="newsletter-tab" data-toggle="tab" href="#Newsletter" role="tab" aria-controls="Newsletter" aria-selected="false">Newsletter</a>
 							</li>
 							@endif
+							@if(count($finalProject['videos']) > 0)
 							<li class="nav-item" role="presentation">
 								<a class="nav-link" id="videos-tab" data-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Videos</a>
 							</li>
+							@endif	
 						</ul>
 						<div class="tab-content" id="myTabContent">
 							<div class="tab-pane fade show <?php echo count($finalProject['news']) > 0 ?'active':'' ?>" id="news" role="tabpanel" aria-labelledby="news-tab">
@@ -141,60 +143,26 @@
 							<div class="tab-pane fade" id="Newsletter" role="tabpanel" aria-labelledby="newsletter-tab">
 								<div class="tab-news">
 									<div class="row">
+										@foreach($finalProject['newsletter'] as $newsletter)
 										<div class="col-md-12">
 											<div class="latest-story-card">
 												<div class="row">
 													<div class="col-5 col-sm-5 col-md-5">
 														<div class="popular-post-img">
-															<a href="{{url('newsletter_list_detail')}}">
-																<img src="http://localhost/creatu/old-unhabitat/public/images/32.jpg" class="img-fluid" alt="">
+															<a href="{{url('newsletter_list_detail/'.$newsletter['slug'])}}">
+																<img src="{{url('uploads/thumbnail/'.$newsletter['image'])}}" class="img-fluid" alt="">
 															</a>
 														</div>
 													</div>
 													<div class="col-7 col-sm-7 col-md-7">
 														<div class="sub-title">
-															<a href="{{url('newsletter_list_detail')}}"><h6>Sani-News (July-December 2015 ) Volume 4 Issue 2</h6></a>
+															<a href="{{url('newsletter_list_detail/'.$newsletter['slug'])}}"><h6>{{$newsletter['title']}}</h6></a>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-12">
-											<div class="latest-story-card">
-												<div class="row">
-													<div class="col-5 col-sm-5 col-md-5">
-														<div class="popular-post-img">
-															<a href="#">
-																<img src="http://localhost/creatu/old-unhabitat/public/images/33.jpg" class="img-fluid" alt="">
-															</a>
-														</div>
-													</div>
-													<div class="col-7 col-sm-7 col-md-7">
-														<div class="sub-title">
-															<a href="#"><h6>Practicing hand hygiene</h6></a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="latest-story-card">
-												<div class="row">
-													<div class="col-5 col-sm-5 col-md-5">
-														<div class="popular-post-img">
-															<a href="#">
-																<img src="http://localhost/creatu/old-unhabitat/public/images/34.jpg" class="img-fluid" alt="">
-															</a>
-														</div>
-													</div>
-													<div class="col-7 col-sm-7 col-md-7">
-														<div class="sub-title">
-															<a href="#"><h6>Grant Project in Nepal mobilises Bungamati Community to produce Protective Face Masks</h6></a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
+										@endforeach
 									</div>
 								</div>
 								<div class="view-more text-center pb-3">
@@ -204,13 +172,14 @@
 							<div class="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab">
 								<div class="tab-news">
 									<div class="row">
+										@foreach($finalProject['videos'] as $videos)
 										<div class="col-md-12">
 											<div class="latest-story-card">
 												<div class="row">
 													<div class="col-5 col-sm-5 col-md-5">
 														<div class="popular-post-img">
-															<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank">
-																<img src="https://img.youtube.com/vi/DgKon3LY5mk/sddefault.jpg">
+															<a href="{{url($videos['url'])}}" target="_blank">
+																<img src="{{url('https://img.youtube.com/vi/'.$videos['url'].'/sddefault.jpg')}}">
 															</a>
 														</div>
 													</div>
@@ -222,6 +191,7 @@
 												</div>
 											</div>
 										</div>
+										@endforeach
 									</div>
 								</div>
 								<div class="view-more text-center pb-3">

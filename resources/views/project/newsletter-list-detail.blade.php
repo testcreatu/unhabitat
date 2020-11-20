@@ -8,39 +8,29 @@
 		<div class="header-margin">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="{{url('#')}}">Project</a></li>
-    				<li class="breadcrumb-item"><a href="{{url('project_detail_content')}}">Project Content Detail</a></li>
-    				<li class="breadcrumb-item active" aria-current="page">Newsletter List Detail</li>
+					<li class="breadcrumb-item"><a href="{{url('#')}}">{{ucfirst($finalNewsLetter['project']['project_status'])}}</a></li>
+					<li class="breadcrumb-item"><a href="{{url('project_detail/'.$finalNewsLetter['project']['slug'])}}">{{$finalNewsLetter['project']['title']}}</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Newsletter List Detail</li>
 				</ol>
 			</nav>
 			<div class="row">
 				<div class="col-md-12 left-conatiner">
 					<div class="publish-detail ma-b">
 						<div class="publish-detail-img">
-							<img src="{{url('public/images/32.jpg')}}" class="img-fluid" alt="">
+							<img src="{{url('uploads/newsletter/image/'.$finalNewsLetter['detail']['image'])}}" class="img-fluid" alt="">
 						</div>
 						<div class="title mt-3">
-							<h4>Sani-News (July-December 2015 ) Volume 4 Issue 2</h4>
+							<h4>{{$finalNewsLetter['detail']['title']}}</h4>
 						</div>
 						<div class="row meta-content mt-3">	
-							<div class="col-md-6 publisher">
-								<strong>Publisher:</strong>
-								<span>UN-HABITAT</span>
-							</div>
-							<div class="col-md-6 publisher text-center">
+							<div class="col-md-1 publisher">
 								<strong>Download</strong>
-								<span class="text-center"><a href="https://onedrive.live.com/download?resid=6A63A96B75C5E0E1!503&authkey=!AMf3rrX7dxY93AU" target="_blank" download><i class="fas fa-download text"></i></a></span>
+								<span class="text-center"><a href="{{url('uploads/newsletter/files/'.$finalNewsLetter['detail']['file'])}}" target="_blank" download><i class="fas fa-download text"></i></a></span>
 							</div>
 						</div>	
 						<div class="content mt-3">
 							<p>
-								2015 has been a difficult year for Nepal, with the 7.6 magnitude earthquake on 25 April 2015, which was followed by numerous aftershocks and landslides, and the political unrest in Terai and subsequent disturbance in supplies of all essential goods, which started in September continues till the end of 2015.  These events have significantly disturbed the implementation of the GSF programme as well because five of the GSF supported districts were highly affected by the earthquake and 10 GSF supported districts are located in the Terai region.
-							</p>
-							<p>
-								However, in spite of the difficulties, GSF has achieved significant progress in 2015. In response to the Nepal earthquake the GSF programme supported in coordinating the WASH clusters in the Bhaktapur, Sindhupalchowk, Dolakha and Nuwakot districts and worked with partners to provide some immediate relief support. GSF is now in the process of reviving the sanitation campaigns in these districts.
-							</p>
-							<p>
-								In the Terai as well, there has been some progress in spite of the political disturbances. However, much more needs to be done and new challenges have been added. We look forward to a much more productive 2016 and we need your support more than ever as we get closer to the national target of 100% ODF by 2017.
+								{!!$finalNewsLetter['detail']['description']!!}
 							</p>
 						</div>
 						<div class="share-plugin mt-3">

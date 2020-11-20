@@ -31,6 +31,10 @@ class NewsLetterController extends Controller
 		{
 			$FinalData['file'] =$this->uploadFile($data['file'],'uploads/newsletter/files');
 		}
+		if(isset($data['image']))
+		{
+			$FinalData['image'] = $this->uploadImage($data['image'],'uploads/newsletter/image');
+		}
 		$merge = array_merge($data,$FinalData);
 		DB::table('newsletters')->insert($merge);
 		Session::flash('success');
@@ -64,6 +68,11 @@ class NewsLetterController extends Controller
 			$this->unlinkImage('uploads/newsletter/files/'.$newsletter['file']);
 			$FinalData['file'] = $this->uploadFile($data['file'],'uploads/newsletter/files');
 		}
+		if(isset($data['image']) && $newsletter['image'] != NULL)
+		{
+			$this->unlinkImage('uploads/newsletter/image/'.$newsletter['image']);
+			$FinalData['image'] = $this->uploadImage($data['image'],'uploads/newsletter/image');
+		}
 
 		$FinalData['slug'] = Str::slug($data['title']);
 		$merge = array_merge($data,$FinalData);
@@ -96,6 +105,7 @@ class NewsLetterController extends Controller
 			'seo_keyword' => 'required',
 			'seo_description' => 'required',
 			'status' => 'required',
+			'image' => 'required|image|mimes:jpeg,png,gif,jpg,svg'
 		]);
 		return $valid;
 	}
@@ -113,6 +123,7 @@ class NewsLetterController extends Controller
 			'seo_keyword' => 'required',
 			'seo_description' => 'required',
 			'status' => 'required',
+			'image' => 'required|image|mimes:jpeg,png,gif,jpg,svg'
 		]);
 		return $valid;
 	}
