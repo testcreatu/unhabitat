@@ -30,6 +30,20 @@
 // }
 
 
+
+//header search
+$(document).ready(function() {
+  $('#close-btn').click(function() {
+    $('#search-overlay').fadeOut();
+    $('#search-btn').show();
+  });
+  $('#search-btn').click(function() {
+    $(this).hide();
+    $('#search-overlay').fadeIn();
+  });
+});
+
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollpos = window.pageYOffset;

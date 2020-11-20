@@ -83,7 +83,7 @@
 				<div class="col-md-4">
 					<div class="popular-post">
 						<div class="title text-center">
-							<h6 class="mb-3">Recent Publications</h6>
+							<h6 class="mb-3">Recent Project</h6>
 						</div>
 						@foreach($finalNewsDetail['latest_projects'] as $projects)
 						<div class="row popular-post-list">

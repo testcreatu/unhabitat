@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="{{url('public/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('public/css/responsive.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('public/css/yearpicker.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('public/css/error.css')}}">
 
     <!-- owl carousel -->
     <link rel="stylesheet" type="text/css" href="{{url('public/owl/owl.carousel.min.css')}}">

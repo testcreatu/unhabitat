@@ -8,7 +8,7 @@
 			</a>
 		</div>
 		<div class="row">
-			<div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+			<div class="col-sm-12 col-md-6 col-lg-2 mb-5">
 				<section class="footer-quick-link">
 					<h2>About us</h2>
 					<ul>
@@ -21,17 +21,12 @@
 						<li>
 							<a href="#">Mandate</a>
 						</li>
-						@foreach($finalFooter['custom_pages'] as $footer)
-						<li>
-							<a href="{{url('/pages/'.$footer['slug'])}}">{{$footer['title']}}</a>
-						</li>
-						@endforeach
 					</ul>
 				</section>
 			</div>
-			<div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+			<div class="col-sm-12 col-md-6 col-lg-2 mb-5">
 				<section class="footer-quick-link">
-					<h2>Project</h2>
+					<h2>Publication</h2>
 					<ul>
 						<li>
 							<a href="#">National</a>
@@ -39,10 +34,13 @@
 						<li>
 							<a href="#">International</a>
 						</li>
+						<li>
+							<a href="#">Flagship</a>
+						</li>
 					</ul>
 				</section>
 			</div>
-			<div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+			<div class="col-sm-12 col-md-6 col-lg-2 mb-5">
 				<section class="footer-quick-link">
 					<h2>Media Center</h2>
 					<ul>
@@ -58,7 +56,19 @@
 					</ul>
 				</section>
 			</div>
-			<div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+			<div class="col-sm-12 col-md-6 col-lg-2 mb-5">
+				<section class="footer-quick-link">
+					<h2>Others</h2>
+					<ul>
+						@foreach($finalFooter['custom_pages'] as $footer)
+						<li>
+							<a href="{{url('/pages/'.$footer['slug'])}}">{{$footer['title']}}</a>
+						</li>
+						@endforeach
+					</ul>
+				</section>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-4 mb-5">
 				<section class="footer-quick-link">
 					<h2>Connect</h2>
 					<ul class="footer-social-link">
@@ -84,8 +94,8 @@
 					<form>
 						<div class="form-group mb-2">
 							<input type="email" class="form-control"  placeholder="Email Address">
+							<button type="submit" class="btn btn2">Submit</button>
 						</div>
-						<button type="submit" class="btn btn2">Submit</button>
 					</form>
 				</section>
 			</div>

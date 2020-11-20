@@ -79,6 +79,19 @@
           </div>
         </li>
       </ul>
+      <i id="search-btn" class="fas fa-search" aria-hidden="true"></i>
+      <div id="search-overlay" class="block">
+        <div class="centered">
+          <div id='search-box'>
+            <i id="close-btn" class="fa fa-times fa-2x"></i>
+            <form id='search-form'>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <button type='submit'><i class="fas fa-search" aria-hidden="true"></i></button>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
   </div>
