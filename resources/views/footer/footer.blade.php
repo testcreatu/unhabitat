@@ -29,13 +29,13 @@
 					<h2>Publication</h2>
 					<ul>
 						<li>
-							<a href="#">National</a>
+							<a href="{{url('national_list')}}">National</a>
 						</li>
 						<li>
-							<a href="#">International</a>
+							<a href="{{url('international_list')}}">International</a>
 						</li>
 						<li>
-							<a href="#">Flagship</a>
+							<a href="{{url('national_list')}}">Flagship</a>
 						</li>
 					</ul>
 				</section>

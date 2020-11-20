@@ -73,6 +73,15 @@ Route::get('event', function () {
     return view('event.event');
 });
 
+Route::get('national_list', function () {
+    return view('publication.national-list');
+});
+
+Route::get('international_list', function () {
+    return view('publication.international-list');
+});
+
+
 Route::get('pages/{slug}','frontend\NewFrontendController@viewCustomPage');
 
 
