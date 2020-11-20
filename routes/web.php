@@ -47,9 +47,7 @@ Route::get('case_list', function () {
     return view('project.case-list');
 });
 
-Route::get('case_list_detail', function () {
-    return view('project.case-list-detail');
-});
+Route::get('case_list_detail/{slug}','frontend\NewFrontendController@CaseStudyDetail');
 
 Route::get('project_publication_list', function () {
     return view('project.project-publication-list');
@@ -61,9 +59,7 @@ Route::get('newsletter_list', function () {
 
 Route::get('newsletter_list_detail/{slug}','frontend\NewFrontendController@NewsletterDetail');
 
-Route::get('project_news_list', function () {
-    return view('project.project-news-list');
-});
+Route::get('project_news_list/{slug}','frontend\NewFrontendController@ProjectNewsList');
 
 Route::get('project_video_list', function () {
     return view('project.project-video-list');

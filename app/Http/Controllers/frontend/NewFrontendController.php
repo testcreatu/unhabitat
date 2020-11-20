@@ -16,6 +16,7 @@ use App\PhotoGallery;
 use App\Notice;
 use App\CustomPages;
 use App\Newsletter;
+use App\CaseStudy;
 class NewFrontendController extends Controller
 {
 	public function viewCustomPage($slug)
@@ -29,5 +30,19 @@ class NewFrontendController extends Controller
 		$finalNewsLetter['detail'] = NewsLetter::where('slug',$slug)->get()->first();
 		$finalNewsLetter['project'] = Projects::find($finalNewsLetter['detail']['project_id']);
 		return view('project.newsletter-list-detail',compact('finalNewsLetter'));
+	}
+	public function CaseStudyDetail($slug)
+	{
+		$finalCaseStudy['detail'] = CaseStudy::where('slug',$slug)->get()->first();
+		$finalCaseStudy['project'] = Projects::find($finalCaseStudy['detail']['project_id']);
+		return view('project.case-list-detail',compact('finalCaseStudy'));
+	}
+
+
+	public function ProjectNewsList($slug)
+	{
+		$finalNewsList['project'] = Projects::where('slug',$slug)->get()->first();
+		$finalNewsList['list'] = Blog::where('status','active')->where('project_id',$finalNewsList['project']['id'])->paginate(6);
+		return view('project.project-news-list',compact('finalNewsList'));
 	}
 }
