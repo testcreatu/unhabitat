@@ -149,7 +149,6 @@ ul li {
 .caroursel-news-title .title h4,
 .post-date {
   color: #fff!important;
-  /*text-shadow: 2px 2px 4px #000;*/
 }
 
 .btn-primary {
@@ -224,12 +223,6 @@ ul li {
   line-height: 100px;
 }
 
-/*.top-header .logo{
-height:100%;
-width: 100%;
-overflow: hidden;
-}*/
-
 .search {
   text-align: right;
   vertical-align: middle;
@@ -301,7 +294,6 @@ overflow: hidden;
   position: absolute;
   top: 55px;
   background: rgba(255,255,255,.8);
-  /*background: #fff;*/
   transition: all 0.6s ease;
   width: 200px;
 }
@@ -313,7 +305,6 @@ overflow: hidden;
 }
 
 .nav-item .sub-menu > ul li {
-  /*white-space: nowrap;*/
   width: 100%;
   position: relative;
 }
@@ -334,7 +325,6 @@ overflow: hidden;
   top: 0;
   left: 210px;
   background: rgba(255,255,255,.8);
-  /*background: #fff;*/
   transition: all 0.6s ease;
   visibility: hidden;
   opacity: 0;
@@ -350,13 +340,6 @@ overflow: hidden;
   padding:10px;
   color: #000 !important;
 }
-
-/*.nav-item .sub-menu > ul li .sub-menu-1 > ul li a i {
-  position: relative;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-} */
 
 .dropdown-menu > li {
   line-height: 25px;
@@ -1624,7 +1607,7 @@ position: relative;*/
 
 .publish-detail .title,
 .publish-detail .content,
-.meta-content {
+ {
   /*padding: 0 30px;*/
 }
 /*
@@ -1632,6 +1615,11 @@ position: relative;*/
 background: #f8f9fa;
 padding: 30px !important;
 }*/
+
+.meta-content {
+  justify-content: center;
+  align-items: center;
+}
 
 .link-list .sub-title h6,
 .link-list ul li a:hover {
@@ -1875,11 +1863,15 @@ padding: 5px 0;
   height: 350px;
 }
 
-.search-input .form-group {
+
+
+.search-input .form-group,
+.sidebar .form-group  {
   position: relative;
 }
 
-.search-input .form-group button{
+.search-input .form-group button,
+.sidebar .form-group button{
   position: absolute;
   top:0;
   right: 0;
@@ -1891,7 +1883,8 @@ padding: 5px 0;
   padding-right: 55px;
 }
 
-.search-input .title h5 {
+.search-input .title h5,
+.sidebar .title h5 {
   color: var(--primary-color) !important;
 }
 
@@ -1902,6 +1895,10 @@ padding: 5px 0;
 .project-report-list .td-download {
  color: var(--secondary-color);
  font-style: italic;
+}
+
+.internation-publication li {
+  list-style: disc;
 }
 /*project list ends*/
 

@@ -19,11 +19,14 @@
 						<div class="publish-detail-img">
 							<img src="{{url('uploads/newsletter/image/'.$finalNewsLetter['detail']['image'])}}" class="img-fluid" alt="">
 						</div>
-						<div class="title mt-3">
-							<h4>{{$finalNewsLetter['detail']['title']}}</h4>
-						</div>
+						
 						<div class="row meta-content mt-3">	
-							<div class="col-md-1 publisher">
+							<div class="col-md-10">
+								<div class="title mt-3">
+									<h4>{{$finalNewsLetter['detail']['title']}}</h4>
+								</div>
+							</div>
+							<div class="col-md-2 publisher text-center">
 								<strong>Download</strong>
 								<span class="text-center"><a href="{{url('uploads/newsletter/files/'.$finalNewsLetter['detail']['file'])}}" target="_blank" download><i class="fas fa-download text"></i></a></span>
 							</div>
