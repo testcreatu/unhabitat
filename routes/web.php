@@ -85,6 +85,10 @@ Route::get('international_list', function () {
     return view('publication.international-list');
 });
 
+Route::get('search', function () {
+    return view('search.search');
+});
+
 
 Route::get('pages/{slug}','frontend\NewFrontendController@viewCustomPage');
 
