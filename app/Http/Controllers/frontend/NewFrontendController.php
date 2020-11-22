@@ -54,5 +54,29 @@ class NewFrontendController extends Controller
 	}
 
 
+	public function ProjectVideoList($slug)
+	{
+		$finalVideoList['project'] = Projects::where('slug',$slug)->get()->first();
+		$finalVideoList['list'] = VideoGallery::where('status','active')->where('project_id',$finalVideoList['project']['id'])->paginate(6);
+		return view('project.project-video-list',compact('finalVideoList'));
+	}
+
+	public function ProjectPublicationList($slug)
+	{
+		$finalPublicationList['project'] = Projects::where('slug',$slug)->get()->first();
+		$finalPublicationList['list'] = Publications::where('status','active')->where('project_id',$finalPublicationList['project']['id'])->paginate(6);
+		return view('project.project-publication-list',compact('finalPublicationList'));
+	}
+
+	public function ProjectCaseStudyList($slug)
+	{
+		$finalCaseStudyList['project'] = Projects::where('slug',$slug)->get()->first();
+		$finalCaseStudyList['list'] = CaseStudy::where('status','active')->where('project_id',$finalCaseStudyList['project']['id'])->paginate(6);
+		return view('project.case-list',compact('finalCaseStudyList'));
+
+	}
+
+
+
 
 }

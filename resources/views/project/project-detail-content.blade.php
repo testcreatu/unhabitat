@@ -207,7 +207,7 @@
 									</div>
 								</div>
 								<div class="view-more text-center pb-3">
-									<a href="{{url('project_video_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+									<a href="{{url('project_video_list/'.$finalProject['detail']['slug'])}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
 								</div>
 							</div>
 						</div>
@@ -253,7 +253,7 @@
 										@endforeach
 									</div>
 									<div class="view-more text-center pb-3">
-										<a href="{{url('project_publication_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+										<a href="{{url('project_publication_list/'.$finalProject['detail']['slug'])}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
 									</div>
 								</div>
 							</div>
@@ -287,7 +287,7 @@
 									</div>
 								</div>
 								<div class="view-more text-center pb-3">
-									<a href="{{url('case_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+									<a href="{{url('case_list/'.$finalProject['detail']['slug'])}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
 								</div>
 							</div>
 							@endif

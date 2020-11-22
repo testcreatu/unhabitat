@@ -10,6 +10,7 @@ use App\Projects;
 use DB;
 use Session;
 use Illuminate\Support\Str;
+use Carbon\Carbon;
 class CaseStudyController extends Controller
 {
 	use ImageController;
@@ -27,6 +28,7 @@ class CaseStudyController extends Controller
 		$data = $this->addValidate();
 		$FinalData['slug'] = Str::slug($data['title']);
 		$FinalData['image'] = $this->uploadImage($data['image'],'uploads/caseStudy');
+		$FinalData['created_at'] = Carbon::now('Asia/Kathmandu');
 		$merge = array_merge($data,$FinalData);
 		DB::table('case_studies')->insert($merge);
 		Session::flash('success');
@@ -98,6 +100,7 @@ class CaseStudyController extends Controller
 			$FinalData['image'] = $this->uploadImage($data['image'],'uploads/caseStudy');
 		}
 		$FinalData['slug'] = Str::slug($data['title']);
+		$FinalData['updated_at'] = Carbon::now('Asia/Kathmandu');
 		$merge = array_merge($data,$FinalData);
 		DB::table('case_studies')->where('id',$id)->update($merge);
 		Session::flash('success1');

@@ -9,6 +9,7 @@ use App\Newsletter;
 use App\Projects;
 use DB;
 use Session;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 
 class NewsLetterController extends Controller
@@ -35,6 +36,7 @@ class NewsLetterController extends Controller
 		{
 			$FinalData['image'] = $this->uploadImage($data['image'],'uploads/newsletter/image');
 		}
+		$FinalData['created_at'] = Carbon::now('Asia/Kathmandu');
 		$merge = array_merge($data,$FinalData);
 		DB::table('newsletters')->insert($merge);
 		Session::flash('success');
@@ -75,6 +77,7 @@ class NewsLetterController extends Controller
 		}
 
 		$FinalData['slug'] = Str::slug($data['title']);
+		$FinalData['updated_at'] = Carbon::now('Asia/Kathmandu');
 		$merge = array_merge($data,$FinalData);
 		DB::table('newsletters')->where('id',$id)->update($merge);
 		Session::flash('success1');

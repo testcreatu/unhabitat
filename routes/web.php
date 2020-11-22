@@ -43,15 +43,11 @@ Route::get('project_detail_content', function () {
     return view('project.project-detail-content');
 });
 
-Route::get('case_list', function () {
-    return view('project.case-list');
-});
+Route::get('case_list/{slug}','frontend\NewFrontendController@ProjectCaseStudyList');
 
 Route::get('case_list_detail/{slug}','frontend\NewFrontendController@CaseStudyDetail');
 
-Route::get('project_publication_list', function () {
-    return view('project.project-publication-list');
-});
+Route::get('project_publication_list/{slug}','frontend\NewFrontendController@ProjectPublicationList');
 
 Route::get('newsletter_list/{slug}','frontend\NewFrontendController@ProjectNewsletterList');
 
@@ -59,9 +55,7 @@ Route::get('newsletter_list_detail/{slug}','frontend\NewFrontendController@Newsl
 
 Route::get('project_news_list/{slug}','frontend\NewFrontendController@ProjectNewsList');
 
-Route::get('project_video_list', function () {
-    return view('project.project-video-list');
-});
+Route::get('project_video_list/{slug}','frontend\NewFrontendController@ProjectVideoList');
 
 Route::get('covid-19_response', function () {
     return view('covid-19.covid-19');
@@ -79,9 +73,7 @@ Route::get('international_list', function () {
     return view('publication.international-list');
 });
 
-Route::get('search', function () {
-    return view('search.search');
-});
+Route::get('search','frontend\SearchController@searchAll');
 
 
 Route::get('pages/{slug}','frontend\NewFrontendController@viewCustomPage');
@@ -93,9 +85,15 @@ Route::get('search-project-news-year','frontend\SearchController@searchProjectNe
 Route::get('search-project-newsletter','frontend\SearchController@searchProjectNewsLetter');
 Route::get('search-project-newsletter-year','frontend\SearchController@searchProjectNewsLetterYear');
 
+Route::get('search-project-video','frontend\SearchController@searchProjectVideo');
+Route::get('search-project-video-year','frontend\SearchController@searchProjectVideoYear');
+
+Route::get('search-project-publication','frontend\SearchController@searchProjectPublication');
+Route::get('search-project-publication-year','frontend\SearchController@searchProjectPublicationYear');
 
 
-
+Route::get('search-project-case-study','frontend\SearchController@searchProjectCaseStudy');
+Route::get('search-project-case-study-year','frontend\SearchController@searchProjectCaseStudyYear');
 
 
 
@@ -178,7 +176,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/cd-admin/delete-video-gallery/{id}','backend\VideoGalleryController@deleteVideoGallery')->name('delete-video-gallery');
 
 
-            // Goals
+            // Notice
     Route::get('/cd-admin/view-notice','backend\NoticeController@viewNotice')->name('view-notice');
     Route::get('/cd-admin/add-notice','backend\NoticeController@addNoticeForm')->name('add-notice-form');
     Route::post('/cd-admin/add-notice','backend\NoticeController@addNotice')->name('add-notice');

@@ -11,7 +11,7 @@ use App\Projects;
 use DB;
 use Session;
 use Illuminate\Support\Str;
-
+use Carbon\Carbon;
 class PublicationsController extends Controller
 {
 	use ImageController;
@@ -31,6 +31,7 @@ class PublicationsController extends Controller
 		$FinalData['slug'] = Str::slug($data['title']);
 		$FinalData['image'] = $this->uploadImage($data['image'],'uploads/publications');
 		$FinalData['file'] =$this->uploadFile($data['file'],'uploads/publications/files');
+		$FinalData['created_at'] = Carbon::now('Asia/Kathmandu');
 		$merge = array_merge($data,$FinalData);
 		DB::table('publications')->insert($merge);
 		Session::flash('success');
@@ -74,6 +75,7 @@ class PublicationsController extends Controller
 		}
 
 		$FinalData['slug'] = Str::slug($data['title']);
+		$FinalData['updated_at'] = Carbon::now('Asia/Kathmandu');
 		$merge = array_merge($data,$FinalData);
 		DB::table('publications')->where('id',$id)->update($merge);
 		Session::flash('success1');

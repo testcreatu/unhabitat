@@ -10,91 +10,91 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item {{ (request()->is('home*')) ? 'active' : '' }}">
-          <a class="nav-link" href="{{url('home')}}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item {{ (request()->is('about_us*')) ? 'active' : '' }}">
-          <a class="nav-link" href="{{url('about_us')}}">About us &nbsp; <i class="fas fa-caret-down"></i></a>
-          <div class="sub-menu">
-            <ul>
-              <li>
-                <a href="{{url('about_us')}}" class="nav-link">Overview</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link">Where we are</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link">Mandate</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Project  &nbsp; <i class="fas fa-caret-down"></i></a>
-          <div class="sub-menu">
-            <ul>
-              <li>
-                <a href="#" class="nav-link">Ongoing Project</a>
-                <div class="sub-menu-1">
-                  <ul>
-                    @foreach($finalHeader['ongoing'] as $ongoing)
-                    <li><a href="{{url('project_detail/'.$ongoing['slug'])}}">{{$ongoing['title']}}</a></li>
-                    @endforeach
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item {{ (request()->is('home*')) ? 'active' : '' }}">
+            <a class="nav-link" href="{{url('home')}}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item {{ (request()->is('about_us*')) ? 'active' : '' }}">
+            <a class="nav-link" href="{{url('about_us')}}">About us &nbsp; <i class="fas fa-caret-down"></i></a>
+            <div class="sub-menu">
+              <ul>
+                <li>
+                  <a href="{{url('about_us')}}" class="nav-link">Overview</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link">Where we are</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link">Mandate</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Project  &nbsp; <i class="fas fa-caret-down"></i></a>
+            <div class="sub-menu">
+              <ul>
+                <li>
+                  <a href="#" class="nav-link">Ongoing Project</a>
+                  <div class="sub-menu-1">
+                    <ul>
+                      @foreach($finalHeader['ongoing'] as $ongoing)
+                      <li><a href="{{url('project_detail/'.$ongoing['slug'])}}">{{$ongoing['title']}}</a></li>
+                      @endforeach
                {{--      <li><a href="{{url('project_detail')}}">Land and Global Land Tool Network(GLTN)</a></li>
-                    <li><a href="{{url('project_detail')}}">Parya Sampada</a></li> --}}
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="#" class="nav-link">Completed Project</a>
-                <div class="sub-menu-1">
-                  <ul>
-                    @foreach($finalHeader['completed'] as $completed)
-                    <li><a href="{{url('project_detail/'.$completed['slug'])}}">{{$completed['title']}}</a></li>
-                    @endforeach
-               {{--      <li><a href="{{url('project_detail')}}">Land and Global Land Tool Network(GLTN)</a></li>
-                    <li><a href="{{url('project_detail')}}">Parya Sampada</a></li> --}}
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Media Center</a>
-          <div class="sub-menu">
+               <li><a href="{{url('project_detail')}}">Parya Sampada</a></li> --}}
+             </ul>
+           </div>
+         </li>
+         <li>
+          <a href="#" class="nav-link">Completed Project</a>
+          <div class="sub-menu-1">
             <ul>
-              <li>
-                <a href="{{url('featured_news')}}" class="nav-link">News Stories</a>
-              </li>
-              <li>
-                <a href="{{url('images')}}" class="nav-link">Gallery</a>
-              </li>
-              <li>
-                <a href="{{url('our_video')}}" class="nav-link">Video</a>
-              </li>
-            </ul>
-          </div>
+              @foreach($finalHeader['completed'] as $completed)
+              <li><a href="{{url('project_detail/'.$completed['slug'])}}">{{$completed['title']}}</a></li>
+              @endforeach
+               {{--      <li><a href="{{url('project_detail')}}">Land and Global Land Tool Network(GLTN)</a></li>
+               <li><a href="{{url('project_detail')}}">Parya Sampada</a></li> --}}
+             </ul>
+           </div>
+         </li>
+       </ul>
+     </div>
+   </li>
+   <li class="nav-item">
+    <a class="nav-link" href="#">Media Center</a>
+    <div class="sub-menu">
+      <ul>
+        <li>
+          <a href="{{url('featured_news')}}" class="nav-link">News Stories</a>
+        </li>
+        <li>
+          <a href="{{url('images')}}" class="nav-link">Gallery</a>
+        </li>
+        <li>
+          <a href="{{url('our_video')}}" class="nav-link">Video</a>
         </li>
       </ul>
-      <i id="search-btn" class="fas fa-search" aria-hidden="true"></i>
-      <div id="search-overlay" class="block">
-        <div class="centered">
-          <div id='search-box'>
-            <i id="close-btn" class="fa fa-times fa-2x"></i>
-            <form id='search-form'>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-                <button type='submit'><i class="fas fa-search" aria-hidden="true"></i></button>
-              </div>
-          </div>
+    </div>
+  </li>
+</ul>
+<i id="search-btn" class="fas fa-search" aria-hidden="true"></i>
+<div id="search-overlay" class="block">
+  <div class="centered">
+    <div id='search-box'>
+      <i id="close-btn" class="fa fa-times fa-2x"></i>
+      <form id='search-form' action="{{url('search')}}" method="GET">
+        <div class="form-group">
+          <input type="text" name="search_tag" class="form-control" placeholder="Search" value="<?php echo isset(Request()->search_tag) ? Request()->search_tag :'' ?>">
+          <button type='submit'><i class="fas fa-search" aria-hidden="true"></i></button>
         </div>
       </div>
     </div>
-  </nav>
   </div>
+</div>
+</nav>
+</div>
 </div>
 
 

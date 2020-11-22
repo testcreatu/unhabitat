@@ -75,7 +75,7 @@
 								@endforeach
 							</div>
 							@else
-							<h3 class="text-center">No News Found</h3>
+							<h3 class="text-center">No NewsLetter Found</h3>
 							@endif
 							@endif
 						</div>
@@ -93,9 +93,9 @@
 								<h5>Search</h5>
 							</div>
 							<div class="form-group">
-								<input type="text" name="search_term" class="form-control" placeholder="Enter Search Term" value="<?php echo isset($finalNewsLetterList['search_type']) ? $finalNewsLetterList['search_type'] == 'search' ? $finalNewsLetterList['search_term']:'':'' ?>">
+								<input type="text" name="search_term" class="form-control" placeholder="Enter Search Term" value="<?php echo isset($finalNewsLetterList['search_type']) ? $finalNewsLetterList['search_type'] == 'search' ? $finalNewsLetterList['search_term']:'':'' ?>" required>
 								<input type="hidden" name="project_name" value="{{$finalNewsLetterList['project']['slug']}}">
-								<input type="hidden" name="type" value="news">
+								<input type="hidden" name="type" value="newsletter">
 								<button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
 							</div>
 						</form>
@@ -106,7 +106,7 @@
 							</div>
 							<div class="form-group main">
 								
-								<input type="number" max="{{Carbon\Carbon::now('Asia/Kathmandu')->format('Y')}}" min="2000" name="year" class="yearpicker form-control" value="<?php echo isset($finalNewsLetterList['search_type']) ? $finalNewsLetterList['search_type'] == 'year' ? $finalNewsList['search_term']:'':'' ?>" />
+								<input type="number" max="{{Carbon\Carbon::now('Asia/Kathmandu')->format('Y')}}" min="2000" name="year" class="yearpicker form-control" value="<?php echo isset($finalNewsLetterList['search_type']) ? $finalNewsLetterList['search_type'] == 'year' ? $finalNewsLetterList['search_term']:'':'' ?>"  required/>
 								<input type="hidden" name="project_name" value="{{$finalNewsLetterList['project']['slug']}}">
 								<input type="hidden" name="type" value="news">
 								<button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>

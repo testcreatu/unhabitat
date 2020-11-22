@@ -91,7 +91,7 @@
 								<h5>Search</h5>
 							</div>
 							<div class="form-group">
-								<input type="text" name="search_term" class="form-control" placeholder="Enter Search Term" value="<?php echo isset($finalNewsList['search_type']) ? $finalNewsList['search_type'] == 'search' ? $finalNewsList['search_term']:'':'' ?>">
+								<input type="text" name="search_term" class="form-control" placeholder="Enter Search Term" value="<?php echo isset($finalNewsList['search_type']) ? $finalNewsList['search_type'] == 'search' ? $finalNewsList['search_term']:'':'' ?>" required>
 								<input type="hidden" name="project_name" value="{{$finalNewsList['project']['slug']}}">
 								<input type="hidden" name="type" value="news">
 								<button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
@@ -104,7 +104,7 @@
 							</div>
 							<div class="form-group main">
 								
-								<input type="number" max="{{Carbon\Carbon::now('Asia/Kathmandu')->format('Y')}}" min="2000" name="year" class="yearpicker form-control" value="<?php echo isset($finalNewsList['search_type']) ? $finalNewsList['search_type'] == 'year' ? $finalNewsList['search_term']:'':'' ?>" />
+								<input type="number" max="{{Carbon\Carbon::now('Asia/Kathmandu')->format('Y')}}" min="2000" name="year" class="yearpicker form-control" value="<?php echo isset($finalNewsList['search_type']) ? $finalNewsList['search_type'] == 'year' ? $finalNewsList['search_term']:'':'' ?>" required />
 								<input type="hidden" name="project_name" value="{{$finalNewsList['project']['slug']}}">
 								<input type="hidden" name="type" value="news">
 								<button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
