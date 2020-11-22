@@ -28,15 +28,21 @@
 				<section class="footer-quick-link">
 					<h2>Publication</h2>
 					<ul>
+						@foreach($finalFooter['publication_category'] as $category)
 						<li>
-							<a href="{{url('national_list')}}">National</a>
+							@if($category['url'] != NULL)
+							<a href="{{$category['url']}}" target="_blank">{{$category['title']}}</a>
+							@else
+							<a href="{{url('publication-category/'.$category['slug'])}}">{{$category['title']}}</a>
+							@endif
 						</li>
-						<li>
+						@endforeach
+						{{-- <li>
 							<a href="{{url('international_list')}}">International</a>
 						</li>
 						<li>
 							<a href="{{url('national_list')}}">Flagship</a>
-						</li>
+						</li> --}}
 					</ul>
 				</section>
 			</div>

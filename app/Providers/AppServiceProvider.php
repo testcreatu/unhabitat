@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Projects;
 use App\CustomPages;
 use View;
+use App\PublicationCategories;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -30,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
         $finalHeader['completed'] = Projects::where('status','active')->where('project_status','completed')->get();
         $finalFooter = [];
         $finalFooter['custom_pages'] = CustomPages::where('status','active')->where('page_for','menu')->get();
+        $finalFooter['publication_category'] = PublicationCategories::where('status','active')->get();
         View::share('finalHeader',$finalHeader);
         View::share('finalFooter',$finalFooter);
 
