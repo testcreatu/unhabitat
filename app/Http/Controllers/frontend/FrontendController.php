@@ -17,6 +17,8 @@ use App\Notice;
 use App\FilesCategory;
 use App\Files;
 use App\NewsLetter;
+use App\CaseStudy;
+use App\CustomPages;
 class FrontendController extends Controller
 {
 	public function home()
@@ -24,7 +26,7 @@ class FrontendController extends Controller
 		$finalHome = [];
 		$finalHome['carousel'] = Carousel::where('status','active')->get();
 		$finalHome['projects'] = Projects::where('status','active')->where('is_trending','yes')->orderBy('id','desc')->get();
-		$finalHome['blog'] = Blog::where('status','active')->orderBy('id','desc')->take(4)->get();
+		$finalHome['blog'] = Blog::where('status','active')->orderBy('id','desc')->take(3)->get();
 		$finalHome['publications'] = Publications::where('status','active')->where('show_in_homepage','show')->orderBy('id','desc')->take(4)->get();
 		$finalHome['features'] = Features::where('status','active')->get();
 		$finalHome['goals'] = Goals::get();
@@ -41,6 +43,8 @@ class FrontendController extends Controller
 		$finalProject['newsletter'] = Newsletter::where('status','active')->where('project_id',$finalProject['detail']['id'])->take(3)->get();
 		$finalProject['project_report_categories'] = FilesCategory::where('status','active')->where('project_id',$finalProject['detail']['id'])->get();
 		$finalProject['videos'] = VideoGallery::where('project_id',$finalProject['detail']['id'])->take(3)->get();
+		$finalProject['case_study'] = CaseStudy::where('project_id',$finalProject['detail']['id'])->take(3)->get();
+		$finalProject['custom_pages'] = CustomPages::where('project_id',$finalProject['detail']['id'])->where('page_for','project')->get();
 		foreach($finalProject['project_report_categories'] as $reportCategory)
 		{
 			$reportCategory['files'] = Files::where('status','active')->where('category_id',$reportCategory['id'])->get();

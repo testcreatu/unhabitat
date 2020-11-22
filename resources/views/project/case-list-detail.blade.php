@@ -10,8 +10,8 @@
 		<div class="header-margin">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="{{url('#')}}">Project</a></li>
-					<li class="breadcrumb-item"><a href="{{url('project_detail_content')}}">Project Content Detail</a></li>
+					<li class="breadcrumb-item"><a href="{{url('#')}}">{{ucfirst($finalCaseStudy['project']['project_status'])}}</a></li>
+					<li class="breadcrumb-item"><a href="{{url('project_detail/'.$finalCaseStudy['project']['slug'])}}">{{$finalCaseStudy['project']['title']}}</a></li>
 					<li class="breadcrumb-item active" aria-current="page">Case Study Detail</li>
 				</ol>
 			</nav>
@@ -20,17 +20,13 @@
 					<div class="left-col">
 						<div class="news-detail-post mb-5">
 							<div class="news-detail-post-img">
-								<img src="{{url('public/images/29.png')}}" class="img-fluid" alt="">
+								<img src="{{url('uploads/caseStudy/'.$finalCaseStudy['detail']['image'])}}" class="img-fluid" alt="">
 							</div>
 							<div class="content mt-2">
 								<div class="title">
-									<h4 class="mb-0">Saving old age pension to build toilet</h4>
+									<h4 class="mb-0">{{$finalCaseStudy['detail']['title']}}</h4>
 								</div>
-								<p>Bara, Ms Basanta Maya Shrestha, 55 years,a resident of Kolbi VDC in Bara district has constructed her own toilet by saving the old age pension. She used Nrs 5500 of her old age pension. She constructed her own toilet within five days with the help of two labours.</p>
-
-								<p>She also remember those days when she use to defecate in the nearby jungle but due to the daily complain of her neighbhours she stopped defecating there and went to her brother’s toilet. Later her sister-in -law refused her to use the toilet and saw bio-gas toilet in her neighbhours but was unable to build one due to her poor financial condition.Later in the VDC after the GSF programme was implemented,she came to know the importance of the toilet and started building one for herself through the old age pension she used to receive.</p>
-
-								<p>Now she is very much proud to have her own toilet and is also happy that she does not have to listen complain of her neighbhours</p>
+								<p>{!!$finalCaseStudy['detail']['description']!!}</p>
 							</div>
 							<div class="share-plugin mt-3">
 								<ul>

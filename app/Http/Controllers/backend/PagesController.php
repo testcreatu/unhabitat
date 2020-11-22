@@ -34,7 +34,7 @@ class PagesController extends Controller
 
 	public function viewPages()
 	{
-		$custom_pages = CustomPages::where('page_for','menu')->get();
+		$custom_pages = CustomPages::where('page_for','project')->get();
 		$projects = Projects::get();
 		return view('cd-admin.custom_pages.view-custom-pages',compact('custom_pages','projects'));
 	}

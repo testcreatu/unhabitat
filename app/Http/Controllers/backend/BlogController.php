@@ -9,6 +9,7 @@ use App\Blog;
 use App\Projects;
 use DB;
 use Session;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 class BlogController extends Controller
 {
@@ -27,6 +28,7 @@ class BlogController extends Controller
 		$data = $this->addValidate();
 		$FinalData['slug'] = Str::slug($data['title']);
 		$FinalData['image'] = $this->uploadImage($data['image'],'uploads/blogs');
+		$FinalData['created_at'] = Carbon::now('Asia/Kathmandu');
 		$merge = array_merge($data,$FinalData);
 		DB::table('blogs')->insert($merge);
 		Session::flash('success');
@@ -98,6 +100,7 @@ class BlogController extends Controller
 			$FinalData['image'] = $this->uploadImage($data['image'],'uploads/blogs');
 		}
 		$FinalData['slug'] = Str::slug($data['title']);
+		$FinalData['updated_at'] = Carbon::now('Asia/Kathmandu');
 		$merge = array_merge($data,$FinalData);
 		DB::table('blogs')->where('id',$id)->update($merge);
 		Session::flash('success1');

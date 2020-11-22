@@ -10,7 +10,7 @@
 		<div class="header-margin">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="#">{{$finalProject['detail']['project_status']}}
+					<li class="breadcrumb-item"><a href="#">{{ucfirst($finalProject['detail']['project_status'])}}
 					</a></li>
 					<li class="breadcrumb-item active" aria-current="page">{{$finalProject['detail']['title']}}
 					</li>
@@ -26,6 +26,11 @@
 							<li class="nav-item" role="presentation">
 								<a class="nav-link" id="pills-second-tab" data-toggle="pill" href="#pills-second" role="tab" aria-controls="pills-second" aria-selected="false">Project Report</a>
 							</li>
+							@foreach($finalProject['custom_pages'] as $custom_pages)
+							<li class="nav-item" role="CustomPages">
+								<a class="nav-link" id="pills-{{$custom_pages['id']}}-tab" data-toggle="pill" href="#pills-{{$custom_pages['id']}}" role="tab" aria-controls="pills-{{$custom_pages['id']}}" aria-selected="false">{{$custom_pages['title']}}</a>
+							</li>
+							@endforeach
 						</ul>
 						<div class="tab-content project-detail-content-tab" id="project-pills-tabContent">
 							<div class="tab-pane fade show active" id="pills-first" role="tabpanel" aria-labelledby="pills-first-tab">
@@ -87,6 +92,11 @@
 								</table>
 								@endforeach
 							</div>
+							@foreach($finalProject['custom_pages'] as $custom_pages_content)
+							<div class="tab-pane fade" id="pills-{{$custom_pages_content['id']}}" role="tabpanel" aria-labelledby="pills-{{$custom_pages_content['id']}}-tab">
+								<p>{!!$custom_pages_content['description']!!}</p>
+							</div>
+							@endforeach
 						</div>
 					</div>
 				</div>
@@ -111,6 +121,7 @@
 							@endif	
 						</ul>
 						<div class="tab-content" id="myTabContent">
+							@if(count($finalProject['news']) > 0)
 							<div class="tab-pane fade show <?php echo count($finalProject['news']) > 0 ?'active':'' ?>" id="news" role="tabpanel" aria-labelledby="news-tab">
 								<div class="tab-news">
 									<div class="row">
@@ -136,10 +147,11 @@
 										@endforeach
 									</div>
 									<div class="view-more text-center pb-3">
-										<a href="{{url('project_news_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+										<a href="{{url('project_news_list/'.$finalProject['detail']['slug'])}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
 									</div>
 								</div>
 							</div>
+							@endif
 							<div class="tab-pane fade" id="Newsletter" role="tabpanel" aria-labelledby="newsletter-tab">
 								<div class="tab-news">
 									<div class="row">
@@ -166,7 +178,7 @@
 									</div>
 								</div>
 								<div class="view-more text-center pb-3">
-									<a href="{{url('newsletter_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+									<a href="{{url('newsletter_list/'.$finalProject['detail']['slug'])}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab">
@@ -179,13 +191,13 @@
 													<div class="col-5 col-sm-5 col-md-5">
 														<div class="popular-post-img">
 															<a href="{{url($videos['url'])}}" target="_blank">
-																<img src="{{url('https://img.youtube.com/vi/'.$videos['url'].'/sddefault.jpg')}}">
+																<img src="{{url('https://img.youtube.com/vi/'.$videos['video_id'].'/sddefault.jpg')}}">
 															</a>
 														</div>
 													</div>
 													<div class="col-7 col-sm-7 col-md-7">
 														<div class="sub-title">
-															<a href="https://www.youtube.com/embed/DgKon3LY5mk" target="_blank"><h6>Carving Heritage of Bungamati</h6></a>
+															<a href="{{url($videos['url'])}}" target="_blank"><h6>{{$videos['title']}}</h6></a>
 														</div>
 													</div>
 												</div>
@@ -203,140 +215,82 @@
 
 					<div class="sidebar sidebar-tab box-shadow mb-5">
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							@if(count($finalProject['publications']) > 0)
 							<li class="nav-item" role="presentation">
 								<a class="nav-link active" id="publication-tab" data-toggle="tab" href="#publication" role="tab" aria-controls="publication" aria-selected="true">Publication</a>
 							</li>
+							@endif
+							@if(count($finalProject['case_study']) > 0)
 							<li class="nav-item" role="presentation">
 								<a class="nav-link" id="casse-study-tab" data-toggle="tab" href="#caseStudy" role="tab" aria-controls="caseStudy" aria-selected="false">Case Study</a>
 							</li>
+							@endif
 						</ul>
 						<div class="tab-content" id="myTabContent">
+							@if(count($finalProject['publications']) > 0)
 							<div class="tab-pane fade show active" id="publication" role="tabpanel" aria-labelledby="publication-tab">
 								<div class="tab-news">
 									<div class="row">
+										@foreach($finalProject['publications'] as $publications)
 										<div class="col-md-12">
 											<div class="latest-story-card">
 												<div class="row">
 													<div class="col-5 col-sm-5 col-md-5">
 														<div class="popular-post-img">
-															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}">
-																<img src="{{url('public/images/8.jpg')}}" class="img-fluid" alt="">
+															<a href="{{url('recent_publish_detail/'.$publications['slug'])}}">
+																<img src="{{url('uploads/thumbnail/'.$publications['image'])}}" class="img-fluid" alt="">
 															</a>
 														</div>
 													</div>
 													<div class="col-7 col-sm-7 col-md-7">
 														<div class="sub-title">
-															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}"><h6>IEC Materials for COVID-19</h6></a>
+															<a href="{{url('recent_publish_detail/'.$publications['slug'])}}"><h6>{{$publications['title']}}</h6></a>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-12">
-											<div class="latest-story-card">
-												<div class="row">
-													<div class="col-5 col-sm-5 col-md-5">
-														<div class="popular-post-img">
-															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}">
-																<img src="{{url('public/images/23.jpg')}}" class="img-fluid" alt="">
-															</a>
-														</div>
-													</div>
-													<div class="col-7 col-sm-7 col-md-7">
-														<div class="sub-title">
-															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}"><h6>Annual Report 2018 (Global Sanitation Fund Programme)</h6></a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="latest-story-card">
-												<div class="row">
-													<div class="col-5 col-sm-5 col-md-5">
-														<div class="popular-post-img">
-															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}">
-																<img src="{{url('public/images/24.jpg')}}" class="img-fluid" alt="">
-															</a>
-														</div>
-													</div>
-													<div class="col-7 col-sm-7 col-md-7">
-														<div class="sub-title">
-															<a href="{{url('http://localhost/creatu/Un-Habitat/recent_publish_detail/bunga-abode-of-the-mystics')}}"><h6>GSF Nepal Annual Report 2017</h6></a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
+										@endforeach
 									</div>
 									<div class="view-more text-center pb-3">
 										<a href="{{url('project_publication_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
 									</div>
 								</div>
 							</div>
+							@endif
+
+
+							@if(count($finalProject['case_study']) > 0)
 							<div class="tab-pane fade" id="caseStudy" role="tabpanel" aria-labelledby="casse-study-tab">
 								<div class="tab-news">
 									<div class="row">
+										@foreach($finalProject['case_study'] as $case_study)
 										<div class="col-md-12">
 											<div class="latest-story-card">
 												<div class="row">
 													<div class="col-5 col-sm-5 col-md-5">
 														<div class="popular-post-img">
-															<a href="{{url('case_list_detail')}}">
-																<img src="{{url('public/images/29.png')}}" class="img-fluid" alt="">
+															<a href="{{url('case_list_detail/'.$case_study['slug'])}}">
+																<img src="{{url('uploads/thumbnail/'.$case_study['image'])}}" class="img-fluid" alt="">
 															</a>
 														</div>
 													</div>
 													<div class="col-7 col-sm-7 col-md-7">
 														<div class="sub-title">
-															<a href="{{url('case_list_detail')}}"><h6>Saving old age pension to build toilet</h6></a>
+															<a href="{{url('case_list_detail/'.$case_study['slug'])}}"><h6>{{$case_study['title']}}</h6></a>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-12">
-											<div class="latest-story-card">
-												<div class="row">
-													<div class="col-5 col-sm-5 col-md-5">
-														<div class="popular-post-img">
-															<a href="{{url('case_list_detail')}}">
-																<img src="{{url('public/images/30.jpg')}}" class="img-fluid" alt="">
-															</a>
-														</div>
-													</div>
-													<div class="col-7 col-sm-7 col-md-7">
-														<div class="sub-title">
-															<a href="{{url('case_list_detail')}}"><h6>Gita Devi’s desire to construct toilet</h6></a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>	
-										<div class="col-md-12">
-											<div class="latest-story-card">
-												<div class="row">
-													<div class="col-5 col-sm-5 col-md-5">
-														<div class="popular-post-img">
-															<a href="{{url('case_list_detail')}}">
-																<img src="{{url('public/images/31.jpg')}}" class="img-fluid" alt="">
-															</a>
-														</div>
-													</div>
-													<div class="col-7 col-sm-7 col-md-7">
-														<div class="sub-title">
-															<a href="{{url('case_list_detail')}}"><h6>Gold Ear Rings or Toilet…? My best decision ever!</h6></a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>	
+										@endforeach
 									</div>
 								</div>
 								<div class="view-more text-center pb-3">
 									<a href="{{url('case_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
 								</div>
 							</div>
+							@endif
 						</div>
 					</div>
 				</div>
