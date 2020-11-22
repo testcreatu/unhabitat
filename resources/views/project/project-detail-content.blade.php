@@ -178,7 +178,7 @@
 									</div>
 								</div>
 								<div class="view-more text-center pb-3">
-									<a href="{{url('newsletter_list')}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+									<a href="{{url('newsletter_list/'.$finalProject['detail']['slug'])}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab">

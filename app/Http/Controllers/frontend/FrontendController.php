@@ -26,7 +26,7 @@ class FrontendController extends Controller
 		$finalHome = [];
 		$finalHome['carousel'] = Carousel::where('status','active')->get();
 		$finalHome['projects'] = Projects::where('status','active')->where('is_trending','yes')->orderBy('id','desc')->get();
-		$finalHome['blog'] = Blog::where('status','active')->orderBy('id','desc')->take(4)->get();
+		$finalHome['blog'] = Blog::where('status','active')->orderBy('id','desc')->take(3)->get();
 		$finalHome['publications'] = Publications::where('status','active')->where('show_in_homepage','show')->orderBy('id','desc')->take(4)->get();
 		$finalHome['features'] = Features::where('status','active')->get();
 		$finalHome['goals'] = Goals::get();

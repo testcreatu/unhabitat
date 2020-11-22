@@ -53,9 +53,7 @@ Route::get('project_publication_list', function () {
     return view('project.project-publication-list');
 });
 
-Route::get('newsletter_list', function () {
-    return view('project.newsletter-list');
-});
+Route::get('newsletter_list/{slug}','frontend\NewFrontendController@ProjectNewsletterList');
 
 Route::get('newsletter_list_detail/{slug}','frontend\NewFrontendController@NewsletterDetail');
 
@@ -84,6 +82,12 @@ Route::get('international_list', function () {
 
 Route::get('pages/{slug}','frontend\NewFrontendController@viewCustomPage');
 
+// Search
+Route::get('search-project-news','frontend\SearchController@searchProjectNews');
+Route::get('search-project-news-year','frontend\SearchController@searchProjectNewsYear');
+
+Route::get('search-project-newsletter','frontend\SearchController@searchProjectNewsLetter');
+Route::get('search-project-newsletter-year','frontend\SearchController@searchProjectNewsLetterYear');
 
 
 

@@ -45,4 +45,14 @@ class NewFrontendController extends Controller
 		$finalNewsList['list'] = Blog::where('status','active')->where('project_id',$finalNewsList['project']['id'])->paginate(6);
 		return view('project.project-news-list',compact('finalNewsList'));
 	}
+
+	public function ProjectNewsletterList($slug)
+	{
+		$finalNewsLetterList['project'] = Projects::where('slug',$slug)->get()->first();
+		$finalNewsLetterList['list'] = Newsletter::where('status','active')->where('project_id',$finalNewsLetterList['project']['id'])->paginate(6);
+		return view('project.newsletter-list',compact('finalNewsLetterList'));
+	}
+
+
+
 }
