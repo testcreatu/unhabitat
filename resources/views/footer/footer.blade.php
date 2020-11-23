@@ -49,12 +49,7 @@
 							@endif
 						</li>
 						@endforeach
-						{{-- <li>
-							<a href="{{url('international_list')}}">International</a>
-						</li>
-						<li>
-							<a href="{{url('national_list')}}">Flagship</a>
-						</li> --}}
+						
 					</ul>
 				</section>
 			</div>
@@ -63,13 +58,13 @@
 					<h2>Media Center</h2>
 					<ul>
 						<li>
-							<a href="#">New Stories</a>
+							<a href="{{url('featured_news')}}">New Stories</a>
 						</li>
 						<li>
-							<a href="#">Gallery</a>
+							<a href="{{url('images')}}">Gallery</a>
 						</li>
 						<li>
-							<a href="#">Videos</a>
+							<a href="{{url('our_video')}}">Videos</a>
 						</li>
 					</ul>
 				</section>
