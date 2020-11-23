@@ -81,129 +81,93 @@
 					</div> -->
 				</div>
 				<div class="col-md-4">
-					<div class="popular-post">
-						<div class="title text-center">
-							<h6 class="mb-3">Recent Project</h6>
+					<div class="sidebar sidebar-tab box-shadow mb-5">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a class="nav-link active" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true">Recent Project</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" id="newsletter-tab" data-toggle="tab" href="#Newsletter" role="tab" aria-controls="Newsletter" aria-selected="false">Related Publication</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
+								<div class="tab-news">
+									<div class="row">
+										@foreach($finalNewsDetail['latest_projects'] as $projects)
+										<div class="col-md-12">
+											<div class="latest-story-card">
+												<div class="row">
+													<div class="col-5 col-sm-5 col-md-5">
+														<div class="popular-post-img">
+															<a href="{{url('project_detail/'.$projects['slug'])}}">
+																<img src="{{url('uploads/thumbnail/'.$projects['image'])}}" class="img-fluid" alt="">
+															</a>
+														</div>
+													</div>
+													<div class="col-7 col-sm-7 col-md-7">
+														<div class="sub-title">
+															<a href="{{url('project_detail/'.$projects['slug'])}}"><h6>{{$projects['title']}}</h6></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										@endforeach
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="Newsletter" role="tabpanel" aria-labelledby="newsletter-tab">
+								<div class="tab-news">
+									<div class="row">
+										@foreach($finalNewsDetail['publications'] as $publications)
+										<div class="col-md-12">
+											<div class="latest-story-card">
+												<div class="row">
+													<div class="col-5 col-sm-5 col-md-5">
+														<div class="popular-post-img">
+															<a href="{{url('recent_publish_detail/'.$publications['slug'])}}">
+																<img src="{{url('uploads/thumbnail/'.$publications['image'])}}" class="img-fluid" alt="">
+															</a>
+														</div>
+													</div>
+													<div class="col-7 col-sm-7 col-md-7">
+														<div class="sub-title">
+															<a href="{{url('recent_publish_detail/'.$publications['slug'])}}"><h6>{{$publications['title']}}</h6></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										@endforeach
+									</div>
+								</div>
+							</div>
 						</div>
-						@foreach($finalNewsDetail['latest_projects'] as $projects)
-						<div class="row popular-post-list">
-							<div class="col-5 col-sm-5 col-md-5">
-								<div class="popular-post-img">
-									<a href="{{url('project_detail/'.$projects['slug'])}}">
-										<img src="{{url('uploads/thumbnail/'.$projects['image'])}}" class="img-fluid" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="col-7 col-sm-7 col-md-7">
-								<div class="sub-title">
-									<a href="{{url('project_detail/'.$projects['slug'])}}"><h6>{{$projects['title']}}</h6></a>
-								</div>
-							</div>
-						</div>
-						@endforeach
-					{{-- 	<div class="row popular-post-list">
-							<div class="col-5 col-sm-5 col-md-5">
-								<div class="popular-post-img">
-									<a href="#">
-										<img src="{{url('public/images/2.jpg')}}" class="img-fluid" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="col-7 col-sm-7 col-md-7">
-								<div class="sub-title">
-									<a href="#"><h6>Practicing hand hygiene</h6></a>
-								</div>
-							</div>
-						</div>
-						<div class="row popular-post-list">
-							<div class="col-5 col-sm-5 col-md-5">
-								<div class="popular-post-img">
-									<a href="#">
-										<img src="{{url('public/images/6.jpeg')}}" class="img-fluid" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="col-7 col-sm-7 col-md-7">
-								<div class="sub-title">
-									<a href="#"><h6>Grant Project in Nepal mobilises Bungamati Community to produce Protective Face Masks </h6></a>
-								</div>
-							</div>
-						</div> --}}
 					</div>
 
-					<div class="popular-post mt-4">
-						<div class="title text-center">
-							<h6 class="mb-3">Notice</h6>
-						</div>
-						<div class="sidebar">
-							@foreach($finalNewsDetail['notice'] as $notice)
-							<div class="link-list mt-4">
-								<ul class="">
-									<li><a href="{{url('notice/'.$notice['slug'])}}">{{$notice['title']}}</a></li>
-								</ul>
+					<div class="sidebar sidebar-tab box-shadow mb-5">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a class="nav-link active" id="notice-tab" data-toggle="tab" href="#notice" role="tab" aria-controls="notice" aria-selected="true">Notice</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="notice" role="tabpanel" aria-labelledby="notice-tab">
+								<div class="tab-notice">
+									<div class="row">
+										@foreach($finalNewsDetail['notice'] as $notice)
+										<div class="link-list mt-4">
+											<ul class="">
+												<li><a href="{{url('notice/'.$notice['slug'])}}">{{$notice['title']}}</a></li>
+											</ul>
+										</div>
+										@endforeach
+									</div>
+								</div>
 							</div>
-							@endforeach
 						</div>
 					</div>
-
-					<div class="popular-post mt-4">
-						<div class="title text-center">
-							<h6 class="mb-3">Related Publications</h6>
-						</div>
-						@foreach($finalNewsDetail['publications'] as $publications)
-						<a href="{{url('recent_publish_detail/'.$publications['slug'])}}">
-							<div class="row popular-post-list">
-								<div class="col-5 col-sm-5 col-md-5">
-									<div class="popular-post-img">
-										<a href="{{url('recent_publish_detail/'.$publications['slug'])}}">
-											<img src="{{url('uploads/thumbnail/'.$publications['image'])}}" class="img-fluid" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="col-7 col-sm-7 col-md-7">
-									<div class="sub-title">
-										<a href="{{url('recent_publish_detail/'.$publications['slug'])}}"><h6>{{$publications['title']}}</h6></a>
-									</div>
-								</div>
-							</div>
-						</a>
-						@endforeach
-						{{-- <a href="{{url('featured_news_detail')}}">
-							<div class="row popular-post-list">
-								<div class="col-5 col-sm-5 col-md-5">
-									<div class="popular-post-img">
-										<a href="#">
-											<img src="{{url('public/images/6.jpeg')}}" class="img-fluid" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="col-7 col-sm-7 col-md-7">
-									<div class="sub-title">
-										<a href="#"><h6>Grant Project in Nepal mobilises Bungamati Community to produce Protective Face Masks </h6></a>
-									</div>
-								</div>
-							</div>
-						</a> --}}
-					</div>
-
-					
-					<!-- <div class="gif-post">
-						<div class="gif-post-img">
-							<a href="https://sustainabledevelopment.un.org/">
-								<img src="{{url('public/images/9.gif')}}" class="img-fluid" alt="">
-							</a>
-						</div>
-						<div class="gif-post-img">
-							<a href="#">
-								<img src="{{url('public/images/10.gif')}}" class="img-fluid" alt="">
-							</a>
-						</div>
-						<div class="gif-post-img">
-							<a href="#">
-								<img src="{{url('public/images/11.gif')}}" class="img-fluid" alt="">
-							</a>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>

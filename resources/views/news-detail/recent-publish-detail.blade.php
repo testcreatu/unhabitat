@@ -62,55 +62,83 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="link-list popular-post">
-						<div class="title text-center">
-							<h6>Publication</h6>
-						</div>
-						<ul class="">
-							@foreach($finalPublication['projects'] as $projects)
-							<li><a href="{{url('project_detail/'.$projects['slug'])}}">{{$projects['title']}}</a></li>
-							@endforeach
-							{{-- <li><a href="{{url('recent_publish_detail')}}">Bunga – Abode of the Mystics </a></li>
-							<li><a href="{{url('recent_publish_detail')}}">Parya Sampada</a></li> --}}
+					<div class="sidebar sidebar-tab box-shadow mb-5">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a class="nav-link active" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true">Publication</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a class="nav-link" id="newsletter-tab" data-toggle="tab" href="#Newsletter" role="tab" aria-controls="Newsletter" aria-selected="false">Other News</a>
+							</li>
 						</ul>
-					</div>
-					<div class="popular-post mt-4">
-						<div class="title text-center">
-							<h6 class="mb-3">Notice</h6>
-						</div>
-						<div class="sidebar">
-							@foreach($finalPublication['notice'] as $notice)
-							<div class="link-list mt-4">
-								<ul class="">
-									<li><a href="{{url('notice/'.$notice['slug'])}}">{{$notice['title']}}</a></li>
-								</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
+								<div class="tab-news">
+									<div class="row">
+										<div class="col-md-12">
+											@foreach($finalPublication['projects'] as $projects)
+											<div class="link-list">
+												<ul class="">
+													<li><a href="{{url('project_detail/'.$projects['slug'])}}">{{$projects['title']}}</a></li>
+												</ul>
+											</div>
+											@endforeach
+										</div>
+									</div>
+								</div>
 							</div>
-							@endforeach
+							<div class="tab-pane fade" id="Newsletter" role="tabpanel" aria-labelledby="newsletter-tab">
+								<div class="tab-news">
+									<div class="row">
+										@foreach($finalPublication['latest_news'] as $news)
+										<div class="col-md-12">
+											<div class="latest-story-card">
+												<div class="row">
+													<div class="col-5 col-sm-5 col-md-5">
+														<div class="popular-post-img">
+															<a href="{{url('featured_news_detail/'.$news['slug'])}}">
+																<img src="{{url('uploads/thumbnail/'.$news['image'])}}" class="img-fluid" alt="">
+															</a>
+														</div>
+													</div>
+													<div class="col-7 col-sm-7 col-md-7">
+														<div class="sub-title">
+															<a href="{{url('featured_news_detail/'.$news['slug'])}}"><h6>{{$news['title']}}</h6></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										@endforeach
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<div class="popular-post mt-4">
-						<div class="title text-center">
-							<h6 class="mb-3">Other News</h6>
-						</div>
-						@foreach($finalPublication['latest_news'] as $news)
-						<a href="{{url('featured_news_detail/'.$news['slug'])}}">
-							<div class="row popular-post-list">
-								<div class="col-5 col-sm-5 col-md-5">
-									<div class="popular-post-img">
-										<a href="{{url('featured_news_detail/'.$news['slug'])}}">
-											<img src="{{url('uploads/thumbnail/'.$news['image'])}}" class="img-fluid" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="col-7 col-sm-7 col-md-7">
-									<div class="sub-title">
-										<a href="{{url('featured_news_detail/'.$news['slug'])}}"><h6>{{$news['title']}}</h6></a>
+					<div class="sidebar sidebar-tab box-shadow mb-5">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a class="nav-link active" id="notice-tab" data-toggle="tab" href="#notice" role="tab" aria-controls="notice" aria-selected="true">Notice</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="notice" role="tabpanel" aria-labelledby="notice-tab">
+								<div class="tab-notice">
+									<div class="row">
+										<div class="col-md-12">
+											@foreach($finalPublication['notice'] as $notice)
+											<div class="link-list">
+												<ul class="">
+													<li><a href="{{url('notice/'.$notice['slug'])}}">{{$notice['title']}}</a></li>
+												</ul>
+											</div>
+											@endforeach
+										</div>
 									</div>
 								</div>
 							</div>
-						</a>
-						@endforeach
+						</div>
 					</div>
 				</div>
 			</div>
