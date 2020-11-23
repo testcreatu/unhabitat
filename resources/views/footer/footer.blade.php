@@ -9,20 +9,32 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12 col-md-6 col-lg-2 mb-5">
+				@if(count($finalFooter['about_pages']))
+				<section class="footer-quick-link">
+					<h2>About us</h2>
+					<ul>
+						@foreach($finalFooter['about_pages'] as $about_pages)
+						<li>
+							<a href="{{url('about-us/'.$about_pages['slug'])}}">{{$about_pages['title']}}</a>
+						</li>
+						@endforeach
+					</ul>
+				</section>
+				@else
 				<section class="footer-quick-link">
 					<h2>About us</h2>
 					<ul>
 						<li>
-							<a href="#">Overview</a>
+							<a href="{{url('about_us')}}" class="nav-link">Overview</a>
 						</li>
+						@foreach($finalHeader['about_pages'] as $aboutPage)
 						<li>
-							<a href="#">Where we are</a>
+							<a href="{{url('about-us/'.$aboutPage['slug'])}}" class="nav-link">{{$aboutPage['title']}}</a>
 						</li>
-						<li>
-							<a href="#">Mandate</a>
-						</li>
+						@endforeach
 					</ul>
 				</section>
+				@endif
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-2 mb-5">
 				<section class="footer-quick-link">

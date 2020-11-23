@@ -14,7 +14,6 @@ class CustomAboutPagesController extends Controller
 {
 	public function addAboutPageForm()
 	{
-		$projects = Projects::get();
 		return view('cd-admin.about_pages.add-about-pages');
 	}
 	public function addAboutPage()
@@ -24,7 +23,6 @@ class CustomAboutPagesController extends Controller
 		$data = $this->addValidate();
 		$FinalData['slug'] = Str::slug($data['title']);
 		$FinalData['created_at'] = Carbon::now('Asia/Kathmandu');
-		$FinalData['page_for'] = 'project';
 		$merge = array_merge($data,$FinalData);
 		DB::table('custom_about_pages')->insert($merge);
 		Session::flash('success');
@@ -33,24 +31,21 @@ class CustomAboutPagesController extends Controller
 
 	public function viewAboutPage()
 	{
-		$about_pages = CustomAboutPages::where('page_for','project')->get();
-		$projects = Projects::get();
-		return view('cd-admin.about_pages.view-about-pages',compact('about_pages','projects'));
+		$about_pages = CustomAboutPages::get();
+		return view('cd-admin.about_pages.view-about-pages',compact('about_pages'));
 	}
 
 	public function viewOnePage($id)
 	{
 		$about_pages = CustomAboutPages::find($id);
-		$projects = Projects::get();
-		return view('cd-admin.about_pages.view-one-about-page',compact('about_pages','projects'));
+		return view('cd-admin.about_pages.view-one-about-page',compact('about_pages'));
 	}
 
 	public function editAboutPageForm($id)
 	{
 		if($data = CustomAboutPages::where('id',$id)->get()->first())
 		{
-			$projects = Projects::get();
-			return view('cd-admin.about_pages.edit-about-pages',compact('data','projects'));
+			return view('cd-admin.about_pages.edit-about-pages',compact('data'));
 		}
 	}
 
@@ -62,7 +57,6 @@ class CustomAboutPagesController extends Controller
 		$data = $this->editValidate($id);
 		$FinalData['slug'] = Str::slug($data['title']);
 		$FinalData['updated_at'] = Carbon::now('Asia/Kathmandu');
-		$FinalData['page_for'] = 'project';
 		$merge = array_merge($data,$FinalData);
 		DB::table('custom_about_pages')->where('id',$id)->update($merge);
 		Session::flash('success1');
@@ -84,7 +78,6 @@ class CustomAboutPagesController extends Controller
 	{
 		$request = Request()->all();
 		$valid = $this->validate(Request(),[
-			'project_id' => '',
 			'title' => 'required|unique:custom_about_pages,title',
 			'description' => 'required',
 			'status' => 'required',
@@ -96,7 +89,6 @@ class CustomAboutPagesController extends Controller
 	{
 		$request = Request()->all();
 		$valid = $this->validate(Request(),[
-			'project_id' => '',
 			'title' => 'required|unique:custom_about_pages,title,'.$id,
 			'description' => 'required',
 			'status' => 'required',

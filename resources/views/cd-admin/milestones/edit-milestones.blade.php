@@ -11,11 +11,11 @@
 			<i class="fa fa-circle"></i>
 		</li>
 		<li>
-			<a href="{{url('cd-admin/view-about-pages')}}">View About Page</a>
+			<a href="{{url('cd-admin/view-milestones')}}">View Milestones</a>
 			<i class="fa fa-circle"></i>
 		</li>
 		<li>
-			<span>Add About Page</span>
+			<span>Edit Milestones</span>
 		</li>
 	</ul>
 </div>
@@ -30,55 +30,44 @@
 		<div class="portlet-title">
 			<div class="caption">
 				<i class="icon-settings font-dark"></i>
-				<span class="caption-subject font-dark sbold uppercase">Add About Page</span>
+				<span class="caption-subject font-dark sbold uppercase">Edit Milestones</span>
 			</div>
 		</div>
 		<div class="portlet-body form">
-			<form class="form-horizontal" method="post" action="{{route('add-about-pages')}}" enctype="multipart/form-data" role="form">
-				@csrf
+			<form class="form-horizontal" method="post" action="{{url('cd-admin/edit-milestones/'.$data['id'])}}" enctype="multipart/form-data" role="form">
 				<div class="form-body">
-					<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter Page Title <span class="cd-admin-required">*</span></label>
+					@csrf
+
+					<div class="form-group{{ $errors->has('summary') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Enter Feature Summary</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" placeholder="Enter Page title" name="title" value="{{old('title')}}">
+							<textarea type="text" name="summary" class="form-control" placeholder="Enter Feature Summary">{{$data['summary']}}</textarea>
 						</div>
-						@if ($errors->has('title'))
-						<span class="text-danger">{{ $errors->first('title') }}</span>
-						@endif
 					</div>
 
-					<div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter Description <span class="cd-admin-required">*</span></label>
+					<div class="form-group{{ $errors->has('number') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Enter Initials</label>
 						<div class="col-md-6">
-							<textarea type="text" name="description" class="form-control summernote" placeholder="Enter Description">{{old('description')}}</textarea>
+							<input type="text" name="number" class="form-control" placeholder="Enter Initials" value="{{$data['number']}}">
 						</div>
-						@if ($errors->has('description'))
-						<span class="text-danger">{{ $errors->first('description') }}</span>
-						@endif
 					</div>
-
-					<!-- seo section starts -->
-					<hr>
-
 					<!-- status section starts -->
 					<hr>
-
 					<div class="form-group">
 						<label class="col-md-3 control-label">Status</label>
 						<div class="col-md-6">
 							<div class="mt-radio-inline">
 								<label class="mt-radio">
-									<input type="radio" name="status" id="optionsRadios25" value="active" checked=""> Active
+									<input type="radio" name="status" id="optionsRadios25" value="active" <?php echo $data['status'] == 'active'?'checked':'' ?>> Active
 									<span></span>
 								</label>
 								<label class="mt-radio">
-									<input type="radio" name="status" id="optionsRadios26" value="inactive"> Inactive
+									<input type="radio" name="status" id="optionsRadios26" value="inactive"<?php echo $data['status'] == 'inactive'?'checked':'' ?>> Inactive
 									<span></span>
 								</label>
 							</div>
 						</div>
 					</div>
-
 					<!-- status section ends -->
 
 				</div>
@@ -95,5 +84,4 @@
 	</div>
 	<!-- END SAMPLE FORM PORTLET-->
 </div>
-
 @endsection

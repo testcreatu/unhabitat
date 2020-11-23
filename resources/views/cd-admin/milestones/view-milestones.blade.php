@@ -3,21 +3,21 @@
 <!-- page content -->
 @section('content')
 
-@if(Session::has('failure'))
+@if(Session::has('ServiceDeleteSuccess'))
 <div class="alert alert-danger">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>About Pages Deleted Successfully</strong> {{ Session::get('message', '') }}
+	<strong>MILESTONES DELETED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
-@elseif(Session::has('success'))
+@elseif(Session::has('ServiceSuccess'))
 <div class="alert alert-success">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>About Pages Added Successfully</strong> {{ Session::get('message', '') }}
+	<strong>MILESTONES INSERTED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
 
-@elseif(Session::has('success1'))
+@elseif(Session::has('ServiceUpdateSuccess'))
 <div class="alert alert-success">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>About Pages Updated Successfully</strong> {{ Session::get('message', '') }}
+	<strong>MILESTONES UPDATED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
 
 @endif
@@ -31,7 +31,7 @@
 		</li>
 	</li>
 	<li>
-		<span>View About Pages</span>
+		<span>View Milestones</span>
 	</li>
 </ul>
 </div>
@@ -44,11 +44,11 @@
 			<div class="portlet-title">
 				<div class="caption font-dark">
 					<i class="icon-settings font-dark"></i>
-					<span class="caption-subject bold uppercase"> View About Pages </span>
+					<span class="caption-subject bold uppercase"> View Milestones </span>
 				</div>
 				<div class="btn-group pull-right">
-					<a href="{{url('cd-admin/add-about-pages')}}">
-						<button id="sample_editable_1_new" class="btn sbold green"> Add About Pages
+					<a href="{{url('cd-admin/add-milestones')}}">
+						<button id="sample_editable_1_new" class="btn sbold green"> Add Milestones
 							<i class="fa fa-plus"></i>
 						</button>
 					</a>
@@ -59,21 +59,21 @@
 					<thead>
 						<tr>
 							<th>SN</th>
-							<th>Title </th>
+							<th> Milestone Summary </th>
 							<th>Status</th>
 							<th> Actions </th>
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($about_pages as $about)
+						@foreach($milestones as $milestone)
+
 						<tr class="odd gradeX">
 							<td>{{$loop->iteration}}</td>
-							<td>{{$about['title']}}</td>
-							<td>
-								@if($about['status'] == 'active')
+							<td>{!!$milestone->summary!!}</td>
+							<td>@if($milestone->status == 'active')
 								<span class="badge badge-success"> Active </span>
 								@else
-								<span class="badge badge-danger"> Inactive </span>
+								<span class="badge badge-danger"> In-Active </span>
 								@endif
 							</td>
 							
@@ -84,15 +84,17 @@
 									</button>
 									<ul class="dropdown-menu pull-left" role="menu">
 										<li>
-											<a href="{{url('cd-admin/view-one-about-page/'.$about['id'])}}"><i class="fa fa-eye"></i> View</a>
+											<a data-toggle="modal" href="#view-modal{{$milestone->id}}">
+												<i class="fa fa-eye"></i> View
+											</a>
 										</li>
 										<li>
-											<a href="{{route('edit-about-pages',$about['id'])}}">
+											<a href="{{url('cd-admin/edit-milestones/'.$milestone->id)}}">
 												<i class="fa fa-edit"></i> Edit
 											</a>
 										</li>
 										<li>
-											<a data-toggle="modal" href="#delete-modal{{$about['id']}}">
+											<a data-toggle="modal" href="#delete-modal{{$milestone->id}}">
 												<i class="fa fa-trash"></i> Delete
 											</a>
 										</li>
@@ -111,13 +113,47 @@
 </div>
 
 <!-- view modals -->
-@foreach($about_pages as $ch)
 
+@foreach($milestones as $ch)
+<div id="view-modal{{$ch->id}}" class="modal fade modal-scroll" tabindex="-1" data-replace="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title pull-left">{{$ch['title']}}</h4>
+				<p class="modal-title pull-right">status 
+					@if($ch->status == 'active')
+					<span class="badge badge-success"> Active </span>
+					@else
+					<span class="badge badge-danger"> In-Active </span>
+					@endif
+				</p>
+			</div>
+			<div class="modal-body">
+				
+				<div class="panel panel-default">
+					<div class="panel-heading">  Initials </div>
+					<div class="panel-body"> {!!$ch['number']!!} </div>
+				</div>
 
+				<div class="panel panel-default">
+					<div class="panel-heading">  Summary </div>
+					<div class="panel-body"> {!!$ch['summary']!!} </div>
+				</div>
+
+				
+				
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn dark btn-outline">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+@endforeach
 
 <!-- delete modal -->
-
-<div class="modal fade" id="delete-modal{{$ch['id']}}" tabindex="-1" role="basic" aria-hidden="true">
+@foreach($milestones as $c)
+<div class="modal fade" id="delete-modal{{$c->id}}" tabindex="-1" role="basic" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -127,7 +163,7 @@
 			<div class="modal-body"> Are you sure want to delete this ? </div>
 			<div class="modal-footer">
 				<button type="button" class="btn dark btn-outline" data-dismiss="modal">No</button>
-				<a href="{{url('cd-admin/delete-about-pages/'.$ch['id'])}}"  class="btn green">YES</a>
+				<a href="{{url('/cd-admin/delete-milestones/'.$c->id)}}"  class="btn green">YES</a>
 			</div>
 		</div>
 		<!-- /.modal-content -->

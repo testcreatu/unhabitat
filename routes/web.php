@@ -19,6 +19,8 @@ Route::get('home','frontend\FrontendController@home');
 
 Route::get('about_us','frontend\FrontendController@aboutUs');
 
+Route::get('about-us/{slug}','frontend\NewFrontendController@aboutPages');
+
 Route::get('featured_news','frontend\FrontendController@featuredNewsList');
 
 Route::get('recent_publish','frontend\FrontendController@publicationList');
@@ -256,5 +258,19 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('cd-admin/view-one-about-page/{id}','backend\CustomAboutPagesController@viewOnePage')->name('view-one-about-pages');
     Route::post('/cd-admin/edit-about-pages/{id}','backend\CustomAboutPagesController@editAboutPage')->name('edit-about-pages');
     Route::get('/cd-admin/delete-about-pages/{id}','backend\CustomAboutPagesController@deleteAboutPage')->name('delete-about-pages');
+
+
+            // Milestones
+    Route::get('/cd-admin/view-milestones','backend\MilestonesController@viewMilestones')->name('view-milestones');
+    Route::get('/cd-admin/add-milestones','backend\MilestonesController@addMilestonesForm')->name('add-milestones-form');
+    Route::post('/cd-admin/add-milestones','backend\MilestonesController@addMilestones')->name('add-milestones');
+    Route::get('/cd-admin/edit-milestones/{id}','backend\MilestonesController@editMilestonesForm')->name('edit-milestones-form');
+    Route::post('/cd-admin/edit-milestones/{id}','backend\MilestonesController@editMilestones')->name('edit-milestones');
+    Route::get('/cd-admin/delete-milestones/{id}','backend\MilestonesController@deleteMilestones')->name('delete-milestones');
+
+        //Titles
+    Route::get('/cd-admin/view-page-titles','backend\TitlesController@viewTitle');
+    Route::get('/cd-admin/edit-page-titles/{id}','backend\TitlesController@editTitleForm');
+    Route::post('/cd-admin/edit-page-titles/{id}','backend\TitlesController@editTitle');
 
 });

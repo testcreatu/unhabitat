@@ -40,12 +40,36 @@
                     <span class="title">About us</span>
                 </a>
             </li> 
-           {{--  <li class="nav-item">
-                <a href="{{url('cd-admin/view-objective')}}" class="nav-link nav-toggle">
+            <li class="nav-item">
+                <a href="{{url('cd-admin/view-about-pages')}}" class="nav-link nav-toggle">
                     <i class="fa fa-info"></i>
-                    <span class="title">Why us?</span>
+                    <span class="title">About Pages</span>
                 </a>
-            </li> --}}
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-about-pages ')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add About Pages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-about-pages')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View About Pages</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="heading">
+                <h3 class="uppercase">Objectives Section</h3>
+            </li>
+            <li class="nav-item">
+                <a href="{{url('cd-admin/view-page-titles')}}" class="nav-link nav-toggle">
+                    <i class="fa fa-info"></i>
+                    <span class="title">Page Titles</span>
+                </a>
+                
+            </li>
 
             <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
@@ -64,6 +88,28 @@
                         <a href="{{url('cd-admin/view-features')}}" class="nav-link">
                             <i class="fa fa-eye"></i>
                             <span class="title">View Features</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-quote-left"></i>
+                    <span class="title">Milestones</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-milestones')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add Milestones</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-milestones')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Milestones</span>
                         </a>
                     </li>
                 </ul>
@@ -94,7 +140,7 @@
 
 
             <li class="heading">
-                <h3 class="uppercase">Section</h3>
+                <h3 class="uppercase">Media Section</h3>
             </li>
 
             <li class="nav-item">
@@ -140,70 +186,6 @@
                 </ul>
             </li>
 
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-list-ol"></i>
-                    <span class="title">Projects</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/add-projects')}}" class="nav-link">
-                            <i class="fa fa-plus"></i>
-                            <span class="title">Add Projects</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/view-projects')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Projects</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-circle"></i>
-                    <span class="title">Publications Category</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/add-publication-category')}}" class="nav-link">
-                            <i class="fa fa-plus"></i>
-                            <span class="title">Add Publications Category</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/view-publication-category')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Publications Category</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-circle"></i>
-                    <span class="title">Publications</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/add-publications')}}" class="nav-link">
-                            <i class="fa fa-plus"></i>
-                            <span class="title">Add Publications</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/view-publications')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Publications</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
 
             <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
@@ -269,6 +251,76 @@
                     </li>
                 </ul>
             </li>
+            <li class="heading">
+                <h3 class="uppercase">Projects Section</h3>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-list-ol"></i>
+                    <span class="title">Projects</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-projects')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-projects')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Projects</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="heading">
+                <h3 class="uppercase">Publications Section</h3>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-circle"></i>
+                    <span class="title">Publications Category</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-publication-category')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add Publications Category</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-publication-category')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Publications Category</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-circle"></i>
+                    <span class="title">Publications</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-publications')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add Publications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-publications')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Publications</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
 
             <li class="heading">
                 <h3 class="uppercase">Media Section</h3>
@@ -318,58 +370,122 @@
             </li>
 
             <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-picture-o"></i>
+                    <span class="title">Carousel</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-carousel')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add new Carousel</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-carousel')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Carousel</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-list-ol"></i>
+                    <span class="title">News</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-blog')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add News</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-blog')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View News</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-circle"></i>
+                    <span class="title">NewsLetter</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-newsletter')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add NewsLetter</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-newsletter')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View NewsLetter</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-circle"></i>
+                    <span class="title">Case Study</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-case-study')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add Case Study</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-case-study')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Case Study</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-circle"></i>
+                    <span class="title">Notice</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-notice')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add Notice</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-notice')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Notice</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+           {{--  <li class="nav-item">
                 <a href="{{url('cd-admin/view-social-links')}}" class="nav-link nav-toggle">
                     <i class="fa fa-group"></i>
                     <span class="title">Social Links</span>
                 </a>
-            </li> -->
+            </li>  --}}
 
-            <li class="heading">
-                <h3 class="uppercase">Pages Section</h3>
-            </li>
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-envelope"></i>
-                    <span class="title">Custom Pages(Projects)</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/add-custom-pages')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">Add Pages</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/view-custom-pages')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Pages</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-envelope"></i>
-                    <span class="title">Custom Pages(Menu)</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/add-custom-menu-pages')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">Add Pages</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{url('cd-admin/view-custom-menu-pages')}}" class="nav-link">
-                            <i class="fa fa-eye"></i>
-                            <span class="title">View Pages</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+            
 
             <li class="heading">
                 <h3 class="uppercase">Files Section</h3>
@@ -412,6 +528,52 @@
                         <a href="{{url('cd-admin/view-files')}}" class="nav-link">
                             <i class="fa fa-eye"></i>
                             <span class="title">View Files</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="heading">
+                <h3 class="uppercase">Pages Section</h3>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-envelope"></i>
+                    <span class="title">Custom Pages(Projects)</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-custom-pages')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">Add Pages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-custom-pages')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Pages</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-envelope"></i>
+                    <span class="title">Custom Pages(Menu)</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-custom-menu-pages')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">Add Pages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-custom-menu-pages')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Pages</span>
                         </a>
                     </li>
                 </ul>

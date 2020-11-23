@@ -19,6 +19,9 @@ use App\Files;
 use App\NewsLetter;
 use App\CaseStudy;
 use App\CustomPages;
+use App\PageTitle;
+use App\Milestones;
+
 class FrontendController extends Controller
 {
 	public function home()
@@ -30,6 +33,9 @@ class FrontendController extends Controller
 		$finalHome['publications'] = Publications::where('status','active')->where('show_in_homepage','show')->orderBy('id','desc')->take(4)->get();
 		$finalHome['features'] = Features::where('status','active')->get();
 		$finalHome['goals'] = Goals::get();
+		$finalHome['milestones'] = Milestones::where('status','active')->take(6)->get();
+		$finalHome['features_desc'] = PageTitle::where('page_name','Features')->get()->first();
+		$finalHome['milestones_desc'] = PageTitle::where('page_name','Milestones')->get()->first();
 		$finalHome['video-gallery'] = VideoGallery::where('status','active')->take(3)->get();
 		return view('home.home',compact('finalHome'));
 	}
@@ -79,6 +85,7 @@ class FrontendController extends Controller
 	{
 		$finalAbout = [];
 		$finalAbout['detail'] = About::get()->first();
+		$finalAbout['detail']['title'] = "About Us";
 		return view('about.about-us',compact('finalAbout'));
 	}
 

@@ -22,12 +22,12 @@
                 <li>
                   <a href="{{url('about_us')}}" class="nav-link">Overview</a>
                 </li>
+                @foreach($finalHeader['about_pages'] as $aboutPage)
                 <li>
-                  <a href="#" class="nav-link">Where we are</a>
+                  <a href="{{url('about-us/'.$aboutPage['slug'])}}" class="nav-link">{{$aboutPage['title']}}</a>
                 </li>
-                <li>
-                  <a href="#" class="nav-link">Mandate</a>
-                </li>
+                @endforeach
+               
               </ul>
             </div>
           </li>

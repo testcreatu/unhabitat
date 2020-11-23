@@ -18,6 +18,7 @@ use App\CustomPages;
 use App\Newsletter;
 use App\PublicationCategories;
 use App\CaseStudy;
+use App\CustomAboutPages;
 class NewFrontendController extends Controller
 {
 	public function viewCustomPage($slug)
@@ -81,6 +82,13 @@ class NewFrontendController extends Controller
 		$finalPublication['category'] = PublicationCategories::where('slug',$slug)->get()->first();
 		$finalPublication['list'] = Publications::where('category_id',$finalPublication['category']['id'])->paginate(6);
 		return view('publication.national-list',compact('finalPublication'));
+	}
+
+	public function aboutPages($slug)
+	{
+		$finalAbout = [];
+		$finalAbout['detail'] = CustomAboutPages::where('slug',$slug)->get()->first();
+		return view('about.about-us',compact('finalAbout'));
 	}
 
 

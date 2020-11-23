@@ -6,18 +6,18 @@
 @if(Session::has('failure'))
 <div class="alert alert-danger">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>Custom Pages Deleted Successfully</strong> {{ Session::get('message', '') }}
+	<strong>About Pages Deleted Successfully</strong> {{ Session::get('message', '') }}
 </div>
 @elseif(Session::has('success'))
 <div class="alert alert-success">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>Custom Pages Added Successfully</strong> {{ Session::get('message', '') }}
+	<strong>About Pages Added Successfully</strong> {{ Session::get('message', '') }}
 </div>
 
 @elseif(Session::has('success1'))
 <div class="alert alert-success">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>Custom Pages Updated Successfully</strong> {{ Session::get('message', '') }}
+	<strong>About Pages Updated Successfully</strong> {{ Session::get('message', '') }}
 </div>
 
 @endif
@@ -31,7 +31,7 @@
 		</li>
 	</li>
 	<li>
-		<span>View Custom Pages</span>
+		<span>View About Pages</span>
 	</li>
 </ul>
 </div>
@@ -44,14 +44,14 @@
 			<div class="portlet-title">
 				<div class="caption font-dark">
 					<i class="icon-settings font-dark"></i>
-					<span class="caption-subject bold uppercase"> View Custom Pages </span>
+					<span class="caption-subject bold uppercase"> View About Pages </span>
 				</div>
 			</div>
 			<div class="portlet-body">
 				<div align="center">
-					<h2>{{$custom_pages['title']}}</h2>
+					<h2>{{$about_pages['title']}}</h2>
 				</div>
-				{!!$custom_pages['description']!!}
+				{!!$about_pages['description']!!}
 			</div>
 		</div>
 		<!-- END EXAMPLE TABLE PORTLET-->

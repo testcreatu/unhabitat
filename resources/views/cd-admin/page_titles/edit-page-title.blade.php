@@ -45,33 +45,17 @@
 					</div>
 
 					<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Sub Text</label>
+						<label class="col-md-3 control-label">Title</label>
 						<div class="col-md-6">
 							<input type="text" class="form-control" name="title"  value="{{$data['title']}}" >
 						</div>
 					</div>
-					<div class="form-group{{ $errors->has('quote') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Quote</label>
+					<div class="form-group{{ $errors->has('summary') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Summary</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" name="quote"  value="{{$data['quote']}}" >
+							<textarea type="text" class="form-control" name="summary" style="height: 150px"  value="" >{{$data['summary']}}</textarea>
 						</div>
 					</div>
-
-
-					<div class="form-group{{ $errors->has('sub_text') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Sub Text</label>
-						<div class="col-md-6">
-							<input type="text" class="form-control" name="sub_text"  value="{{$data['sub_text']}}" >
-						</div>
-					</div>
-
-					<div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Background Image</label>
-						<div class="col-md-6">
-							<input type="file" class="form-control" name="image"  value="{{$data['image']}}">
-						</div>
-					</div>
-
 				</div>
 				<div class="form-actions">
 					<div class="row">
