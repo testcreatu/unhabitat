@@ -65,9 +65,7 @@ Route::get('event', function () {
     return view('event.event');
 });
 
-Route::get('national_list', function () {
-    return view('publication.national-list');
-});
+Route::get('publication-category/{slug}','frontend\NewFrontendController@PublicationsCategory');
 
 Route::get('international_list', function () {
     return view('publication.international-list');
@@ -248,5 +246,15 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/cd-admin/edit-files/{id}','backend\FilesController@editFilesForm')->name('edit-files-form');
     Route::post('/cd-admin/edit-files/{id}','backend\FilesController@editFiles')->name('edit-files');
     Route::get('/cd-admin/delete-files/{id}','backend\FilesController@deleteFiles')->name('delete-files');
+
+
+        //About Pages
+    Route::get('/cd-admin/add-about-pages','backend\CustomAboutPagesController@addAboutPageForm')->name('add-about-pages-form');
+    Route::post('/cd-admin/add-about-pages','backend\CustomAboutPagesController@addAboutPage')->name('add-about-pages');
+    Route::get('/cd-admin/view-about-pages','backend\CustomAboutPagesController@viewAboutPage')->name('view-about-pages');
+    Route::get('/cd-admin/edit-about-pages/{id}','backend\CustomAboutPagesController@editAboutPageForm')->name('edit-about-pages-form');
+    Route::get('cd-admin/view-one-about-page/{id}','backend\CustomAboutPagesController@viewOnePage')->name('view-one-about-pages');
+    Route::post('/cd-admin/edit-about-pages/{id}','backend\CustomAboutPagesController@editAboutPage')->name('edit-about-pages');
+    Route::get('/cd-admin/delete-about-pages/{id}','backend\CustomAboutPagesController@deleteAboutPage')->name('delete-about-pages');
 
 });

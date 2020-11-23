@@ -16,6 +16,7 @@ use App\PhotoGallery;
 use App\Notice;
 use App\CustomPages;
 use App\Newsletter;
+use App\PublicationCategories;
 use App\CaseStudy;
 class NewFrontendController extends Controller
 {
@@ -73,7 +74,13 @@ class NewFrontendController extends Controller
 		$finalCaseStudyList['project'] = Projects::where('slug',$slug)->get()->first();
 		$finalCaseStudyList['list'] = CaseStudy::where('status','active')->where('project_id',$finalCaseStudyList['project']['id'])->paginate(6);
 		return view('project.case-list',compact('finalCaseStudyList'));
+	}
 
+	public function PublicationsCategory($slug)
+	{
+		$finalPublication['category'] = PublicationCategories::where('slug',$slug)->get()->first();
+		$finalPublication['list'] = Publications::where('category_id',$finalPublication['category']['id'])->paginate(6);
+		return view('publication.national-list',compact('finalPublication'));
 	}
 
 
