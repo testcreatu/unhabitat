@@ -1629,6 +1629,7 @@ padding: 30px !important;
 .link-list ul li {
   padding:5px 30px;
   position: relative;
+  margin-left: 25px;
   /*border-bottom: 2px solid #fff;*/
 }
 
