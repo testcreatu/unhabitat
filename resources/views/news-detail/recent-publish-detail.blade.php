@@ -34,10 +34,6 @@
 								<span class="text-center"><a href="{{url('uploads/publications/files/'.$finalPublication['detail']['file'])}}" target="_blank" download><i class="fas fa-download text"></i></a></span>
 							</div>
 						</div>	
-						<div class="content mt-3">
-							<p>
-								{!!$finalPublication['detail']['description']!!}
-						</div>
 						<div class="share-plugin mt-3">
 							<ul>
 								<li class="facebook">
@@ -49,6 +45,11 @@
 									<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
 								</li> -->
 							</ul>
+						</div>
+						<div class="content mt-3">
+							<p>
+								{!!$finalPublication['detail']['description']!!}
+							</p>
 						</div>
 					</div>
 
@@ -62,7 +63,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="sidebar sidebar-tab box-shadow mb-5">
+					<div class="sidebar sidebar-tab mb-5">
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							<li class="nav-item" role="presentation">
 								<a class="nav-link active" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true">Publication</a>
@@ -116,7 +117,7 @@
 						</div>
 					</div>
 
-					<div class="sidebar sidebar-tab box-shadow mb-5">
+					<div class="sidebar sidebar-tab mb-5">
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							<li class="nav-item" role="presentation">
 								<a class="nav-link active" id="notice-tab" data-toggle="tab" href="#notice" role="tab" aria-controls="notice" aria-selected="true">Notice</a>
@@ -124,15 +125,15 @@
 						</ul>
 						<div class="tab-content" id="myTabContent">
 							<div class="tab-pane fade show active" id="notice" role="tabpanel" aria-labelledby="notice-tab">
-								<div class="tab-notice">
+								<div class="tab-notice tab-news">
 									<div class="row">
 										<div class="col-md-12">
 											@foreach($finalPublication['notice'] as $notice)
-											<div class="link-list">
-												<ul class="">
-													<li><a href="{{url('notice/'.$notice['slug'])}}">{{$notice['title']}}</a></li>
-												</ul>
-											</div>
+												<div class="link-list">
+													<ul class="">
+														<li><a href="{{url('notice/'.$notice['slug'])}}">{{$notice['title']}}</a></li>
+													</ul>
+												</div>
 											@endforeach
 										</div>
 									</div>

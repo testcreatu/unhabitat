@@ -4,69 +4,6 @@
 
 @section('content')
 
-<!-- <div id="projectCarousel" class="carousel slide" data-ride="carousel">
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-			<div class="carousel-img overlay-bg">
-				<img src="{{url('public/images/18.jpg')}}" class="d-block w-100" alt="...">
-			</div>
-			<div class="banner-feature">
-				<a href="{{url('featured_news_detail')}}">
-					<h1>Little girl washing hand at newly installed Eco-Foot Operated Hand Washing Station at Bansighat, Kathmandu</h1>
-				</a>
-				<a href="{{url('featured_news_detail')}}" class="btn btn2">Read More</a>				
-			</div>
-		</div>
-		<div class="carousel-item">
-			<div class="carousel-img overlay-bg">
-				<img src="{{url('public/images/19.jpg')}}" class="d-block w-100" alt="...">
-			</div>
-			<div class="banner-feature">
-				<a href="{{url('featured_news_detail')}}">
-					<h1>Girl washing hand at Eco-Foot Operated Hand Washing Station at Kalimati Vegetable Market</h1>
-				</a>
-				<a href="{{url('featured_news_detail')}}" class="btn btn2">Read More</a>				
-			</div>
-		</div>
-		<div class="carousel-item">
-			<div class="carousel-img overlay-bg">
-				<img src="{{url('public/images/20.jpg')}}" class="d-block w-100" alt="...">
-			</div>
-			<div class="banner-feature">
-				<a href="{{url('featured_news_detail')}}">
-					<h1>Hand Washing Station was installed at Kangeshwori Temple</h1>
-				</a>
-				<a href="{{url('featured_news_detail')}}" class="btn btn2">Read More</a>				
-			</div>
-		</div>
-	</div>
-	<a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	</a>
-</div> -->
-
-<div class="banner">
-	<div class="banner-image overlay-bg">
-		<img src="{{url('public/images/36.jpg')}}" class="img-fluid overlay-bg" alt="">
-	</div>
-	<div class="banner-feature">
-		<div class="banner-title">
-			<h2>{{$finalProject['detail']['title']}}</h2>
-		</div>
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb text-center">
-				<li class="breadcrumb-item"><a href="#">Home</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Project Detail</li>
-			</ol>
-		</nav>
-	</div>
-</div>
-
 <div class="notice project ma-t ma-b">
 	<div class="container">
 		<div class="row">
@@ -75,9 +12,6 @@
 					<div class="news-detail-post mb-5">
 						<div class="news-detail-post-img">
 							<img src="{{url('uploads/thumbnail/'.$finalProject['detail']['image'])}}" class="img-fluid" alt="">
-						</div>
-						<div class="content mt-2">
-							{!!$finalProject['detail']['description']!!}
 						</div>
 						<div class="share-plugin mt-3">
 							<ul>
@@ -90,6 +24,9 @@
 									<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
 								</li> -->
 							</ul>
+						</div>
+						<div class="content mt-2">
+							{!!$finalProject['detail']['description']!!}
 						</div>
 					</div>
 					<hr>

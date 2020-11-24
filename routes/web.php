@@ -67,6 +67,14 @@ Route::get('event', function () {
     return view('event.event');
 });
 
+Route::get('event_list', function () {
+    return view('event.event-list');
+});
+
+Route::get('notice_list', function () {
+    return view('notice.notice-list');
+});
+
 Route::get('publication-category/{slug}','frontend\NewFrontendController@PublicationsCategory');
 
 Route::get('international_list', function () {

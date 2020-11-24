@@ -1338,6 +1338,7 @@ margin: 100px 0;
 
 .detail-content .content p {
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .detail-content ul {
@@ -1470,10 +1471,20 @@ margin: 100px 0;
   transform: translateY(6px);
 }
 
+.sidebar-tab .nav-tabs {
+  border-bottom: none !important; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+
 .sidebar-tab .nav-tabs .nav-item.show .nav-link, 
 .sidebar-tab .nav-tabs .nav-link.active {
   background: var(--primary-color);
   color: #fff;
+  border-radius: 5px;
 }
 
 .sidebar-tab .nav-tabs .nav-link:focus, 
@@ -1481,6 +1492,31 @@ margin: 100px 0;
  border-color:transparent; 
  background: var(--primary-color);
  color: #fff;
+}
+
+.sidebar-tab .nav-tabs .nav-link {
+  box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
+  margin-right: 10px;
+  background: #fff;
+}
+
+/*.sidebar-tab .tab-content {
+  margin-top: 15px;
+}*/
+
+.sidebar-tab .tab-news {
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.15);
+  padding: 20px;
+  position: relative;
+  top: -20px;
+  background: #fafafa;
+}
+
+.sidebar-tab .tab-news .latest-story-card {
+  /*border-bottom: 1px solid #eee;*/
+  background: #fff;
+  margin-bottom:15px;
+  margin-top: 15px;
 }
 
 .nav-link:focus, 
@@ -1494,6 +1530,16 @@ margin: 100px 0;
 .nav-pills .nav-link {
   box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
   margin-right: 10px;
+}
+
+.tab-rows {
+  justify-content:center;
+  align-items: center;
+}
+
+.tab-rows .sub-title h6 {
+  margin-bottom: 0;
+  font-size: 13px;
 }
 
 .btn3 {
@@ -1629,7 +1675,7 @@ padding: 30px !important;
 .link-list ul li {
   padding:5px 30px;
   position: relative;
-  margin-left: 25px;
+  /*margin-left: 25px;*/
   /*border-bottom: 2px solid #fff;*/
 }
 
@@ -1646,7 +1692,7 @@ padding: 5px 0;
 }*/
 
 .link-list ul li:before {
-  content:'\f101';
+  content:'\f249';
   font-family: "Font Awesome 5 Free";
   display: inline-block;
   padding-right: 3px;

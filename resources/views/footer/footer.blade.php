@@ -73,6 +73,8 @@
 				<section class="footer-quick-link">
 					<h2>Others</h2>
 					<ul>
+						<li><a href="{{url('notice_list')}}">Notice</a></li>
+						<li><a href="{{url('event_list')}}">Event</a></li>
 						@foreach($finalFooter['custom_pages'] as $footer)
 						<li>
 							<a href="{{url('/pages/'.$footer['slug'])}}">{{$footer['title']}}</a>

@@ -26,19 +26,19 @@
 								<div class="title">
 									<h4 class="mb-0">{{$finalCaseStudy['detail']['title']}}</h4>
 								</div>
+								<div class="share-plugin mt-3">
+									<ul>
+										<li class="facebook">
+											<div id="fb-root"></div>
+											<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=499538454157104&autoLogAppEvents=1" nonce="Ra50b1s9"></script>
+											<div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.google.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+										</li>
+										<!-- <li class="twitter">
+											<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
+										</li> -->
+									</ul>
+								</div>
 								<p>{!!$finalCaseStudy['detail']['description']!!}</p>
-							</div>
-							<div class="share-plugin mt-3">
-								<ul>
-									<li class="facebook">
-										<div id="fb-root"></div>
-										<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=499538454157104&autoLogAppEvents=1" nonce="Ra50b1s9"></script>
-										<div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.google.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-									</li>
-									<!-- <li class="twitter">
-										<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
-									</li> -->
-								</ul>
 							</div>
 						</div>
 					</div>

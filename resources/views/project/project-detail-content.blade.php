@@ -42,22 +42,23 @@
 										<div class="title">
 											<h4 class="mb-0">{{$finalProject['detail']['title']}}</h4>
 										</div>
+
+										<div class="share-plugin mt-3">
+											<ul>
+												<li class="facebook">
+													<div id="fb-root"></div>
+													<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=499538454157104&autoLogAppEvents=1" nonce="Ra50b1s9"></script>
+													<div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.google.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+												</li>
+												<!-- <li class="twitter">
+													<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
+												</li> -->
+											</ul>
+										</div>
+										
 										<p>		
 											{!!$finalProject['detail']['description']!!}
 										</p>
-
-									</div>
-									<div class="share-plugin mt-3">
-										<ul>
-											<li class="facebook">
-												<div id="fb-root"></div>
-												<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=499538454157104&autoLogAppEvents=1" nonce="Ra50b1s9"></script>
-												<div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.google.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-											</li>
-											<li class="twitter">
-												<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
-											</li>
-										</ul>
 									</div>
 								</div>
 							</div>
@@ -101,7 +102,7 @@
 					</div>
 				</div>
 				<div class="col-md-4 right-container">
-					<div class="sidebar sidebar-tab box-shadow mb-5">
+					<div class="sidebar sidebar-tab mb-5">
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							@if(count($finalProject['news']) > 0)
 							<li class="nav-item" role="presentation">
@@ -128,7 +129,7 @@
 										@foreach($finalProject['news'] as $news)
 										<div class="col-md-12">
 											<div class="latest-story-card">
-												<div class="row">
+												<div class="row  tab-rows">
 													<div class="col-5 col-sm-5 col-md-5">
 														<div class="popular-post-img">
 															<a href="{{url('featured_news_detail/'.$news['slug'])}}">
@@ -138,7 +139,7 @@
 													</div>
 													<div class="col-7 col-sm-7 col-md-7">
 														<div class="sub-title">
-															<a href="#"><h6>{{$news['title']}}</h6></a>
+															<a href="#"><h6>{{substr($news['title'],0,50)}}</h6></a>
 														</div>
 													</div>
 												</div>
@@ -158,7 +159,7 @@
 										@foreach($finalProject['newsletter'] as $newsletter)
 										<div class="col-md-12">
 											<div class="latest-story-card">
-												<div class="row">
+												<div class="row tab-rows">
 													<div class="col-5 col-sm-5 col-md-5">
 														<div class="popular-post-img">
 															<a href="{{url('newsletter_list_detail/'.$newsletter['slug'])}}">
@@ -176,9 +177,9 @@
 										</div>
 										@endforeach
 									</div>
-								</div>
-								<div class="view-more text-center pb-3">
-									<a href="{{url('newsletter_list/'.$finalProject['detail']['slug'])}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+									<div class="view-more text-center pb-3">
+										<a href="{{url('newsletter_list/'.$finalProject['detail']['slug'])}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+									</div>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab">
@@ -187,7 +188,7 @@
 										@foreach($finalProject['videos'] as $videos)
 										<div class="col-md-12">
 											<div class="latest-story-card">
-												<div class="row">
+												<div class="row tab-rows">
 													<div class="col-5 col-sm-5 col-md-5">
 														<div class="popular-post-img">
 															<a href="{{url($videos['url'])}}" target="_blank">
@@ -205,15 +206,15 @@
 										</div>
 										@endforeach
 									</div>
-								</div>
-								<div class="view-more text-center pb-3">
-									<a href="{{url('project_video_list/'.$finalProject['detail']['slug'])}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+									<div class="view-more text-center pb-3">
+										<a href="{{url('project_video_list/'.$finalProject['detail']['slug'])}}" class="btn btn3">View More &nbsp;&nbsp; +</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="sidebar sidebar-tab box-shadow mb-5">
+					<div class="sidebar sidebar-tab mb-5">
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							@if(count($finalProject['publications']) > 0)
 							<li class="nav-item" role="presentation">
@@ -230,11 +231,11 @@
 							@if(count($finalProject['publications']) > 0)
 							<div class="tab-pane fade show active" id="publication" role="tabpanel" aria-labelledby="publication-tab">
 								<div class="tab-news">
-									<div class="row">
+									<div class="row ">
 										@foreach($finalProject['publications'] as $publications)
 										<div class="col-md-12">
 											<div class="latest-story-card">
-												<div class="row">
+												<div class="row tab-rows tab-rows">
 													<div class="col-5 col-sm-5 col-md-5">
 														<div class="popular-post-img">
 															<a href="{{url('recent_publish_detail/'.$publications['slug'])}}">
@@ -267,7 +268,7 @@
 										@foreach($finalProject['case_study'] as $case_study)
 										<div class="col-md-12">
 											<div class="latest-story-card">
-												<div class="row">
+												<div class="row tab-rows">
 													<div class="col-5 col-sm-5 col-md-5">
 														<div class="popular-post-img">
 															<a href="{{url('case_list_detail/'.$case_study['slug'])}}">
