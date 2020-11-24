@@ -72,7 +72,6 @@ Route::get('event_list', function () {
 });
 
 Route::get('notice_list', function () {
-    return view('notice.notice-list');
 });
 
 Route::get('publication-category/{slug}','frontend\NewFrontendController@PublicationsCategory');

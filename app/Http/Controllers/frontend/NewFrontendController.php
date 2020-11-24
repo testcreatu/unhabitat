@@ -91,6 +91,13 @@ class NewFrontendController extends Controller
 		return view('about.about-us',compact('finalAbout'));
 	}
 
+	public function noticeList()
+	{
+		$finalNotice = [];
+		$finalNotice['list'] = Notice::where('status','active')->orderBy('id','desc')->get();
+		return view('notice.notice-list');
+	}
+
 
 
 
