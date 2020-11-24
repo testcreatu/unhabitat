@@ -63,11 +63,11 @@
 				<h2>Title</h2>
 				<p>{{$about['title']}}</p>
 			</div>
-			<div class="portlet-body">
+			{{-- <div class="portlet-body">
 				<h2>Background Image</h2>
 
 				<img src="{{url('uploads/thumbnail/'.$about['background_image'])}}" alt="{{$about['image']}}" class="img-responsive">
-			</div>
+			</div> --}}
 			
 			<div class="portlet-body">
 				<h2>Summary</h2>

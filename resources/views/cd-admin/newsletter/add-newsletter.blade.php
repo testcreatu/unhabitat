@@ -106,7 +106,7 @@
 					<!-- seo section starts -->
 					<hr>
 					<div class="form-group{{ $errors->has('seo_title') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter SEO Title<span class="cd-admin-required">*</span></label>
+						<label class="col-md-3 control-label">Enter SEO Title</label>
 						<div class="col-md-6">
 							<input type="text" class="form-control" placeholder="Enter seo title" name="seo_title" value="{{old('seo_title')}}">
 						</div>
@@ -115,7 +115,7 @@
 						@endif
 					</div>
 					<div class="form-group{{ $errors->has('seo_keyword') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter SEO Keywords<span class="cd-admin-required">*</span></label>
+						<label class="col-md-3 control-label">Enter SEO Keywords</label>
 						<div class="col-md-6">
 							<input type="text" class="form-control" placeholder="Enter seo keywords" name="seo_keyword" value="{{old('seo_keyword')}}">
 						</div>
@@ -125,7 +125,7 @@
 					</div>
 
 					<div class="form-group{{ $errors->has('seo_description') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter SEO description <span class="cd-admin-required">*</span></label>
+						<label class="col-md-3 control-label">Enter SEO description </label>
 						<div class="col-md-6">
 							<textarea class="form-control" rows="5" placeholder="Enter seo description" name="seo_description">{{old('seo_description')}}</textarea>
 						</div>

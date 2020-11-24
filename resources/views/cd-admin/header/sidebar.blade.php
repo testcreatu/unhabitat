@@ -37,7 +37,7 @@
             <li class="nav-item">
                 <a href="{{url('cd-admin/view-about')}}" class="nav-link nav-toggle">
                     <i class="fa fa-info"></i>
-                    <span class="title">About us</span>
+                    <span class="title">Overview</span>
                 </a>
             </li> 
             <li class="nav-item">
@@ -64,9 +64,9 @@
                 <h3 class="uppercase">Objectives Section</h3>
             </li>
             <li class="nav-item">
-                <a href="{{url('cd-admin/view-page-titles')}}" class="nav-link nav-toggle">
+                <a href="{{url('cd-admin/view-social-links')}}" class="nav-link nav-toggle">
                     <i class="fa fa-info"></i>
-                    <span class="title">Page Titles</span>
+                    <span class="title">Social Links</span>
                 </a>
                 
             </li>
@@ -118,20 +118,20 @@
             <li class="nav-item">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-quote-left"></i>
-                    <span class="title">Goals</span>
+                    <span class="title"> SustainableGoals</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
                     <li class="nav-item">
                         <a href="{{url('cd-admin/add-goals ')}}" class="nav-link">
                             <i class="fa fa-plus"></i>
-                            <span class="title">Add Goals</span>
+                            <span class="title">Add Sustainable Goals</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{url('cd-admin/view-goals')}}" class="nav-link">
                             <i class="fa fa-eye"></i>
-                            <span class="title">View Goals</span>
+                            <span class="title">View Sustainable Goals</span>
                         </a>
                     </li>
                 </ul>
@@ -153,7 +153,7 @@
                     <li class="nav-item">
                         <a href="{{url('cd-admin/add-carousel')}}" class="nav-link">
                             <i class="fa fa-plus"></i>
-                            <span class="title">Add new Carousel</span>
+                            <span class="title">Add Carousel</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -247,6 +247,28 @@
                         <a href="{{url('cd-admin/view-notice')}}" class="nav-link">
                             <i class="fa fa-eye"></i>
                             <span class="title">View Notice</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-circle"></i>
+                    <span class="title">Events</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/add-events')}}" class="nav-link">
+                            <i class="fa fa-plus"></i>
+                            <span class="title">Add Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('cd-admin/view-events')}}" class="nav-link">
+                            <i class="fa fa-eye"></i>
+                            <span class="title">View Events</span>
                         </a>
                     </li>
                 </ul>

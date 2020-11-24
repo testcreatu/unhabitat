@@ -13,11 +13,11 @@
 </div>
 <!-- END PAGE BAR -->
 <!-- BEGIN PAGE TITLE-->
-<h1 class="page-title"> Admin Dashboard</h1>
-<!-- END PAGE TITLE-->
+{{-- <h1 class="page-title"> Admin Dashboard</h1>
+--}}<!-- END PAGE TITLE-->
 <!-- END PAGE HEADER-->
 <!-- BEGIN DASHBOARD STATS 1-->
-<div class="row">
+{{-- <div class="row">
 	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 		<a class="dashboard-stat dashboard-stat-v2 blue" href="#">
 			<div class="visual">
@@ -69,6 +69,13 @@
 				<div class="desc"> Name </div>
 			</div>
 		</a>
+	</div>
+</div> --}}
+
+<div style="margin-top: 113px">
+	<h2 align="center">Welcome To UN-Habitat Dashboard</h2>
+	<div align="center">
+		<img src="{{url('public/images/namaste.png')}}" height="200" width="200">
 	</div>
 </div>
 <div class="clearfix"></div>

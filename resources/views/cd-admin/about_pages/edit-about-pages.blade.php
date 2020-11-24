@@ -48,6 +48,17 @@
 						@endif
 					</div>
 
+					<div class="form-group{{ $errors->has('priority_no') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Enter Priority Number </label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" placeholder="Enter Priority Number" name="priority_no" value="{{$data['priority_no']}}">
+						</div>
+						@if ($errors->has('priority_no'))
+						<span class="text-danger">{{ $errors->first('priority_no') }}</span>
+						@endif
+					</div>
+
+
 					<div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
 						<label class="col-md-3 control-label">Enter Description <span class="cd-admin-required">*</span></label>
 						<div class="col-md-6">

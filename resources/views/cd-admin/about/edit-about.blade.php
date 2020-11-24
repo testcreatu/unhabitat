@@ -44,13 +44,13 @@
 						</div>
 					</div>
 
-					<div class="form-group{{ $errors->has('background_image') ? ' has-error' : '' }}"> 
+					{{-- <div class="form-group{{ $errors->has('background_image') ? ' has-error' : '' }}"> 
 						<label for="exampleInputFile" class="col-md-3 control-label">Upload Background Image</label>
 						<div class="col-md-9">
 							<input type="file" name="background_image" id="exampleInputFile">
 							<p class="help-block"> Upload Background Image. </p>
 						</div>
-					</div>
+					</div> --}}
 					
 					<div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
 						<label class="control-label col-md-3">Enter  Description</label>

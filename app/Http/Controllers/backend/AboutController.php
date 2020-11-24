@@ -61,9 +61,9 @@ class AboutController extends Controller
 			'summary'=>'required',
 			'description' => 'required',
 			'background_image' => 'required|image|mimes:jpeg,jpg,gif,svg,png',
-			'seo_title' => 'required',
-			'seo_description' => 'required',
-			'seo_keyword' => 'required',
+			'seo_title' => '',
+			'seo_description' => '',
+			'seo_keyword' => '',
 
 		]);
 		return $data;
@@ -75,10 +75,10 @@ class AboutController extends Controller
 			'title'=>'required',   
 			'summary'=>'required',
 			'description' => 'required',
-			'background_image' => 'required|mimes:jpeg,png,gif,jpg,svg',
-			'seo_title' => 'required',
-			'seo_description' => 'required',
-			'seo_keyword' => 'required',
+			'background_image' => 'mimes:jpeg,png,gif,jpg,svg',
+			'seo_title' => '',
+			'seo_description' => '',
+			'seo_keyword' => '',
 		]);
 		return $data;
 	}

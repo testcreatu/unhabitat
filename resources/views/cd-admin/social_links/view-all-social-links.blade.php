@@ -29,7 +29,7 @@
 		</li>
 	</li>
 	<li>
-		<span>View all Social Links</span>
+		<span>View Social Links</span>
 	</li>
 </ul>
 @if($social != NULL) 
@@ -57,7 +57,7 @@
 			<div class="portlet-title">
 				<div class="caption font-dark">
 					<i class="icon-settings font-dark"></i>
-					<span class="caption-subject bold uppercase"> View All Social Links </span>
+					<span class="caption-subject bold uppercase"> View Social Links </span>
 				</div>
 			</div>
 			<div class="portlet-body">
@@ -78,13 +78,10 @@
 					<div class="panel-body"> <a href="{{$social['youtube_link']}}">{{$social['youtube_link']}}</a> </div>
 				</div>
 				<div class="panel panel-default">
-					<div class="panel-heading">Email </div>
-					<a href="mailto:{{$social['email']}}"><div class="panel-body"> {!!$social['email']!!} </div></a>
+					<div class="panel-heading">Linkedin Link </div>
+					<a href="{{$social['linkedin_link']}}" target="_blank"><div class="panel-body"> {!!$social['linkedin_link']!!} </div></a>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading"> Contact Number </div>
-					<a href="tel:{{$social['contact_no']}}"><div class="panel-body"> {!!$social['contact_no']!!} </div></a>
-				</div>	
+				
 			</div>
 		</div>
 		<!-- END EXAMPLE TABLE PORTLET-->

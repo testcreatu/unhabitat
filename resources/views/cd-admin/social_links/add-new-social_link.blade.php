@@ -11,11 +11,11 @@
 			<i class="fa fa-circle"></i>
 		</li>
 		<li>
-			<a href="{{url('cd-admin/view-all-blog')}}">View all Social Links</a>
+			<a href="{{url('cd-admin/view-social-links')}}">View Social Links</a>
 			<i class="fa fa-circle"></i>
 		</li>
 		<li>
-			<span>Add new Social Links</span>
+			<span>Add Social Links</span>
 		</li>
 	</ul>
 </div>
@@ -30,7 +30,7 @@
 		<div class="portlet-title">
 			<div class="caption">
 				<i class="icon-settings font-dark"></i>
-				<span class="caption-subject font-dark sbold uppercase">Add New Social Links</span>
+				<span class="caption-subject font-dark sbold uppercase">Add Social Links</span>
 			</div>
 		</div>
 		<div class="portlet-body form">
@@ -65,10 +65,10 @@
 							<input type="url" name="youtube_link" class="form-control" placeholder="Enter Youtube Link" value="{{old('youtube_link')}}">
 						</div>
 					</div>
-					<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter Email Address </label>
+					<div class="form-group{{ $errors->has('linkedin_link') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Enter Linkedin Link </label>
 						<div class="col-md-6">
-							<input type="email" name="email" class="form-control" placeholder="Enter Email Address" value="{{old('email')}}">
+							<input type="url" name="linkedin_link" class="form-control" placeholder="Enter Linkedin Link" value="{{old('linkedin_link')}}">
 						</div>
 					</div>
 

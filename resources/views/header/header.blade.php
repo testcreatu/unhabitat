@@ -27,7 +27,7 @@
                   <a href="{{url('about-us/'.$aboutPage['slug'])}}" class="nav-link">{{$aboutPage['title']}}</a>
                 </li>
                 @endforeach
-               
+
               </ul>
             </div>
           </li>
@@ -102,22 +102,30 @@
 
 <div class="sticky-container">
   <ul class="sticky">
+    @if($finalHeader['social_links']['fb_link'] != NULL)
     <li>
       <img src="{{url('public/images/facebook-circle.png')}}" width="32" height="32">
-      <p><a href="https://www.facebook.com/codexworld" target="_blank">Like Us on<br>Facebook</a></p>
+      <p><a href="{{$finalHeader['social_links']['fb_link']}}" target="_blank">Like Us on<br>Facebook</a></p>
     </li>
+    @endif
+    @if($finalHeader['social_links']['twitter_link'] != NULL)
     <li>
       <img src="{{url('public/images/twitter-circle.png')}}" width="32" height="32">
-      <p><a href="https://twitter.com/codexworldblog" target="_blank">Follow Us on<br>Twitter</a></p>
+      <p><a href="{{$finalHeader['social_links']['twitter_link']}}" target="_blank">Follow Us on<br>Twitter</a></p>
     </li>
+    @endif
+    @if($finalHeader['social_links']['linkedin_link'] != NULL)
     <li>
       <img src="{{url('public/images/linkedin-circle.png')}}" width="32" height="32">
-      <p><a href="https://www.linkedin.com/company/codexworld" target="_blank">Follow Us on<br>LinkedIn</a></p>
+      <p><a href="{{$finalHeader['social_links']['linkedin_link']}}" target="_blank">Follow Us on<br>LinkedIn</a></p>
     </li>
+    @endif
+    @if($finalHeader['social_links']['youtube_link'] != NULL)
     <li>
       <img src="{{url('public/images/youtube-circle.png')}}" width="32" height="32">
-      <p><a href="http://www.youtube.com/codexworld" target="_blank">Subscribe on<br>YouYube</a></p>
+      <p><a href="{{$finalHeader['social_links']['youtube_link']}}" target="_blank">Subscribe on<br>YouYube</a></p>
     </li>
+    @endif
   </ul>
 </div>
 

@@ -28,7 +28,7 @@
 							<div class="row">
 								@foreach($finalPublication['list'] as $list)
 								<div class="col-md-4 mb-5">
-									<a href="{{url('newsletter_list_detail')}}" class="carousel-card newsletter-list">
+									<a href="{{url('recent_publish_detail/'.$list['slug'])}}" class="carousel-card newsletter-list">
 										<div class="carousel-news">
 											<div class="carousel-news-img newsletter-list-img overlay-bg">
 												<img src="{{url('uploads/thumbnail/'.$list['image'])}}" class="img-fluid overlay-bg" alt="">

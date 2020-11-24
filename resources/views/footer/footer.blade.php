@@ -87,21 +87,31 @@
 				<section class="footer-quick-link">
 					<h2>Connect</h2>
 					<ul class="footer-social-link">
+						@if($finalHeader['social_links']['fb_link'] != NULL)
 						<li>
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="{{$finalHeader['social_links']['fb_link']}}"><i class="fab fa-facebook-f"></i></a>
 						</li>
+						@endif
+						@if($finalHeader['social_links']['instagram_link'] != NULL)
 						<li>
-							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="{{$finalHeader['social_links']['instagram_link']}}"><i class="fab fa-instagram"></i></a>
 						</li>
+						@endif
+						@if($finalHeader['social_links']['twitter_link'] != NULL)
 						<li>
-							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="{{$finalHeader['social_links']['twitter_link']}}"><i class="fab fa-twitter"></i></a>
 						</li>
+						@endif
+						@if($finalHeader['social_links']['youtube_link'] != NULL)
 						<li>
-							<a href="#"><i class="fab fa-youtube"></i></a>
+							<a href="{{$finalHeader['social_links']['youtube_link']}}"><i class="fab fa-youtube"></i></a>
 						</li>
+						@endif
+						@if($finalHeader['social_links']['linkedin_link'] != NULL)	
 						<li>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="{{$finalHeader['social_links']['linkedin_link']}}"><i class="fab fa-linkedin-in"></i></a>
 						</li>
+						@endif
 					</ul>
 				</section>
 				<section class="footer-subscribe text-center">

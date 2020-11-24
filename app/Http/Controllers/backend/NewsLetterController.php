@@ -104,9 +104,9 @@ class NewsLetterController extends Controller
 			'file' => 'file|mimes:pdf,docx,doc,pptx,ppt',
 			'description' => 'required',
 			'summary' => 'required',
-			'seo_title' => 'required',
-			'seo_keyword' => 'required',
-			'seo_description' => 'required',
+			'seo_title' => '',
+			'seo_keyword' => '',
+			'seo_description' => '',
 			'status' => 'required',
 			'image' => 'required|image|mimes:jpeg,png,gif,jpg,svg'
 		]);
@@ -122,11 +122,11 @@ class NewsLetterController extends Controller
 			'file' => 'file|mimes:pdf,docx,doc,pptx,ppt',
 			'description' => 'required',
 			'summary' => 'required',
-			'seo_title' => 'required',
-			'seo_keyword' => 'required',
-			'seo_description' => 'required',
+			'seo_title' => '',
+			'seo_keyword' => '',
+			'seo_description' => '',
 			'status' => 'required',
-			'image' => 'required|image|mimes:jpeg,png,gif,jpg,svg'
+			'image' => 'image|mimes:jpeg,png,gif,jpg,svg'
 		]);
 		return $valid;
 	}

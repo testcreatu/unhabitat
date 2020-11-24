@@ -32,7 +32,7 @@ class FrontendController extends Controller
 		$finalHome['blog'] = Blog::where('status','active')->orderBy('id','desc')->take(3)->get();
 		$finalHome['publications'] = Publications::where('status','active')->where('show_in_homepage','show')->orderBy('id','desc')->take(4)->get();
 		$finalHome['features'] = Features::where('status','active')->get();
-		$finalHome['goals'] = Goals::get();
+		$finalHome['goals'] = Goals::orderBy('priority_no','asc')->get();
 		$finalHome['milestones'] = Milestones::where('status','active')->take(6)->get();
 		$finalHome['features_desc'] = PageTitle::where('page_name','Features')->get()->first();
 		$finalHome['milestones_desc'] = PageTitle::where('page_name','Milestones')->get()->first();
@@ -78,13 +78,13 @@ class FrontendController extends Controller
 
 	public function featuredNewsList()
 	{
-		$finalNewsList = Blog::where('status','active')->paginate(9);
+		$finalNewsList = Blog::where('status','active')->orderBy('id','desc')->paginate(9);
 		return view('news.featured-news-list',compact('finalNewsList'));
 	}
 
 	public function publicationList()
 	{
-		$finalPublicationList = Publications::where('status','active')->paginate(9);
+		$finalPublicationList = Publications::where('status','active')->orderBy('id','desc')->paginate(9);
 		return view('news.recent-publish-list',compact('finalPublicationList'));
 	}
 

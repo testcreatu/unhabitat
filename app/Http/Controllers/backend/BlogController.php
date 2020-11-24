@@ -129,9 +129,9 @@ class BlogController extends Controller
 			'altimage' => 'required',
 			'description' => 'required',
 			'summary' => 'required',
-			'seo_title' => 'required',
-			'seo_keyword' => 'required',
-			'seo_description' => 'required',
+			'seo_title' => '',
+			'seo_keyword' => '',
+			'seo_description' => '',
 			'status' => 'required',
 		]);
 		return $valid;
@@ -147,9 +147,9 @@ class BlogController extends Controller
 			'altimage' => 'required',
 			'description' => 'required',
 			'summary' => 'required',
-			'seo_title' => 'required',
-			'seo_keyword' => 'required',
-			'seo_description' => 'required',
+			'seo_title' => '',
+			'seo_keyword' => '',
+			'seo_description' => '',
 			'status' => 'required',
 		]);
 		return $valid;

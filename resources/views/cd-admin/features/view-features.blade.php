@@ -19,7 +19,11 @@
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 	<strong>FEATURES UPDATED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
-
+@elseif(Session::has('updateSuccess'))
+<div class="alert alert-success">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	<strong>FEATURES TITLE UPDATED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
+</div>
 @endif
 
 <!-- BEGIN PAGE BAR -->
@@ -53,6 +57,13 @@
 						</button>
 					</a>
 				</div>
+				<div class="btn-group pull-right" style="margin-right: 15px">
+					<a href="{{url('cd-admin/edit-page-titles/1')}}">
+						<button id="sample_editable_1_new" class="btn sbold green"> Edit Features Title
+							<i class="fa fa-edit"></i>
+						</button>					
+					</a>
+				</div>
 			</div>
 			<div class="portlet-body">
 				<table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
@@ -76,7 +87,7 @@
 								<span class="badge badge-danger"> In-Active </span>
 								@endif
 							</td>
-							
+
 							<td>
 								<div class="btn-group">
 									<button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Actions
@@ -103,7 +114,7 @@
 							</td>
 						</tr>
 						@endforeach
-						
+
 					</tbody>
 				</table>
 			</div>
@@ -138,7 +149,7 @@
 					<div class="panel-body"> {!!$ch['summary']!!} </div>
 				</div>
 
-				
+
 			</div>
 			<div class="modal-footer">
 				<button type="button" data-dismiss="modal" class="btn dark btn-outline">Close</button>

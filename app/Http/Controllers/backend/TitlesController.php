@@ -35,6 +35,13 @@ class TitlesController extends Controller
 		$title->summary = $data['summary'];
 		$title->save();
 		Session::flash('updateSuccess');
-		return redirect('/cd-admin/view-page-titles');
+		if($id == 1)
+		{
+			return redirect('/cd-admin/view-features');
+		}
+		else
+		{
+			return redirect('/cd-admin/view-milestones');
+		}
 	}
 }

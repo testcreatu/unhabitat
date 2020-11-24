@@ -20,6 +20,11 @@
 	<strong>MILESTONES UPDATED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
 </div>
 
+@elseif(Session::has('updateSuccess'))
+<div class="alert alert-success">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	<strong>MILESTONES TITLE UPDATED SUCCESSFULLY!!!</strong> {{ Session::get('message', '') }}
+</div>
 @endif
 
 <!-- BEGIN PAGE BAR -->
@@ -51,6 +56,13 @@
 						<button id="sample_editable_1_new" class="btn sbold green"> Add Milestones
 							<i class="fa fa-plus"></i>
 						</button>
+					</a>
+				</div>
+				<div class="btn-group pull-right" style="margin-right: 15px">
+					<a href="{{url('cd-admin/edit-page-titles/2')}}">
+						<button id="sample_editable_1_new" class="btn sbold green"> Edit Milestones Title
+							<i class="fa fa-edit"></i>
+						</button>					
 					</a>
 				</div>
 			</div>

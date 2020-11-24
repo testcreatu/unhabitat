@@ -23,6 +23,7 @@ class CustomAboutPagesController extends Controller
 		$data = $this->addValidate();
 		$FinalData['slug'] = Str::slug($data['title']);
 		$FinalData['created_at'] = Carbon::now('Asia/Kathmandu');
+		$FinalData['priority_no'] = isset($data['priority_no'])?$data['priority_no']:'9999';
 		$merge = array_merge($data,$FinalData);
 		DB::table('custom_about_pages')->insert($merge);
 		Session::flash('success');
@@ -57,6 +58,7 @@ class CustomAboutPagesController extends Controller
 		$data = $this->editValidate($id);
 		$FinalData['slug'] = Str::slug($data['title']);
 		$FinalData['updated_at'] = Carbon::now('Asia/Kathmandu');
+		$FinalData['priority_no'] = isset($data['priority_no'])?$data['priority_no']:'9999';
 		$merge = array_merge($data,$FinalData);
 		DB::table('custom_about_pages')->where('id',$id)->update($merge);
 		Session::flash('success1');
@@ -81,6 +83,7 @@ class CustomAboutPagesController extends Controller
 			'title' => 'required|unique:custom_about_pages,title',
 			'description' => 'required',
 			'status' => 'required',
+			'priority_no' => '',
 		]);
 		return $valid;
 	}
@@ -92,6 +95,7 @@ class CustomAboutPagesController extends Controller
 			'title' => 'required|unique:custom_about_pages,title,'.$id,
 			'description' => 'required',
 			'status' => 'required',
+			'priority_no' => '',
 		]);
 		return $valid;
 	}

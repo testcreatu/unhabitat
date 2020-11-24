@@ -281,4 +281,26 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/cd-admin/edit-page-titles/{id}','backend\TitlesController@editTitleForm');
     Route::post('/cd-admin/edit-page-titles/{id}','backend\TitlesController@editTitle');
 
+
+        //Social Links
+    Route::get('/cd-admin/add-social-links','backend\SocialLinksController@addsocialLinksform');
+
+    Route::get('/cd-admin/view-social-links','backend\SocialLinksController@view');
+
+    Route::post('/store-social-links','backend\SocialLinksController@store');
+
+    Route::get('/cd-admin/edit-socialLinks/{id}','backend\SocialLinksController@editsocialLinksForm');
+    Route::post('/update-social-links/{id}','backend\SocialLinksController@update');
+
+
+
+
+            // Events
+    Route::get('/cd-admin/view-events','backend\EventsController@viewEvents')->name('view-events');
+    Route::get('/cd-admin/add-events','backend\EventsController@addEventsForm')->name('add-events-form');
+    Route::post('/cd-admin/add-events','backend\EventsController@addEvents')->name('add-events');
+    Route::get('/cd-admin/edit-events/{id}','backend\EventsController@editEventsForm')->name('edit-events-form');
+    Route::post('/cd-admin/edit-events/{id}','backend\EventsController@editEvents')->name('edit-events');
+    Route::get('/cd-admin/delete-events/{id}','backend\EventsController@deleteEvents')->name('delete-events');
+
 });

@@ -33,9 +33,9 @@ class NoticeController extends Controller
 			'title' => 'required',
 			'description' => 'required',
 			'summary' => 'required',
-			'seo_title' => 'required',
-			'seo_description' => 'required',
-			'seo_keyword' => 'required',
+			'seo_title' => '',
+			'seo_description' => '',
+			'seo_keyword' => '',
 			'status' => 'required',
 		]);
 		$notice = new Notice();
@@ -59,9 +59,9 @@ class NoticeController extends Controller
 			'title' => 'required',
 			'description' => 'required',
 			'summary' => 'required',
-			'seo_title' => 'required',
-			'seo_description' => 'required',
-			'seo_keyword' => 'required',
+			'seo_title' => '',
+			'seo_description' => '',
+			'seo_keyword' => '',
 			'status' => 'required',
 		]);
 		$notice = Notice::find($id);

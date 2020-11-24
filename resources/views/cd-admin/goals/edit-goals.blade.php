@@ -50,6 +50,17 @@
 						<strong>{{ $errors->first('summary') }}</strong>
 					</span>
 					@endif
+					<div class="form-group{{ $errors->has('priority_no') ? ' has-error' : '' }}">
+						<label class="col-md-3 control-label">Enter Priority Number</label>
+						<div class="col-md-6">
+							<input type="number" name="priority_no" class="form-control" placeholder="Enter Priority Number" value="{{$data['priority_no']}}">
+						</div>
+					</div>
+					@if ($errors->has('priority_no'))
+					<span class="help-block">
+						<strong>{{ $errors->first('priority_no') }}</strong>
+					</span>
+					@endif
 					<div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
 						<label class="col-md-3 control-label">Enter Goal Image</label>
 						<div class="col-md-6">

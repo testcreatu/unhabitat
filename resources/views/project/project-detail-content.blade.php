@@ -139,7 +139,11 @@
 													</div>
 													<div class="col-7 col-sm-7 col-md-7">
 														<div class="sub-title">
+<<<<<<< Updated upstream
 															<a href="#"><h6>{{substr($news['title'],0,50)}}</h6></a>
+=======
+															<a href="{{url('featured_news_detail/'.$news['slug'])}}"><h6>{{$news['title']}}</h6></a>
+>>>>>>> Stashed changes
 														</div>
 													</div>
 												</div>
