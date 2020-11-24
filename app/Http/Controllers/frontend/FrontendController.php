@@ -45,31 +45,18 @@ class FrontendController extends Controller
 
 		$finalProject['detail'] = Projects::where('slug',$slug)->get()->first();
 		$finalProject['news'] = Blog::where('status','active')->where('project_id',$finalProject['detail']['id'])->take(3)->get();
-		if(count($finalProject['news']) == 0)
-		{
-			$finalProject['status']['news_status'] = 0;
-		}
+		$finalProject['status']['news_status'] = count($finalProject['news']) == 0 ?0:1;
 		$finalProject['publications'] = Publications::where('status','active')->where('project_id',$finalProject['detail']['id'])->take(3)->get();
-		if(count($finalProject['publications']) == 0)
-		{
-			$finalProject['status']['publications_status'] = 0;
-		}
+		$finalProject['status']['publications_status'] = count($finalProject['publications']) == 0 ?0:1;
 		$finalProject['newsletter'] = Newsletter::where('status','active')->where('project_id',$finalProject['detail']['id'])->take(3)->get();
-		if(count($finalProject['newsletter']) == 0)
-		{
-			$finalProject['status']['newsletter_status'] = 0;
-		}
+		$finalProject['status']['newsletter_status'] = count($finalProject['newsletter']) == 0 ?0:1;
 		$finalProject['project_report_categories'] = FilesCategory::where('status','active')->where('project_id',$finalProject['detail']['id'])->get();
 		$finalProject['videos'] = VideoGallery::where('project_id',$finalProject['detail']['id'])->take(3)->get();
-		if(count($finalProject['videos']) == 0)
-		{
-			$finalProject['status']['videos_status'] = 0;
-		}
+		$finalProject['status']['videos_status'] = count($finalProject['videos']) == 0 ?0:1;
+
 		$finalProject['case_study'] = CaseStudy::where('project_id',$finalProject['detail']['id'])->take(3)->get();
-		if(count($finalProject['case_study']) == 0)
-		{
-			$finalProject['status']['case_study_status'] = 0;
-		}
+		$finalProject['status']['case_study_tab'] = count($finalProject['case_study']) == 0 ?0:1;
+
 		$finalProject['custom_pages'] = CustomPages::where('project_id',$finalProject['detail']['id'])->where('page_for','project')->get();
 		foreach($finalProject['project_report_categories'] as $reportCategory)
 		{

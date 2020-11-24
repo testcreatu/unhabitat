@@ -3,7 +3,7 @@
 <head>
 
     <!-- Page Title -->
-    <title>Unhabitat</title>
+    <title>UN-Habitat</title>
 
 
     <!-- FavIcon Link -->
