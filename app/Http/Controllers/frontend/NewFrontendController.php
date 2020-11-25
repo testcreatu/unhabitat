@@ -59,28 +59,28 @@ class NewFrontendController extends Controller
 	public function ProjectVideoList($slug)
 	{
 		$finalVideoList['project'] = Projects::where('slug',$slug)->get()->first();
-		$finalVideoList['list'] = VideoGallery::where('status','active')->where('project_id',$finalVideoList['project']['id'])->paginate(6);
+		$finalVideoList['list'] = VideoGallery::where('status','active')->where('project_id',$finalVideoList['project']['id'])->orderBy('id','desc')->paginate(6);
 		return view('project.project-video-list',compact('finalVideoList'));
 	}
 
 	public function ProjectPublicationList($slug)
 	{
 		$finalPublicationList['project'] = Projects::where('slug',$slug)->get()->first();
-		$finalPublicationList['list'] = Publications::where('status','active')->where('project_id',$finalPublicationList['project']['id'])->paginate(6);
+		$finalPublicationList['list'] = Publications::where('status','active')->where('project_id',$finalPublicationList['project']['id'])->orderBy('id','desc')->paginate(6);
 		return view('project.project-publication-list',compact('finalPublicationList'));
 	}
 
 	public function ProjectCaseStudyList($slug)
 	{
 		$finalCaseStudyList['project'] = Projects::where('slug',$slug)->get()->first();
-		$finalCaseStudyList['list'] = CaseStudy::where('status','active')->where('project_id',$finalCaseStudyList['project']['id'])->paginate(6);
+		$finalCaseStudyList['list'] = CaseStudy::where('status','active')->where('project_id',$finalCaseStudyList['project']['id'])->orderBy('id','desc')->paginate(6);
 		return view('project.case-list',compact('finalCaseStudyList'));
 	}
 
 	public function PublicationsCategory($slug)
 	{
 		$finalPublication['category'] = PublicationCategories::where('slug',$slug)->get()->first();
-		$finalPublication['list'] = Publications::where('category_id',$finalPublication['category']['id'])->paginate(6);
+		$finalPublication['list'] = Publications::where('category_id',$finalPublication['category']['id'])->orderBy('id','desc')->paginate(6);
 		return view('publication.national-list',compact('finalPublication'));
 	}
 
@@ -89,6 +89,13 @@ class NewFrontendController extends Controller
 		$finalAbout = [];
 		$finalAbout['detail'] = CustomAboutPages::where('slug',$slug)->get()->first();
 		return view('about.about-us',compact('finalAbout'));
+	}
+
+	public function noticeList()
+	{
+		$finalNotice = [];
+		$finalNotice['list'] = Notice::where('status','active')->orderBy('id','desc')->get();
+		return view('notice.notice-list',compact('finalNotice'));
 	}
 
 
