@@ -117,8 +117,12 @@
 				<section class="footer-subscribe text-center">
 					<h5>Stay updated on sustainable urbanization</h5>
 					<form>
+						
+					</form>
+					<form action="{{url('subscribe-to-unhabitat')}}" method="POST">
+						@csrf
 						<div class="form-group mb-2">
-							<input type="email" class="form-control"  placeholder="Email Address">
+							<input type="email" class="form-control" name="email" placeholder="Email Address">
 							<button type="submit" class="btn btn2">Submit</button>
 						</div>
 					</form>

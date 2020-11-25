@@ -3,7 +3,12 @@
 
 
 @section('content')
-
+@if(Session::has('SubscriptionSuccess'))
+<div class="alert alert-success">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	<strong>Subscription Added Successfully</strong> {{ Session::get('message', '') }}
+</div>
+@endif
 <div class="home-page">
 	<div id="bannerCarousel" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner bannercarousel-item overlay-bg">

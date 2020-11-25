@@ -116,6 +116,14 @@ ul li {
 
 
 
+.alert {
+    position: absolute!important;
+    margin-bottom: 0!important;
+    top: 115px;
+    z-index: 9;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 
 .goal-img img,

@@ -19,6 +19,9 @@ use App\Newsletter;
 use App\PublicationCategories;
 use App\CaseStudy;
 use App\CustomAboutPages;
+use App\Events;
+use App\Subscription;
+use Session;
 class NewFrontendController extends Controller
 {
 	public function viewCustomPage($slug)
@@ -96,6 +99,32 @@ class NewFrontendController extends Controller
 		$finalNotice = [];
 		$finalNotice['list'] = Notice::where('status','active')->orderBy('id','desc')->get();
 		return view('notice.notice-list',compact('finalNotice'));
+	}
+
+	public function eventList()
+	{
+		$eventList = [];
+		$eventList['list']  = Events::where('status','active')->orderBy('id','desc')->get();
+		return view('event.event-list',compact('eventList'));
+	}
+
+	public function eventDetail($slug)
+	{
+		$eventDetail = [];
+		$eventDetail['detail']  = Events::where('slug',$slug)->get()->first();
+		return view('event.event',compact('eventDetail'));
+	}
+
+	public function subscribeToUnHabitat()
+	{
+		$data = Request()->validate([
+			'email' => 'required|email',
+		]);
+		$subscription = new Subscription();
+		$subscription->email = $data['email'];
+		$subscription->save();
+		Session::flash("SubscriptionSuccess");
+		return redirect()->back();
 	}
 
 

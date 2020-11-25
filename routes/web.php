@@ -63,13 +63,9 @@ Route::get('covid-19_response', function () {
     return view('covid-19.covid-19');
 });
 
-Route::get('event', function () {
-    return view('event.event');
-});
+Route::get('event/{slug}','frontend\NewFrontendController@eventDetail');
 
-Route::get('event_list', function () {
-    return view('event.event-list');
-});
+Route::get('event_list','frontend\NewFrontendController@eventList');
 
 Route::get('notice_list','frontend\NewFrontendController@noticeList');
 
@@ -101,6 +97,7 @@ Route::get('search-project-publication-year','frontend\SearchController@searchPr
 Route::get('search-project-case-study','frontend\SearchController@searchProjectCaseStudy');
 Route::get('search-project-case-study-year','frontend\SearchController@searchProjectCaseStudyYear');
 
+Route::post('subscribe-to-unhabitat','frontend\NewFrontendController@subscribeToUnHabitat');
 
 
 Route::get('link', function () {
@@ -300,5 +297,8 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/cd-admin/edit-events/{id}','backend\EventsController@editEventsForm')->name('edit-events-form');
     Route::post('/cd-admin/edit-events/{id}','backend\EventsController@editEvents')->name('edit-events');
     Route::get('/cd-admin/delete-events/{id}','backend\EventsController@deleteEvents')->name('delete-events');
+
+    //Subscriptions
+    ROute::get('/cd-admin/view-subscriptions','backend\SubscriptionController@viewSubscriptions');
 
 });

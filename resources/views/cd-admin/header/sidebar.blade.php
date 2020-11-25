@@ -600,6 +600,15 @@
                     </li>
                 </ul>
             </li>
+            <li class="heading">
+                <h3 class="uppercase">Subscriptions Section</h3>
+            </li>
+            <li class="nav-item">
+                <a href="{{url('cd-admin/view-subscriptions')}}" class="nav-link nav-toggle">
+                    <i class="fa fa-envelope"></i>
+                    <span class="title">Subscriptions</span>
+                </a>
+            </li>
         </ul>
         <!-- END SIDEBAR MENU -->
         <!-- END SIDEBAR MENU -->

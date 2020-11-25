@@ -16,7 +16,7 @@ use App\PhotoGallery;
 use App\Notice;
 use App\FilesCategory;
 use App\Files;
-use App\NewsLetter;
+use App\Newsletter;
 use App\CaseStudy;
 use App\CustomPages;
 use App\PageTitle;
