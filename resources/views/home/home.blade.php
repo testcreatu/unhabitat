@@ -209,9 +209,7 @@
 							<div class="img-preview">
 								<div class="preview">
 									<img src="http://placehold.it/400x220">
-									<p class="img-text-goals"></p>
 								</div>
-								
 							</div>
 						</div>
 					</div>
@@ -233,16 +231,16 @@
 			<div class="owl-carousel owl-theme home-card-carousel">
 				@foreach($finalHome['video-gallery'] as $key=>$videoGallery)
 				<div class="item">
-					<div class="video-card">
-						<div class="video-card-img">
-							<a href="{{$videoGallery['embeded_url']}}" target="_blank">
+					<a href="{{$videoGallery['embeded_url']}}" target="_blank">
+						<div class="video-card">
+							<div class="video-card-img">
 								<img src="https://img.youtube.com/vi/{{$videoGallery['video_id']}}/sddefault.jpg">
-							</a>
+							</div>
+							<div class="video-card-title">
+								<h6>{{$videoGallery['title']}}</h6>
+							</div>
 						</div>
-						<div class="video-card-title">
-							<h6>{{$videoGallery['title']}}</h6>
-						</div>
-					</div>
+					</a>
 				</div>
 				@endforeach
 

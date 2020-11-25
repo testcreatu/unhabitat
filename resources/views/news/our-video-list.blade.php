@@ -7,8 +7,12 @@
 <div class="header-margin">
 	<div class="news-post-list">
 		<div class="container ma-t ma-b">
-			<div class="title text-center mb-4">
-				<h2 class="m-0">Our Video</h2>
+			<div class="container-title">
+				<h3>
+					<span>
+						Our Video
+					</span>
+				</h3>
 			</div>
 
 			<div class="row recent-publish video-list">
@@ -21,7 +25,7 @@
 							</a>
 						</div>
 						<div class="video-card-title">
-							<h6>Nepal Lifetime Experiences Rice Planting Festival</h6>
+							<h6>{{$video['title']}}</h6>
 						</div>
 					</div>
 				</div>
