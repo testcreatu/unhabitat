@@ -5,7 +5,7 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Blog;
-use App\NewsLetter;
+use App\Newsletter;
 use App\Projects;
 use App\VideoGallery;
 use App\Publications;

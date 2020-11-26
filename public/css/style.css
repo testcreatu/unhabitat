@@ -957,6 +957,10 @@ position: relative;
   width: 100%;
 }
 
+.recent-publish .post-card-content {
+    bottom:-100px;
+}
+
 .post-card-content .sub-title h5 {
   color: #fff !important;
 }
@@ -1506,6 +1510,7 @@ margin: 100px 0;
   box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
   margin-right: 10px;
   background: #fff;
+  border-radius:5px;
 }
 
 /*.sidebar-tab .tab-content {

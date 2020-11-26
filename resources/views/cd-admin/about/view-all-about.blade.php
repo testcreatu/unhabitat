@@ -51,6 +51,7 @@
 
 <div class="row">
 	<div class="col-md-12">
+	    @if(isset($about))
 		<!-- BEGIN EXAMPLE TABLE PORTLET-->
 		<div class="portlet light bordered">
 			<div class="portlet-title">
@@ -80,6 +81,10 @@
 			</div>
 
 		</div>
+		@else
+		<a href="{{url('cd-admin/add-about')}}"><button align="center">  Add About  </button>  </a>
+		@endif
+		
 		<!-- END EXAMPLE TABLE PORTLET-->
 	</div>
 </div>

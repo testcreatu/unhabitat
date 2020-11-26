@@ -23,9 +23,11 @@
 							<li class="nav-item" role="presentation">
 								<a class="nav-link active" id="pills-first-tab" data-toggle="pill" href="#pills-first" role="tab" aria-controls="pills-first" aria-selected="true">About</a>
 							</li>
+							@if(count($finalProject['project_report_categories']) != 0)
 							<li class="nav-item" role="presentation">
 								<a class="nav-link" id="pills-second-tab" data-toggle="pill" href="#pills-second" role="tab" aria-controls="pills-second" aria-selected="false">Project Report</a>
 							</li>
+							@endif
 							@foreach($finalProject['custom_pages'] as $custom_pages)
 							<li class="nav-item" role="CustomPages">
 								<a class="nav-link" id="pills-{{$custom_pages['id']}}-tab" data-toggle="pill" href="#pills-{{$custom_pages['id']}}" role="tab" aria-controls="pills-{{$custom_pages['id']}}" aria-selected="false">{{$custom_pages['title']}}</a>
@@ -139,7 +141,7 @@
 													</div>
 													<div class="col-7 col-sm-7 col-md-7">
 														<div class="sub-title">
-															<a href="{{url('featured_news_detail/'.$news['slug'])}}"><h6>{{$news['title']}}</h6></a>
+															<a href="{{url('featured_news_detail/'.$news['slug'])}}"><h6>{{substr($news['title'],0,60)}}...</h6></a>
 														</div>
 													</div>
 												</div>

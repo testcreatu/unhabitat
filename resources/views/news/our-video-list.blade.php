@@ -18,16 +18,16 @@
 			<div class="row recent-publish video-list">
 				@foreach($videoGallery as $video)
 				<div class="col-md-4 mb-3">
+			  <a href="{{$video['embeded_url']}}" target="_blank">
 					<div class="video-card">
-						<div class="video-card-img">
-							<a href="{{$video['embeded_url']}}" target="_blank">
-								<img src="https://img.youtube.com/vi/{{$video['video_id']}}/sddefault.jpg">
-							</a>
-						</div>
-						<div class="video-card-title">
-							<h6>{{$video['title']}}</h6>
-						</div>
+    						<div class="video-card-img">
+    								<img src="https://img.youtube.com/vi/{{$video['video_id']}}/sddefault.jpg">
+    						</div>
+    						<div class="video-card-title">
+    							<h6>{{$video['title']}}</h6>
+    						</div>
 					</div>
+					</a>
 				</div>
 				@endforeach
 			{{-- 	<div class="col-md-4 mb-3">

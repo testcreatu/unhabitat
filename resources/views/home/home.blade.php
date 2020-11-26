@@ -78,6 +78,7 @@
 				</h3>
 			</div>
 			<div class="row mt-3">
+			    @if(count($finalHome['blog']) != 0)
 				<div class="col-md-8 mb-3">
 					<a href="{{url('featured_news_detail/'.$finalHome['blog'][0]['slug'])}}">
 						<div class="main-post-card ">
@@ -95,6 +96,7 @@
 						</div>
 					</a>
 				</div>
+				@endif
 				<div class="col-md-4 mb-3">
 					<div class="row">
 						@foreach($finalHome['blog'] as $key=>$blog)
