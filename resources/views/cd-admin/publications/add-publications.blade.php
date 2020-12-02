@@ -77,7 +77,7 @@
 						@endif
 					</div>
 					<div class="form-group{{ $errors->has('publisher_name') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter Publisher Name  <span class="cd-admin-required">*</span></label>
+						<label class="col-md-3 control-label">Enter Publisher Name  </label>
 						<div class="col-md-6">
 							<input type="text" class="form-control" placeholder="Enter Publisher Name" name="publisher_name" value="{{old('publisher_name')}}">
 						</div>
@@ -108,18 +108,9 @@
 						@endif
 					</div>
 
-					<div class="form-group{{ $errors->has('file') ? ' has-error' : '' }}">
-						<label for="exampleInputFile" class="col-md-3 control-label">Upload File <span class="cd-admin-required">*</span></label>
-						<div class="col-md-9">
-							<input type="file" name="file" id="exampleInputFile">
-							<p class="help-block"> Upload File. </p>
-						</div>
-						@if ($errors->has('file'))
-						<span class="text-danger">{{ $errors->first('file') }}</span>
-						@endif
-					</div>
+					
 					<div class="form-group{{ $errors->has('year') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter Year <span class="cd-admin-required">*</span></label>
+						<label class="col-md-3 control-label">Enter Year </label>
 						<div class="col-md-6">
 							<input type="text" class="form-control" placeholder="Enter Publications year" name="year" value="{{old('year')}}">
 						</div>
@@ -129,7 +120,7 @@
 					</div>
 
 					<div class="form-group{{ $errors->has('pages') ? ' has-error' : '' }}">
-						<label class="col-md-3 control-label">Enter No. of Pages <span class="cd-admin-required">*</span></label>
+						<label class="col-md-3 control-label">Enter No. of Pages </label>
 						<div class="col-md-6">
 							<input type="text" class="form-control" placeholder="Enter No of Pages" name="pages" value="{{old('pages')}}">
 						</div>
@@ -172,6 +163,48 @@
 							@endif
 					</div>
 					--}}
+						<div class="form-group">
+						<label class="col-md-3 control-label">Publication Type</label>
+						<div class="col-md-6">
+							<div class="mt-radio-inline">
+								<label class="mt-radio">
+									<input type="radio" name="publication_type" id="optionsRadios25" value="url" checked="" onchange="checkType('url')"> URL
+									<span></span>
+								</label>
+								<label class="mt-radio">
+									<input type="radio" name="publication_type" id="optionsRadios26" value="file"  onchange="checkType('file')"> File
+									<span></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group{{ $errors->has('file') ? ' has-error' : '' }}" id="file" style="display:none;">
+						<label for="exampleInputFile" class="col-md-3 control-label">Upload File <span class="cd-admin-required">*</span></label>
+						<div class="col-md-9">
+							<input type="file" name="file" id="exampleInputFile">
+							<p class="help-block"> Upload File. </p>
+						</div>
+						@if ($errors->has('file'))
+						<span class="text-danger">{{ $errors->first('file') }}</span>
+						@endif
+					</div>
+
+	                <div class="form-group{{ $errors->has('url') ? ' has-error' : '' }}" id="url" style="display:block;">
+						<label class="col-md-3 control-label">Enter URL <span class="cd-admin-required">*</span></label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" placeholder="Enter Publications url" name="url" value="{{old('url')}}">
+						</div>
+						@if ($errors->has('url'))
+						<span class="text-danger">{{ $errors->first('url') }}</span>
+						@endif
+					</div>
+					
+					@if(Session::has('urlRequired'))
+                    <div class="text text-danger">
+                    	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    	<strong>Either URL or File is Required</strong> {{ Session::get('message', '') }}
+                    </div>
+                    @endif
 					<!-- seo section starts -->
 					<hr>
 					<div class="form-group{{ $errors->has('seo_title') ? ' has-error' : '' }}">
@@ -256,5 +289,19 @@
 	</div>
 	<!-- END SAMPLE FORM PORTLET-->
 </div>
-
+<script>
+    function checkType(value)
+    {
+        if(value == 'url')
+        {
+            document.getElementById('url').style.display = "block";
+            document.getElementById('file').style.display = "none";
+        }
+        else if(value == 'file')
+        {
+            document.getElementById('url').style.display = "none";
+            document.getElementById('file').style.display = "block";
+        }
+    }
+</script>
 @endsection

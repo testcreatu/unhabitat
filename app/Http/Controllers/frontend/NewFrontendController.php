@@ -119,6 +119,7 @@ class NewFrontendController extends Controller
 	{
 		$data = Request()->validate([
 			'email' => 'required|email',
+			'g-recaptcha-response' => 'required|recaptcha'
 		]);
 		$subscription = new Subscription();
 		$subscription->email = $data['email'];
@@ -126,6 +127,16 @@ class NewFrontendController extends Controller
 		Session::flash("SubscriptionSuccess");
 		return redirect()->back();
 	}
+
+	public function messages()
+    {
+        return [
+       'required' => 'The :attribute field is required.',
+       'email' => 'The :attribute must use a valid email address',
+       'g-recaptcha-response.recaptcha' => 'Captcha verification failed',
+       'g-recaptcha-response.required' => 'Please complete the captcha'
+       ];
+    }
 
 
 

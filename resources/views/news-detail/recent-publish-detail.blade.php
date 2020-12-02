@@ -3,7 +3,7 @@
 
 
 @section('content')
-	
+
 <div class="publish">	
 	<div class="container ma-t ma-b">
 		<div class="header-margin">
@@ -31,7 +31,11 @@
 							</div>
 							<div class="col-2 col-sm-2 col-md-2 publisher">
 								<strong>Download</strong>
+								@if($finalPublication['detail']['publication_type'] == 'file')
 								<span class="text-center"><a href="{{url('uploads/publications/files/'.$finalPublication['detail']['file'])}}" target="_blank" download><i class="fas fa-download text"></i></a></span>
+								@else
+								<span class="text-center"><a href="{{$finalPublication['detail']['file']}}" target="_blank" download><i class="fas fa-download text"></i></a></span>
+								@endif
 							</div>
 						</div>	
 						<div class="share-plugin mt-3">
@@ -129,11 +133,11 @@
 									<div class="row">
 										<div class="col-md-12">
 											@foreach($finalPublication['notice'] as $notice)
-												<div class="link-list">
-													<ul class="">
-														<li><a href="{{url('notice/'.$notice['slug'])}}">{{$notice['title']}}</a></li>
-													</ul>
-												</div>
+											<div class="link-list">
+												<ul class="">
+													<li><a href="{{url('notice/'.$notice['slug'])}}">{{$notice['title']}}</a></li>
+												</ul>
+											</div>
 											@endforeach
 										</div>
 									</div>

@@ -299,6 +299,11 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/cd-admin/delete-events/{id}','backend\EventsController@deleteEvents')->name('delete-events');
 
     //Subscriptions
-    ROute::get('/cd-admin/view-subscriptions','backend\SubscriptionController@viewSubscriptions');
+    Route::get('/cd-admin/view-subscriptions','backend\SubscriptionController@viewSubscriptions');
+
+    //CSV Uploads
+    Route::get('/cd-admin/upload-news-csv','backend\CSVuploadController@addNewsCsvForm');
+    Route::post('/cd-admin/upload-news-csv','backend\CSVuploadController@addNewsCsv');
+
 
 });

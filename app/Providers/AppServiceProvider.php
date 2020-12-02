@@ -3,12 +3,14 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Validator;
 use App\Projects;
 use App\CustomPages;
 use View;
 use App\PublicationCategories;
 use App\CustomAboutPages;
 use App\SocialLinks;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -28,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Validator::extend('recaptcha', 'App\\Validators\\ReCaptcha@validate');
         $finalHeader = [];
         $finalHeader['ongoing'] = Projects::where('status','active')->where('project_status','ongoing')->get();
         $finalHeader['completed'] = Projects::where('status','active')->where('project_status','completed')->get();

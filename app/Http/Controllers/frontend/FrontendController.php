@@ -54,7 +54,7 @@ class FrontendController extends Controller
 		$finalProject['videos'] = VideoGallery::where('project_id',$finalProject['detail']['id'])->take(3)->get();
 		$finalProject['status']['videos_status'] = count($finalProject['videos']) == 0 ?0:1;
 
-		$finalProject['case_study'] = CaseStudy::where('project_id',$finalProject['detail']['id'])->take(3)->get();
+		$finalProject['case_study'] = CaseStudy::where('project_id',$finalProject['detail']['id'])->where('status','active')->take(3)->get();
 		$finalProject['status']['case_study_tab'] = count($finalProject['case_study']) == 0 ?0:1;
 
 		$finalProject['custom_pages'] = CustomPages::where('project_id',$finalProject['detail']['id'])->where('page_for','project')->get();

@@ -29,9 +29,21 @@ class PublicationsController extends Controller
 		$request = Request()->all();
 		$data = $this->addValidate();
 		$FinalData['slug'] = Str::slug($data['title']);
+		if($data['publication_type'] == 'file')
+		{
+		   	$FinalData['file'] =$this->uploadFile($data['file'],'uploads/publications/files');
+		}
+		else
+		{
+		    if(!isset($data['url']))
+		    {
+		        Session::flash('urlRequired');
+		    }
+		    $FinalData['file'] = $data['url'];
+		}
 		$FinalData['image'] = $this->uploadImage($data['image'],'uploads/publications');
-		$FinalData['file'] =$this->uploadFile($data['file'],'uploads/publications/files');
 		$FinalData['created_at'] = Carbon::now('Asia/Kathmandu');
+		unset($data['url']);
 		$merge = array_merge($data,$FinalData);
 		DB::table('publications')->insert($merge);
 		Session::flash('success');
@@ -68,14 +80,25 @@ class PublicationsController extends Controller
 			$this->unlinkImage('uploads/thumbnail/'.$publications['image']);
 			$FinalData['image'] = $this->uploadImage($data['image'],'uploads/publications');
 		}
-		if(isset($data['file']))
+		if(isset($data['file']) || $data['publication_type'] != 'file')
 		{
 			$this->unlinkImage('uploads/publications/files/'.$publications['file']);
-			$FinalData['file'] = $this->uploadFile($data['file'],'uploads/publications/files');
 		}
-
+		if($data['publication_type'] == 'file')
+		{
+		   	$FinalData['file'] =$this->uploadFile($data['file'],'uploads/publications/files');
+		}
+		else
+		{
+		    if(!isset($data['url']))
+		    {
+		        Session::flash('urlRequired');
+		    }
+		    $FinalData['file'] = $data['url'];
+		}
 		$FinalData['slug'] = Str::slug($data['title']);
 		$FinalData['updated_at'] = Carbon::now('Asia/Kathmandu');
+		unset($data['url']);
 		$merge = array_merge($data,$FinalData);
 		DB::table('publications')->where('id',$id)->update($merge);
 		Session::flash('success1');
@@ -110,10 +133,12 @@ class PublicationsController extends Controller
 			'seo_description' => '',
 			'status' => 'required',
 			'show_in_homepage' => 'required',
-			'publisher_name' => 'required',
-			'file' => 'required|file|mimes:pdf,docx,doc,pptx,ppt',
-			'year' => 'required',
-			'pages' => 'required',
+			'publisher_name' => '',
+			'file' => 'file|mimes:pdf,docx,doc,pptx,ppt',
+			'year' => '',
+			'pages' => '',
+			'publication_type' => 'required',
+			'url' => '',
 		]);
 		return $valid;
 	}
@@ -134,10 +159,12 @@ class PublicationsController extends Controller
 			'seo_description' => '',
 			'status' => 'required',
 			'show_in_homepage' => 'required',
-			'publisher_name' => 'required',
+			'publisher_name' => '',
 			'file' => 'file|mimes:pdf,docx,doc,pptx,ppt',
-			'year' => 'required',
-			'pages' => 'required',
+			'year' => '',
+			'pages' => '',
+			'publication_type' => 'required',
+			'url' => '',
 		]);
 		return $valid;
 	}

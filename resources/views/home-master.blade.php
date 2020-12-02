@@ -51,18 +51,18 @@
 
 <body>
 
-<div>
-	@include('header.header')
-</div>
+    <div>
+       @include('header.header')
+   </div>
 
-<div style="min-height: 50vh">
-	@yield('content')
-</div>
+   <div style="min-height: 50vh">
+       @yield('content')
+   </div>
 
-<div>
-	@include('footer.footer')
-</div>
-	
+   <div>
+       @include('footer.footer')
+   </div>
+   
 </body>
 
 <!-- Popper, Boostrap JS -->
@@ -77,14 +77,16 @@
 
 
 <!-- Global JS -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
 <script type="text/javascript" src="{{url('public/js/js.js')}}"></script>
 <script type="text/javascript" src="{{url('public/js/yearpicker.js')}}"></script>
 <script>
   $(document).ready(function() {
     $(".yearpicker").yearpicker({
-    startYear: 2000,
-      endYear:{{date('Y')}},
-  });
+        startYear: 2000,
+        endYear:{{date('Y')}},
+    });
 });
 </script>
 

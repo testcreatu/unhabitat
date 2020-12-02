@@ -63,7 +63,7 @@
 						<li>
 							<a href="{{url('our_video')}}">Videos</a>
 						</li>
-							<li><a href="{{url('notice_list')}}">Notice</a></li>
+						<li><a href="{{url('notice_list')}}">Notice</a></li>
 						<li><a href="{{url('event_list')}}">Event</a></li>
 					</ul>
 				</section>
@@ -72,7 +72,7 @@
 				<section class="footer-quick-link">
 					<h2>Others</h2>
 					<ul>
-					
+						
 						@foreach($finalFooter['custom_pages'] as $footer)
 						<li>
 							<a href="{{url('/pages/'.$footer['slug'])}}">{{$footer['title']}}</a>
@@ -119,22 +119,25 @@
 					</form>
 					<form action="{{url('subscribe-to-unhabitat')}}" method="POST">
 						@csrf
-						<div class="form-group mb-2">
-							<input type="email" class="form-control" name="email" placeholder="Email Address">
-							<button type="submit" class="btn btn2">Submit</button>
-						</div>
-					</form>
-				</section>
-			</div>
+						<div class="g-recaptcha" 
+						data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}">
+					</div>
+					<div class="form-group mb-2">
+						<input type="email" class="form-control" name="email" placeholder="Email Address">
+						<button type="submit" class="btn btn2">Submit</button>
+					</div>
+				</form>
+			</section>
 		</div>
 	</div>
-	<div class="copyright text-center">
-		<div class="container">
-			<div class="content">
-				<p>Copyright © {{date('Y')}} UN-Habitat Nepal</p>
-			</div>
+</div>
+<div class="copyright text-center">
+	<div class="container">
+		<div class="content">
+			<p>Copyright © {{date('Y')}} UN-Habitat Nepal</p>
 		</div>
 	</div>
+</div>
 </footer>
 
 
