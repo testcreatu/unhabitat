@@ -24,7 +24,13 @@
 
 
 @media (max-width:767px) {
-		.search {
+	.logo {
+	    width: 180px;
+	    overflow: hidden;
+	    height: 30px;
+	}
+	
+	.search {
 		padding-top: 0;
 		text-align: center;
 		margin-bottom: 10px;
@@ -102,7 +108,13 @@
 
 
 @media (max-width:480px) {
-		.search {
+	.logo {
+	    width: 180px;
+	    overflow: hidden;
+	    height: 30px;
+	}
+
+	.search {
 		padding-top: 0;
 		text-align: center;
 		margin-bottom: 10px;
@@ -178,6 +190,12 @@
 
 
 @media (max-width:320px) {
+	.logo {
+	    width: 180px;
+	    overflow: hidden;
+	    height: 30px;
+	}
+
 	.search {
 		padding-top: 0;
 		text-align: center;

@@ -42,65 +42,65 @@
                       @foreach($finalHeader['ongoing'] as $ongoing)
                       <li><a href="{{url('project_detail/'.$ongoing['slug'])}}">{{$ongoing['title']}}</a></li>
                       @endforeach
-               {{--      <li><a href="{{url('project_detail')}}">Land and Global Land Tool Network(GLTN)</a></li>
-               <li><a href="{{url('project_detail')}}">Parya Sampada</a></li> --}}
-             </ul>
-           </div>
-         </li>
-         <li>
-          <a href="#" class="nav-link">Completed Project</a>
-          <div class="sub-menu-1">
-            <ul>
-              @foreach($finalHeader['completed'] as $completed)
-              <li><a href="{{url('project_detail/'.$completed['slug'])}}">{{$completed['title']}}</a></li>
-              @endforeach
-               {{--      <li><a href="{{url('project_detail')}}">Land and Global Land Tool Network(GLTN)</a></li>
-               <li><a href="{{url('project_detail')}}">Parya Sampada</a></li> --}}
-             </ul>
-           </div>
-         </li>
-       </ul>
-     </div>
-   </li>
-   <li class="nav-item">
-    <a class="nav-link" href="#">Media Center</a>
-    <div class="sub-menu">
-      <ul>
-        <li>
-          <a href="{{url('featured_news')}}" class="nav-link">News Stories</a>
-        </li>
-        <li>
-          <a href="{{url('images')}}" class="nav-link">Gallery</a>
-        </li>
-        <li>
-          <a href="{{url('our_video')}}" class="nav-link">Video</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-</ul>
-<i id="search-btn" class="fas fa-search" aria-hidden="true"></i>
-<div id="search-overlay" class="block">
-  <div class="centered">
-    <div id='search-box'>
-      <i id="close-btn" class="fa fa-times fa-2x"></i>
-      <form id='search-form' action="{{url('search')}}" method="GET">
-        <div class="form-group">
-          <input type="text" name="search_tag" class="form-control" placeholder="Search" value="<?php echo isset(Request()->search_tag) ? Request()->search_tag :'' ?>">
-          <button type='submit'><i class="fas fa-search" aria-hidden="true"></i></button>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#" class="nav-link">Completed Project</a>
+                  <div class="sub-menu-1">
+                    <ul>
+                      @foreach($finalHeader['completed'] as $completed)
+                      <li><a href="{{url('project_detail/'.$completed['slug'])}}">{{$completed['title']}}</a></li>
+                      @endforeach
+                      {{--      <li><a href="{{url('project_detail')}}">Land and Global Land Tool Network(GLTN)</a></li>
+                      <li><a href="{{url('project_detail')}}">Parya Sampada</a></li> --}}
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Media Center</a>
+            <div class="sub-menu">
+              <ul>
+                <li>
+                  <a href="{{url('featured_news')}}" class="nav-link">News Stories</a>
+                </li>
+                <li>
+                  <a href="{{url('images')}}" class="nav-link">Gallery</a>
+                </li>
+                <li>
+                  <a href="{{url('our_video')}}" class="nav-link">Video</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <i id="search-btn" class="fas fa-search" aria-hidden="true"></i>
+        <div id="search-overlay" class="block">
+          <div class="centered">
+            <div id='search-box'>
+              <i id="close-btn" class="fa fa-times fa-2x"></i>
+              <form id='search-form' action="{{url('search')}}" method="GET">
+                <div class="form-group">
+                  <input type="text" name="search_tag" class="form-control" placeholder="Search" value="<?php echo isset(Request()->search_tag) ? Request()->search_tag :'' ?>">
+                  <button type='submit'><i class="fas fa-search" aria-hidden="true"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
   </div>
-</div>
-</nav>
-</div>
 </div>
 
 
 
 
 <div class="sticky-container">
+  @if($finalHeader['social_links'] != Null)
   <ul class="sticky">
     @if($finalHeader['social_links']['fb_link'] != NULL)
     <li>
@@ -127,6 +127,7 @@
     </li>
     @endif
   </ul>
+  @endif
 </div>
 
 

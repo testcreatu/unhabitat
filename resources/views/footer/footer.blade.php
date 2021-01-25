@@ -84,6 +84,7 @@
 			<div class="col-sm-12 col-md-6 col-lg-4 mb-5">
 				<section class="footer-quick-link">
 					<h2>Connect</h2>
+					@if($finalHeader['social_links'] != Null)
 					<ul class="footer-social-link">
 						@if($finalHeader['social_links']['fb_link'] != NULL)
 						<li>
@@ -111,6 +112,7 @@
 						</li>
 						@endif
 					</ul>
+					@endif
 				</section>
 				<section class="footer-subscribe text-center">
 					<h5>Stay updated on sustainable urbanization</h5>
